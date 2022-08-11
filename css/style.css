@@ -2073,7 +2073,7 @@ pre .javascript .function {
   box-sizing: border-box;
   width: 100%;
   overflow: hidden;
-  background: url("https://cdn.staticaly.com/gh/Zhicheng2001/Zhicheng2001.github.io@main/picture/wallhaven-72rd8e.7jsz3w91h9s0.webp") center center/cover no-repeat;
+  background: url("/images/bg.svg") center center/cover no-repeat;
   background-position-y: 70px;
 }
 @media (max-width: 780px) {
