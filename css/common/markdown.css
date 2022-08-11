@@ -128,6 +128,11 @@ keep-tablet()
   width: 100%;
   overflow: auto;
 }
+@media screen and (max-width: 768px) {
+  .markdown-body > table {
+    table-layout: fixed;
+  }
+}
 .markdown-body > table td,
 .markdown-body > table th {
   padding: 0;
