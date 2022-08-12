@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
     KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/tx.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"吾尝终日不食，终夜不寝，以思，无益，不如学也。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
-    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
 <meta name="generator" content="Hexo 6.2.0"></head>
 
@@ -112,7 +112,7 @@
                             <a class="active"
                                href="/"
                             >
-                                HOME
+                                首页
                             </a>
                         </li>
                     
@@ -120,7 +120,7 @@
                             <a class=""
                                href="/archives"
                             >
-                                ARCHIVES
+                                归档
                             </a>
                         </li>
                     
@@ -128,7 +128,7 @@
                             <a class=""
                                href="/categories"
                             >
-                                CATEGORIES
+                                分类
                             </a>
                         </li>
                     
@@ -136,7 +136,7 @@
                             <a class=""
                                href="/about"
                             >
-                                ABOUT
+                                关于
                             </a>
                         </li>
                     
@@ -157,22 +157,22 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class="active"
-                       href="/">HOME</a>
+                       href="/">首页</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/archives">ARCHIVES</a>
+                       href="/archives">归档</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/categories">CATEGORIES</a>
+                       href="/categories">分类</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/about">ABOUT</a>
+                       href="/about">关于</a>
                 </li>
             
         </ul>
@@ -198,29 +198,41 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2022/08/11/cf%E5%A5%97%E9%A2%981/">
-                        
+                    <a href="/2022/05/13/%E6%B5%85%E8%B0%88%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/">
+                        浅谈连通分量
                     </a>
                 </h3>
 
                 <div class="home-article-content markdown-body">
                     
-                        cf套题1A题目大意：
-Cirno给他的学生一个正整数x，并且布置了一项作业，要求他的学生找到最小的正整数
-要满足两个条件： x &amp; y &gt; 0 并且 x .xor. y &gt; 0
-思路：
-有&amp;和.xor.，很明显这是一道涉...
+                        连通分量连通分量编号递减的顺序一定是拓扑序
+有向图——强连通分量将有向图通过缩点的方法，转换成一个有向无环图(DAG)
+缩点：将所有连通分量缩成一个点。
+
+四条边树枝边：DFS时经过的边，即DFS搜索树上的边前向边：与DFS方向一致，从某个结点指向其...
                     
                 </div>
 
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Aug 11 2022 21:00:16 GMT+0800">2022-08-11</span></span>
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri May 13 2022 19:19:23 GMT+0800">2022-05-13</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
         
         
     </div>
 
-    <a href="/2022/08/11/cf%E5%A5%97%E9%A2%981/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a href="/2022/05/13/%E6%B5%85%E8%B0%88%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -230,7 +242,174 @@ Cirno给他的学生一个正整数x，并且布置了一项作业，要求他�
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2022/08/10/hello-world/">
+                    <a href="/2022/05/05/%E6%B5%85%E8%B0%88%E5%80%8D%E5%A2%9E/">
+                        浅谈倍增
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        倍增(ST)倍增是什么？
+倍增，每次将范围扩大或减少一倍以达到加速的效果
+
+思想引入：如果你想跳到n &#x3D; 15米远的地方，怎么做？
+
+一步一步跳过去（暴力）：显然这是15次
+
+$2^k$次（倍增）：
+
+设 k &#x3D; 5，$2^5$ ...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu May 05 2022 18:17:30 GMT+0800">2022-05-05</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2022/05/05/%E6%B5%85%E8%B0%88%E5%80%8D%E5%A2%9E/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/05/02/%E6%B5%85%E8%B0%88%E4%BA%8C%E5%88%86%E5%9B%BE/">
+                        浅谈二分图
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        二分图
+什么是二分图？
+二分图又称二部图，是图论的一种特殊模型。节点由两个集合组成，且两个集合内部没有边的图。
+
+  
+ 设$G &#x3D; (U,V)$是一个无向图，如果顶点$U$可以分割为两个互不相交的子集$(A,B)$，并且图中的每条边$(i...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon May 02 2022 17:58:33 GMT+0800">2022-05-02</span></span>
+        
+        
+    </div>
+
+    <a href="/2022/05/02/%E6%B5%85%E8%B0%88%E4%BA%8C%E5%88%86%E5%9B%BE/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/04/30/%E6%B5%85%E8%B0%88%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/">
+                        浅谈差分约束
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        差分约束什么是差分约束？
+是一种特殊的$n$元一次不等式组，它包含$n$个变量$x_1,x_2,…,x_n$以及$m$个约束条件，每个约束条件是由两个其中的变量做差构成的。
+
+形如$x_i - x_j \le c_k$,其中 $1 \le i,j \...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 30 2022 20:11:21 GMT+0800">2022-04-30</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2022/04/30/%E6%B5%85%E8%B0%88%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/04/30/%E6%B5%85%E8%B0%8801%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92/">
+                        浅谈01分数规划
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        01分数规划什么是01分数规划？分数规划用来求一个分式的极值。
+给出$a_i$和$b_i$，求一组$w_i$ ∈ {0，1}，最小化或最大化
+$$\frac{\sum_{i&#x3D;1}^n a_i \times w_i}{\sum_{i&#x3D...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 30 2022 20:04:31 GMT+0800">2022-04-30</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a href="/2022/04/30/%E6%B5%85%E8%B0%8801%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/04/07/hello-world/">
                         Hello World
                     </a>
                 </h3>
@@ -243,12 +422,24 @@ Cirno给他的学生一个正整数x，并且布置了一项作业，要求他�
 
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Aug 10 2022 14:38:58 GMT+0800">2022-08-10</span></span>
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Apr 07 2022 20:55:00 GMT+0800">2022-04-07</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/Hexo/">Hexo</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
         
         
     </div>
 
-    <a href="/2022/08/10/hello-world/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a href="/2022/04/07/hello-world/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -284,7 +475,7 @@ Cirno给他的学生一个正整数x，并且布置了一项作业，要求他�
         </div>
         
         <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
         </div>
         
         
