@@ -9,7 +9,7 @@
     
     <title>
         
-            浅谈连通分量 |
+            803(Div.2)A~C |
         
         Lzc&#39;s blog
     </title>
@@ -149,7 +149,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">浅谈连通分量</span>
+            <span class="title-hover-animation">803(Div.2)A~C</span>
         </div>
 
         
@@ -168,8 +168,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-05-13 19:19:23</span>
-        <span class="mobile">2022-05-13 19:19</span>
+        <span class="pc">2022-07-07 00:02:25</span>
+        <span class="mobile">2022-07-07 00:02</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -177,7 +177,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
+                        <a href="/categories/Codeforces%E9%A2%98%E8%A7%A3/">Codeforces题解</a>&nbsp;
                     </li>
                 
             </ul>
@@ -188,12 +188,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>416 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>502 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>2 分钟</span>
         </span>
     
     
@@ -205,27 +205,31 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="连通分量"><a href="#连通分量" class="headerlink" title="连通分量"></a>连通分量</h1><p>连通分量编号递减的顺序一定是拓扑序</p>
-<h2 id="有向图——强连通分量"><a href="#有向图——强连通分量" class="headerlink" title="有向图——强连通分量"></a>有向图——强连通分量</h2><p>将有向图通过<code>缩点</code>的方法，转换成一个有向无环图(DAG)</p>
-<p>缩点：将所有连通分量缩成一个点。</p>
-<p><img  
+            <h2 id="A-XOR-Mixup"><a href="#A-XOR-Mixup" class="headerlink" title="A. XOR Mixup"></a><a class="link"   target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/A" >A. XOR Mixup<i class="fas fa-external-link-alt"></i></a></h2><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="C:\Users\lizhicheng\AppData\Roaming\Typora\typora-user-images\image-20220512184750686.png"
-                      alt="image-20220512184750686"
+                     data-src="https://img-blog.csdnimg.cn/e53eaf6eefc848d7b2a2f90a90db4e49.png"
+                      alt="在这里插入图片描述"
                 ></p>
-<h2 id="四条边"><a href="#四条边" class="headerlink" title="四条边"></a>四条边</h2><h4 id="树枝边：DFS时经过的边，即DFS搜索树上的边"><a href="#树枝边：DFS时经过的边，即DFS搜索树上的边" class="headerlink" title="树枝边：DFS时经过的边，即DFS搜索树上的边"></a>树枝边：DFS时经过的边，即DFS搜索树上的边</h4><h4 id="前向边：与DFS方向一致，从某个结点指向其某个子孙的边。"><a href="#前向边：与DFS方向一致，从某个结点指向其某个子孙的边。" class="headerlink" title="前向边：与DFS方向一致，从某个结点指向其某个子孙的边。"></a>前向边：与DFS方向一致，从某个结点指向其某个子孙的边。</h4><h4 id="后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）"><a href="#后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）" class="headerlink" title="后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）"></a>后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）</h4><h4 id="横叉边-x-y-：从某个结点指向搜索树中的另一子树中的某结点的边。"><a href="#横叉边-x-y-：从某个结点指向搜索树中的另一子树中的某结点的边。" class="headerlink" title="横叉边(x,y)：从某个结点指向搜索树中的另一子树中的某结点的边。"></a>横叉边(x,y)：从某个结点指向搜索树中的另一子树中的某结点的边。</h4><h3 id="tarjan算法模板"><a href="#tarjan算法模板" class="headerlink" title="tarjan算法模板"></a>tarjan算法模板</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">void tarjan(int u)</span><br><span class="line">&#123;</span><br><span class="line">	dfn[u] = low[u] = ++ timestamp; //等于时间戳</span><br><span class="line">	stk[ ++ top] = u; //将当前节点加入栈中</span><br><span class="line">	in_stk[u] = true; //记录当前节点是否在栈中</span><br><span class="line">	</span><br><span class="line">	//遍历u所有能到的点</span><br><span class="line">	for (int i = h[u];~i;i = ne[i])</span><br><span class="line">	&#123;</span><br><span class="line">		int j = e[i];</span><br><span class="line">		</span><br><span class="line">		//如果当前这个点还没有被遍历过</span><br><span class="line">		if (!dfn[j])</span><br><span class="line">		&#123;</span><br><span class="line">			tarjan(j);</span><br><span class="line">			</span><br><span class="line">			//更新u能到的哪个点的最小值</span><br><span class="line">			low[u] = min(low[u],low[j]);</span><br><span class="line">		&#125;</span><br><span class="line">			//如果这个点还在栈中</span><br><span class="line">		else if (in_stk[j])</span><br><span class="line">			low[u] = min(low[u],dfn[j]);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//如果遍历完后，发现u能到的最前面一个点就是自己</span><br><span class="line">	//则它就是这个强连通分量的最高点</span><br><span class="line">	if (dfn[u] == low[u])</span><br><span class="line">	&#123;</span><br><span class="line">		int y;</span><br><span class="line">		//强连通分量个数加一</span><br><span class="line">		++ scc_cnt;</span><br><span class="line">		do</span><br><span class="line">		&#123;</span><br><span class="line">			//取出栈顶元素</span><br><span class="line">			y = stk[top --];</span><br><span class="line">			//标记这个元素已经不在栈中</span><br><span class="line">			in_stk[y] = false;</span><br><span class="line">			//标记这个节点属于哪个强连通分量</span><br><span class="line">			id[y] = scc_cnt;</span><br><span class="line">		&#125;while (y != u);//如果到了自己，则退出循环</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>题目大意</strong>：有一个长度为n的数组包含x和n-1个元素，其中x是其他n-1个元素的按位异或，从这个数组中找出x.<br><strong>思路</strong>：因为n最大为100，所以这题直接暴力枚举就行了.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">&#123;</span><br><span class="line">	int n;</span><br><span class="line">	int res;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)	cin &gt;&gt; a[i];</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)</span><br><span class="line">	&#123;</span><br><span class="line">		res = a[1];</span><br><span class="line">		for (int j = 2;j &lt;= n;j ++)</span><br><span class="line">		&#123;</span><br><span class="line">			if (j == i)	continue;</span><br><span class="line">			else	res = res ^ a[j];</span><br><span class="line">		&#125;</span><br><span class="line">		if (res == a[i])</span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-<h2 id="无向图——双连通分量"><a href="#无向图——双连通分量" class="headerlink" title="无向图——双连通分量"></a>无向图——双连通分量</h2><img  
+<h2 id="B-Rising-Sand"><a href="#B-Rising-Sand" class="headerlink" title="B. Rising Sand"></a><a class="link"   target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/B" >B. Rising Sand<i class="fas fa-external-link-alt"></i></a></h2><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="C:\Users\lizhicheng\AppData\Roaming\Typora\typora-user-images\image-20220512184732446.png"
-                      alt="image-20220512184732446" style="zoom:25%;" 
-                >
+                     data-src="https://img-blog.csdnimg.cn/8df1913ab82d42f38426be5ac17db68d.png"
+                      alt="在这里插入图片描述"
+                ></p>
+<p><strong>题目大意</strong>：给一组数，定义ans为<strong>a[2]~a[n-1]<strong>中值大于相邻两个数之和的元素个数。使用一种不限次数的操作选择连续长度为</strong>m</strong>的序列均加上1。求ans的最大可能值。<br><strong>思路</strong>：<br>分类讨论<br>当m &#x3D;&#x3D; 1时，数组中的每一个数都可以随便加，所以最大值为数组中不相邻的个数，即(n - 1) &#x2F; 2.<br>当m &gt;&#x3D; 2时，直接暴力模拟即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">&#123;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">	int ans = 0;</span><br><span class="line">	</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)	cin &gt;&gt; a[i];</span><br><span class="line">	</span><br><span class="line">	if (k == 1)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; (n - 1) / 2 &lt;&lt; endl;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		for (int i = 2;i &lt; n;i ++)</span><br><span class="line">			if (a[i] &gt; a[i - 1] + a[i + 1])</span><br><span class="line">				ans ++;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="C-3SUM-Closure"><a href="#C-3SUM-Closure" class="headerlink" title="C. 3SUM Closure"></a><a class="link"   target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/c" >C. 3SUM Closure<i class="fas fa-external-link-alt"></i></a></h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img-blog.csdnimg.cn/313fef6487fa4c83896d7844f0911ee3.png"
+                      alt="在这里插入图片描述"
+                ><br><strong>题目大意</strong>：一个长度为n的数组，如果对任意的 1 &lt;&#x3D; i &lt; j  &lt; k &lt;&#x3D; n,存在1 &lt;&#x3D; l &lt;&#x3D; n，使a[i] + a[j] + a[k] &#x3D; a[l] 满足，则这个数组是3SUM-closed的。<br>判断数组是不是3SUM-closed。<br><strong>思路</strong>：如果数组有三个正数，选择三个最大的，它们之和必然大于其中任何一个，所以必然不成立。因此，数组最多只能有2个正数。负数同理，最多只能有两个负数。<br>0对答案的贡献<br>没有0，两正一负<br>1个0，一正一负<br>2个0，一负或一正</p>
+
         </div>
 
         
@@ -235,29 +239,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/07/07/803(Div.2)A~C/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">803(Div.2)A~C</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2022/05/05/%E6%B5%85%E8%B0%88%E5%80%8D%E5%A2%9E/"
+                           href="/2022/05/13/%E6%B5%85%E8%B0%88%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">浅谈倍增</span>
+                                <span class="post-nav-title-item">浅谈连通分量</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -368,7 +357,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text">连通分量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E5%90%91%E5%9B%BE%E2%80%94%E2%80%94%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F"><span class="nav-number">1.1.</span> <span class="nav-text">有向图——强连通分量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E6%9D%A1%E8%BE%B9"><span class="nav-number">1.2.</span> <span class="nav-text">四条边</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%91%E6%9E%9D%E8%BE%B9%EF%BC%9ADFS%E6%97%B6%E7%BB%8F%E8%BF%87%E7%9A%84%E8%BE%B9%EF%BC%8C%E5%8D%B3DFS%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%8A%E7%9A%84%E8%BE%B9"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">树枝边：DFS时经过的边，即DFS搜索树上的边</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%89%8D%E5%90%91%E8%BE%B9%EF%BC%9A%E4%B8%8EDFS%E6%96%B9%E5%90%91%E4%B8%80%E8%87%B4%EF%BC%8C%E4%BB%8E%E6%9F%90%E4%B8%AA%E7%BB%93%E7%82%B9%E6%8C%87%E5%90%91%E5%85%B6%E6%9F%90%E4%B8%AA%E5%AD%90%E5%AD%99%E7%9A%84%E8%BE%B9%E3%80%82"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">前向边：与DFS方向一致，从某个结点指向其某个子孙的边。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8E%E5%90%91%E8%BE%B9%EF%BC%9A%E4%B8%8EDFS%E6%96%B9%E5%90%91%E7%9B%B8%E5%8F%8D%EF%BC%8C%E4%BB%8E%E6%9F%90%E4%B8%AA%E7%BB%93%E7%82%B9%E6%8C%87%E5%90%91%E5%85%B6%E6%9F%90%E4%B8%AA%E7%A5%96%E5%85%88%E7%9A%84%E8%BE%B9%E3%80%82%EF%BC%88%E8%BF%94%E7%A5%96%E8%BE%B9%EF%BC%89"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%AA%E5%8F%89%E8%BE%B9-x-y-%EF%BC%9A%E4%BB%8E%E6%9F%90%E4%B8%AA%E7%BB%93%E7%82%B9%E6%8C%87%E5%90%91%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E5%8F%A6%E4%B8%80%E5%AD%90%E6%A0%91%E4%B8%AD%E7%9A%84%E6%9F%90%E7%BB%93%E7%82%B9%E7%9A%84%E8%BE%B9%E3%80%82"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">横叉边(x,y)：从某个结点指向搜索树中的另一子树中的某结点的边。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tarjan%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF"><span class="nav-number">1.2.1.</span> <span class="nav-text">tarjan算法模板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E5%90%91%E5%9B%BE%E2%80%94%E2%80%94%E5%8F%8C%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F"><span class="nav-number">1.3.</span> <span class="nav-text">无向图——双连通分量</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-XOR-Mixup"><span class="nav-number">1.</span> <span class="nav-text">A. XOR Mixup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#B-Rising-Sand"><span class="nav-number">2.</span> <span class="nav-text">B. Rising Sand</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-3SUM-Closure"><span class="nav-number">3.</span> <span class="nav-text">C. 3SUM Closure</span></a></li></ol>
     </div>
 </div>
         </aside>
