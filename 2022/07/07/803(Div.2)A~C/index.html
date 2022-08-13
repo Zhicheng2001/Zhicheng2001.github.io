@@ -16,15 +16,127 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/tx.png">
+    <link rel="shortcut icon" href="/images/l-solid.svg">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/tx.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"吾尝终日不食，终夜不寝，以思，无益，不如学也。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/l-solid.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"吾尝终日不食，终夜不寝，以思，无益，不如学也。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -161,8 +273,6 @@
                     <div class="author">
                         <span class="name">LZC</span>
                         
-                            <span class="author-label">Lv1</span>
-                        
                     </div>
                     <div class="meta-info">
                         <div class="article-meta-info">
@@ -188,7 +298,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>502 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>479 字</span>
         </span>
     
     
@@ -205,30 +315,15 @@
         
 
         <div class="article-content markdown-body">
-            <h2 id="A-XOR-Mixup"><a href="#A-XOR-Mixup" class="headerlink" title="A. XOR Mixup"></a><a class="link"   target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/A" >A. XOR Mixup<i class="fas fa-external-link-alt"></i></a></h2><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://img-blog.csdnimg.cn/e53eaf6eefc848d7b2a2f90a90db4e49.png"
-                      alt="在这里插入图片描述"
-                ></p>
+            <h2 id="A-XOR-Mixup"><a href="#A-XOR-Mixup" class="headerlink" title="A. XOR Mixup"></a><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/A">A. XOR Mixup<i class="fas fa-external-link-alt"></i></a></h2><p><img lazyload="" src="/images/loading.svg" data-src="https://img-blog.csdnimg.cn/e53eaf6eefc848d7b2a2f90a90db4e49.png" alt="在这里插入图片描述"></p>
 <p><strong>题目大意</strong>：有一个长度为n的数组包含x和n-1个元素，其中x是其他n-1个元素的按位异或，从这个数组中找出x.<br><strong>思路</strong>：因为n最大为100，所以这题直接暴力枚举就行了.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">&#123;</span><br><span class="line">	int n;</span><br><span class="line">	int res;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)	cin &gt;&gt; a[i];</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)</span><br><span class="line">	&#123;</span><br><span class="line">		res = a[1];</span><br><span class="line">		for (int j = 2;j &lt;= n;j ++)</span><br><span class="line">		&#123;</span><br><span class="line">			if (j == i)	continue;</span><br><span class="line">			else	res = res ^ a[j];</span><br><span class="line">		&#125;</span><br><span class="line">		if (res == a[i])</span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">{</span><br><span class="line">	int n;</span><br><span class="line">	int res;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)	cin &gt;&gt; a[i];</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)</span><br><span class="line">	{</span><br><span class="line">		res = a[1];</span><br><span class="line">		for (int j = 2;j &lt;= n;j ++)</span><br><span class="line">		{</span><br><span class="line">			if (j == i)	continue;</span><br><span class="line">			else	res = res ^ a[j];</span><br><span class="line">		}</span><br><span class="line">		if (res == a[i])</span><br><span class="line">		{</span><br><span class="line">			cout &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">			return;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
-<h2 id="B-Rising-Sand"><a href="#B-Rising-Sand" class="headerlink" title="B. Rising Sand"></a><a class="link"   target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/B" >B. Rising Sand<i class="fas fa-external-link-alt"></i></a></h2><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://img-blog.csdnimg.cn/8df1913ab82d42f38426be5ac17db68d.png"
-                      alt="在这里插入图片描述"
-                ></p>
-<p><strong>题目大意</strong>：给一组数，定义ans为<strong>a[2]~a[n-1]<strong>中值大于相邻两个数之和的元素个数。使用一种不限次数的操作选择连续长度为</strong>m</strong>的序列均加上1。求ans的最大可能值。<br><strong>思路</strong>：<br>分类讨论<br>当m &#x3D;&#x3D; 1时，数组中的每一个数都可以随便加，所以最大值为数组中不相邻的个数，即(n - 1) &#x2F; 2.<br>当m &gt;&#x3D; 2时，直接暴力模拟即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">&#123;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">	int ans = 0;</span><br><span class="line">	</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)	cin &gt;&gt; a[i];</span><br><span class="line">	</span><br><span class="line">	if (k == 1)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; (n - 1) / 2 &lt;&lt; endl;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		for (int i = 2;i &lt; n;i ++)</span><br><span class="line">			if (a[i] &gt; a[i - 1] + a[i + 1])</span><br><span class="line">				ans ++;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="B-Rising-Sand"><a href="#B-Rising-Sand" class="headerlink" title="B. Rising Sand"></a><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/B">B. Rising Sand<i class="fas fa-external-link-alt"></i></a></h2><p><img lazyload="" src="/images/loading.svg" data-src="https://img-blog.csdnimg.cn/8df1913ab82d42f38426be5ac17db68d.png" alt="在这里插入图片描述"></p>
+<p><strong>题目大意</strong>：给一组数，定义ans为<strong>a[2]~a[n-1]<strong>中值大于相邻两个数之和的元素个数。使用一种不限次数的操作选择连续长度为</strong>m</strong>的序列均加上1。求ans的最大可能值。<br><strong>思路</strong>：<br>分类讨论<br>当m == 1时，数组中的每一个数都可以随便加，所以最大值为数组中不相邻的个数，即(n - 1) / 2.<br>当m &gt;= 2时，直接暴力模拟即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">{</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">	int ans = 0;</span><br><span class="line">	</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)	cin &gt;&gt; a[i];</span><br><span class="line">	</span><br><span class="line">	if (k == 1)</span><br><span class="line">	{</span><br><span class="line">		cout &lt;&lt; (n - 1) / 2 &lt;&lt; endl;</span><br><span class="line">		return;</span><br><span class="line">	}</span><br><span class="line">	else</span><br><span class="line">	{</span><br><span class="line">		for (int i = 2;i &lt; n;i ++)</span><br><span class="line">			if (a[i] &gt; a[i - 1] + a[i + 1])</span><br><span class="line">				ans ++;</span><br><span class="line">	}</span><br><span class="line">	cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
-<h2 id="C-3SUM-Closure"><a href="#C-3SUM-Closure" class="headerlink" title="C. 3SUM Closure"></a><a class="link"   target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/c" >C. 3SUM Closure<i class="fas fa-external-link-alt"></i></a></h2><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://img-blog.csdnimg.cn/313fef6487fa4c83896d7844f0911ee3.png"
-                      alt="在这里插入图片描述"
-                ><br><strong>题目大意</strong>：一个长度为n的数组，如果对任意的 1 &lt;&#x3D; i &lt; j  &lt; k &lt;&#x3D; n,存在1 &lt;&#x3D; l &lt;&#x3D; n，使a[i] + a[j] + a[k] &#x3D; a[l] 满足，则这个数组是3SUM-closed的。<br>判断数组是不是3SUM-closed。<br><strong>思路</strong>：如果数组有三个正数，选择三个最大的，它们之和必然大于其中任何一个，所以必然不成立。因此，数组最多只能有2个正数。负数同理，最多只能有两个负数。<br>0对答案的贡献<br>没有0，两正一负<br>1个0，一正一负<br>2个0，一负或一正</p>
+<h2 id="C-3SUM-Closure"><a href="#C-3SUM-Closure" class="headerlink" title="C. 3SUM Closure"></a><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/c">C. 3SUM Closure<i class="fas fa-external-link-alt"></i></a></h2><p><img lazyload="" src="/images/loading.svg" data-src="https://img-blog.csdnimg.cn/313fef6487fa4c83896d7844f0911ee3.png" alt="在这里插入图片描述"><br><strong>题目大意</strong>：一个长度为n的数组，如果对任意的 1 &lt;= i &lt; j  &lt; k &lt;= n,存在1 &lt;= l &lt;= n，使a[i] + a[j] + a[k] = a[l] 满足，则这个数组是3SUM-closed的。<br>判断数组是不是3SUM-closed。<br><strong>思路</strong>：如果数组有三个正数，选择三个最大的，它们之和必然大于其中任何一个，所以必然不成立。因此，数组最多只能有2个正数。负数同理，最多只能有两个负数。<br>0对答案的贡献<br>没有0，两正一负<br>1个0，一正一负<br>2个0，一负或一正</p>
 
         </div>
 

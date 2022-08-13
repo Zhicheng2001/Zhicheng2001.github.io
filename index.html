@@ -14,15 +14,127 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/tx.png">
+    <link rel="shortcut icon" href="/images/l-solid.svg">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/tx.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"吾尝终日不食，终夜不寝，以思，无益，不如学也。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/l-solid.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"吾尝终日不食，终夜不寝，以思，无益，不如学也。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -294,13 +406,13 @@
                         倍增(ST)倍增是什么？
 倍增，每次将范围扩大或减少一倍以达到加速的效果
 
-思想引入：如果你想跳到n &#x3D; 15米远的地方，怎么做？
+思想引入：如果你想跳到n = 15米远的地方，怎么做？
 
 一步一步跳过去（暴力）：显然这是15次
 
-$2^k$次（倍增）：
+次（倍增）：
 
-设 k &#x3D; 5，$2^5$ ...
+设 k = 5， = 32 &gt; n, k – ,k ...
                     
                 </div>
 
@@ -345,7 +457,7 @@ $2^k$次（倍增）：
 二分图又称二部图，是图论的一种特殊模型。节点由两个集合组成，且两个集合内部没有边的图。
 
   
- 设$G &#x3D; (U,V)$是一个无向图，如果顶点$U$可以分割为两个互不相交的子集$(A,B)$，并且图中的每条边$(i...
+ 设是一个无向图，如果顶点可以分割为两个互不相交的子集，并且图中的每条边所关联的两个顶点和分别属于这两个不同的顶点集，则称图G为一...
                     
                 </div>
 
@@ -374,9 +486,10 @@ $2^k$次（倍增）：
                 <div class="home-article-content markdown-body">
                     
                         差分约束什么是差分约束？
-是一种特殊的$n$元一次不等式组，它包含$n$个变量$x_1,x_2,…,x_n$以及$m$个约束条件，每个约束条件是由两个其中的变量做差构成的。
+是一种特殊的元一次不等式组，它包含个变量以及个约束条件，每个约束条件是由两个其中的变量做差构成的。
 
-形如$x_i - x_j \le c_k$,其中 $1 \le i,j \...
+形如,其中 并且是常数（可正可负）。
+约束条件可以变形这就很像图论中的求最短路不等式因此，我们可以把每个变量看做图中的一个...
                     
                 </div>
 
@@ -417,8 +530,10 @@ $2^k$次（倍增）：
                 <div class="home-article-content markdown-body">
                     
                         01分数规划什么是01分数规划？分数规划用来求一个分式的极值。
-给出$a_i$和$b_i$，求一组$w_i$ ∈ {0，1}，最小化或最大化
-$$\frac{\sum_{i&#x3D;1}^n a_i \times w_i}{\sum_{i&#x3D...
+给出和，求一组 ∈ {0，1}，最小化或最大化
+ 
+另一种描述：每种物品有两个权值和,选出若干个物品使得 最大/最小。
+在图论问题（_求负环、最小生成树和最短路_）中类似于这样形式的题，...
                     
                 </div>
 

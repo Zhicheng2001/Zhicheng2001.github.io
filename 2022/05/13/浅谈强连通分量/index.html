@@ -16,15 +16,127 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/tx.png">
+    <link rel="shortcut icon" href="/images/l-solid.svg">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/tx.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"吾尝终日不食，终夜不寝，以思，无益，不如学也。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/l-solid.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"吾尝终日不食，终夜不寝，以思，无益，不如学也。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -161,8 +273,6 @@
                     <div class="author">
                         <span class="name">LZC</span>
                         
-                            <span class="author-label">Lv1</span>
-                        
                     </div>
                     <div class="meta-info">
                         <div class="article-meta-info">
@@ -188,7 +298,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>416 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>406 字</span>
         </span>
     
     
@@ -208,24 +318,14 @@
             <h1 id="连通分量"><a href="#连通分量" class="headerlink" title="连通分量"></a>连通分量</h1><p>连通分量编号递减的顺序一定是拓扑序</p>
 <h2 id="有向图——强连通分量"><a href="#有向图——强连通分量" class="headerlink" title="有向图——强连通分量"></a>有向图——强连通分量</h2><p>将有向图通过<code>缩点</code>的方法，转换成一个有向无环图(DAG)</p>
 <p>缩点：将所有连通分量缩成一个点。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="C:\Users\lizhicheng\AppData\Roaming\Typora\typora-user-images\image-20220512184750686.png"
-                      alt="image-20220512184750686"
-                ></p>
-<h2 id="四条边"><a href="#四条边" class="headerlink" title="四条边"></a>四条边</h2><h4 id="树枝边：DFS时经过的边，即DFS搜索树上的边"><a href="#树枝边：DFS时经过的边，即DFS搜索树上的边" class="headerlink" title="树枝边：DFS时经过的边，即DFS搜索树上的边"></a>树枝边：DFS时经过的边，即DFS搜索树上的边</h4><h4 id="前向边：与DFS方向一致，从某个结点指向其某个子孙的边。"><a href="#前向边：与DFS方向一致，从某个结点指向其某个子孙的边。" class="headerlink" title="前向边：与DFS方向一致，从某个结点指向其某个子孙的边。"></a>前向边：与DFS方向一致，从某个结点指向其某个子孙的边。</h4><h4 id="后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）"><a href="#后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）" class="headerlink" title="后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）"></a>后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）</h4><h4 id="横叉边-x-y-：从某个结点指向搜索树中的另一子树中的某结点的边。"><a href="#横叉边-x-y-：从某个结点指向搜索树中的另一子树中的某结点的边。" class="headerlink" title="横叉边(x,y)：从某个结点指向搜索树中的另一子树中的某结点的边。"></a>横叉边(x,y)：从某个结点指向搜索树中的另一子树中的某结点的边。</h4><h3 id="tarjan算法模板"><a href="#tarjan算法模板" class="headerlink" title="tarjan算法模板"></a>tarjan算法模板</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">void tarjan(int u)</span><br><span class="line">&#123;</span><br><span class="line">	dfn[u] = low[u] = ++ timestamp; //等于时间戳</span><br><span class="line">	stk[ ++ top] = u; //将当前节点加入栈中</span><br><span class="line">	in_stk[u] = true; //记录当前节点是否在栈中</span><br><span class="line">	</span><br><span class="line">	//遍历u所有能到的点</span><br><span class="line">	for (int i = h[u];~i;i = ne[i])</span><br><span class="line">	&#123;</span><br><span class="line">		int j = e[i];</span><br><span class="line">		</span><br><span class="line">		//如果当前这个点还没有被遍历过</span><br><span class="line">		if (!dfn[j])</span><br><span class="line">		&#123;</span><br><span class="line">			tarjan(j);</span><br><span class="line">			</span><br><span class="line">			//更新u能到的哪个点的最小值</span><br><span class="line">			low[u] = min(low[u],low[j]);</span><br><span class="line">		&#125;</span><br><span class="line">			//如果这个点还在栈中</span><br><span class="line">		else if (in_stk[j])</span><br><span class="line">			low[u] = min(low[u],dfn[j]);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//如果遍历完后，发现u能到的最前面一个点就是自己</span><br><span class="line">	//则它就是这个强连通分量的最高点</span><br><span class="line">	if (dfn[u] == low[u])</span><br><span class="line">	&#123;</span><br><span class="line">		int y;</span><br><span class="line">		//强连通分量个数加一</span><br><span class="line">		++ scc_cnt;</span><br><span class="line">		do</span><br><span class="line">		&#123;</span><br><span class="line">			//取出栈顶元素</span><br><span class="line">			y = stk[top --];</span><br><span class="line">			//标记这个元素已经不在栈中</span><br><span class="line">			in_stk[y] = false;</span><br><span class="line">			//标记这个节点属于哪个强连通分量</span><br><span class="line">			id[y] = scc_cnt;</span><br><span class="line">		&#125;while (y != u);//如果到了自己，则退出循环</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img lazyload="" src="/images/loading.svg" data-src="C:\Users\lizhicheng\AppData\Roaming\Typora\typora-user-images\image-20220512184750686.png" alt="image-20220512184750686"></p>
+<h2 id="四条边"><a href="#四条边" class="headerlink" title="四条边"></a>四条边</h2><h4 id="树枝边：DFS时经过的边，即DFS搜索树上的边"><a href="#树枝边：DFS时经过的边，即DFS搜索树上的边" class="headerlink" title="树枝边：DFS时经过的边，即DFS搜索树上的边"></a>树枝边：DFS时经过的边，即DFS搜索树上的边</h4><h4 id="前向边：与DFS方向一致，从某个结点指向其某个子孙的边。"><a href="#前向边：与DFS方向一致，从某个结点指向其某个子孙的边。" class="headerlink" title="前向边：与DFS方向一致，从某个结点指向其某个子孙的边。"></a>前向边：与DFS方向一致，从某个结点指向其某个子孙的边。</h4><h4 id="后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）"><a href="#后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）" class="headerlink" title="后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）"></a>后向边：与DFS方向相反，从某个结点指向其某个祖先的边。（返祖边）</h4><h4 id="横叉边-x-y-：从某个结点指向搜索树中的另一子树中的某结点的边。"><a href="#横叉边-x-y-：从某个结点指向搜索树中的另一子树中的某结点的边。" class="headerlink" title="横叉边(x,y)：从某个结点指向搜索树中的另一子树中的某结点的边。"></a>横叉边(x,y)：从某个结点指向搜索树中的另一子树中的某结点的边。</h4><h3 id="tarjan算法模板"><a href="#tarjan算法模板" class="headerlink" title="tarjan算法模板"></a>tarjan算法模板</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">void tarjan(int u)</span><br><span class="line">{</span><br><span class="line">	dfn[u] = low[u] = ++ timestamp; //等于时间戳</span><br><span class="line">	stk[ ++ top] = u; //将当前节点加入栈中</span><br><span class="line">	in_stk[u] = true; //记录当前节点是否在栈中</span><br><span class="line">	</span><br><span class="line">	//遍历u所有能到的点</span><br><span class="line">	for (int i = h[u];~i;i = ne[i])</span><br><span class="line">	{</span><br><span class="line">		int j = e[i];</span><br><span class="line">		</span><br><span class="line">		//如果当前这个点还没有被遍历过</span><br><span class="line">		if (!dfn[j])</span><br><span class="line">		{</span><br><span class="line">			tarjan(j);</span><br><span class="line">			</span><br><span class="line">			//更新u能到的哪个点的最小值</span><br><span class="line">			low[u] = min(low[u],low[j]);</span><br><span class="line">		}</span><br><span class="line">			//如果这个点还在栈中</span><br><span class="line">		else if (in_stk[j])</span><br><span class="line">			low[u] = min(low[u],dfn[j]);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	//如果遍历完后，发现u能到的最前面一个点就是自己</span><br><span class="line">	//则它就是这个强连通分量的最高点</span><br><span class="line">	if (dfn[u] == low[u])</span><br><span class="line">	{</span><br><span class="line">		int y;</span><br><span class="line">		//强连通分量个数加一</span><br><span class="line">		++ scc_cnt;</span><br><span class="line">		do</span><br><span class="line">		{</span><br><span class="line">			//取出栈顶元素</span><br><span class="line">			y = stk[top --];</span><br><span class="line">			//标记这个元素已经不在栈中</span><br><span class="line">			in_stk[y] = false;</span><br><span class="line">			//标记这个节点属于哪个强连通分量</span><br><span class="line">			id[y] = scc_cnt;</span><br><span class="line">		}while (y != u);//如果到了自己，则退出循环</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
 
 
 
 
-<h2 id="无向图——双连通分量"><a href="#无向图——双连通分量" class="headerlink" title="无向图——双连通分量"></a>无向图——双连通分量</h2><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="C:\Users\lizhicheng\AppData\Roaming\Typora\typora-user-images\image-20220512184732446.png"
-                      alt="image-20220512184732446" style="zoom:25%;" 
-                >
+<h2 id="无向图——双连通分量"><a href="#无向图——双连通分量" class="headerlink" title="无向图——双连通分量"></a>无向图——双连通分量</h2><img lazyload="" src="/images/loading.svg" data-src="C:\Users\lizhicheng\AppData\Roaming\Typora\typora-user-images\image-20220512184732446.png" alt="image-20220512184732446" style="zoom:25%;">
         </div>
 
         
