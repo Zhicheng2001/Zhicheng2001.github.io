@@ -22,7 +22,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/l-solid.svg","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":{"enable":true}},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.6"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/l-solid.svg","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":{"enable":true}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.6"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
 <meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
@@ -142,6 +142,8 @@ mjx-container[display="true"] + br {
 
 <body>
 <div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
     
 
     
@@ -312,6 +314,18 @@ mjx-container[display="true"] + br {
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 30 2022 20:11:21 GMT+0800">2022-04-30</span></span>
         
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
         
     </div>
 
@@ -344,6 +358,18 @@ mjx-container[display="true"] + br {
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 30 2022 20:04:31 GMT+0800">2022-04-30</span></span>
         
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
         
     </div>
 
@@ -371,6 +397,18 @@ mjx-container[display="true"] + br {
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Apr 07 2022 20:55:00 GMT+0800">2022-04-07</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/Hexo/">Hexo</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
         
         
     </div>
@@ -418,6 +456,21 @@ mjx-container[display="true"] + br {
             
         </div>
         
+            <script async 
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
         <div class="theme-info info-item">
             由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题
             &nbsp;
@@ -456,10 +509,6 @@ mjx-container[display="true"] + br {
         
 
         
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
 
         <li class="tools-item tool-scroll-to-bottom flex-center">
             <i class="fas fa-arrow-down"></i>
@@ -470,6 +519,11 @@ mjx-container[display="true"] + br {
         <li class="tools-item tool-toggle-show flex-center">
             <i class="fas fa-cog fa-spin"></i>
         </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
         
     </ul>
 </div>
@@ -494,6 +548,8 @@ mjx-container[display="true"] + br {
 
 
 
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/code-copy.js"></script>
 
 
 
