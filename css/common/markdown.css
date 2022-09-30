@@ -127,11 +127,7 @@ keep-tablet()
   border-collapse: collapse;
   width: 100%;
   overflow: auto;
-}
-@media screen and (max-width: 768px) {
-  .markdown-body > table {
-    table-layout: fixed;
-  }
+keep-mobile()
 }
 .markdown-body > table td,
 .markdown-body > table th {

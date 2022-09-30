@@ -15,11 +15,14 @@
 <link rel="stylesheet" href="/css/style.css">
 
     <link rel="shortcut icon" href="/images/l-solid.svg">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/brands.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/l-solid.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"吾尝终日不食，终夜不寝，以思，无益，不如学也。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","logo":"/images/l-solid.svg","favicon":"/images/l-solid.svg","avatar":"/images/tx.png","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":{"enable":true}},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.6"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
 <meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
@@ -140,14 +143,7 @@ mjx-container[display="true"] + br {
 <body>
 <div class="progress-bar-container">
     
-        <span class="scroll-progress-bar"></span>
-    
 
-    
-        <span class="pjax-progress-bar"></span>
-        <span class="pjax-progress-icon">
-            <i class="fas fa-circle-notch fa-spin"></i>
-        </span>
     
 </div>
 
@@ -155,24 +151,26 @@ mjx-container[display="true"] + br {
 <main class="page-container">
 
     
-        <div class="first-screen-container flex-center fade-in-down-animation">
+        
+<div class="first-screen-container flex-center fade-in-down-animation">
     <div class="content flex-center">
-        <div class="description hitokoto">
-            吾尝终日不食，终夜不寝，以思，无益，不如学也。
-        </div>
+        
+            <div class="description hitokoto">
+                
+                    <div>Keep writing and Keep loving.</div>
+                
+            </div>
+        
+        
+            <script async 
+                    src="https://v1.hitokoto.cn/?encode=js"
+            >
+            </script>
         
         
             <div class="s-icon-list">
                 
                     
-                        
-                            <span class="s-icon-item github">
-                                <a target="_blank" href="https://github.com/Zhicheng2001">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </span>
-                        
-                    
                 
                     
                 
@@ -186,14 +184,6 @@ mjx-container[display="true"] + br {
                 
                     
                 
-                    
-                        
-                            <span class="s-icon-item email">
-                                <a href="mailto:zhicheng_1003@163.com">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </span>
-                        
                     
                 
             </div>
@@ -203,16 +193,21 @@ mjx-container[display="true"] + br {
 
     
 
-    <div class="page-main-content">
+    <div class="page-main-content home">
 
         <div class="page-main-content-top">
-            <header class="header-wrapper">
+            
+<header class="header-wrapper">
 
     <div class="header-content has-first-screen">
         <div class="left">
             
+                <a class="logo-image" href="/">
+                    <img src="/images/l-solid.svg">
+                </a>
+            
             <a class="logo-title" href="/">
-                Lzc&#39;s blog
+               Lzc&#39;s blog
             </a>
         </div>
 
@@ -327,18 +322,6 @@ mjx-container[display="true"] + br {
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Sep 22 2022 19:34:45 GMT+0800">2022-09-22</span></span>
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C%E4%BD%9C%E4%B8%9A/">数据结构实验作业</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
         
     </div>
 
@@ -369,18 +352,6 @@ mjx-container[display="true"] + br {
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Sep 21 2022 22:04:31 GMT+0800">2022-09-21</span></span>
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C%E4%BD%9C%E4%B8%9A/">数据结构实验作业</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
         
     </div>
 
@@ -410,18 +381,6 @@ mjx-container[display="true"] + br {
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Sep 21 2022 20:04:31 GMT+0800">2022-09-21</span></span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C%E4%BD%9C%E4%B8%9A/">数据结构实验作业</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
         
         
     </div>
@@ -454,18 +413,6 @@ mjx-container[display="true"] + br {
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Sep 21 2022 12:04:31 GMT+0800">2022-09-21</span></span>
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C%E4%BD%9C%E4%B8%9A/">数据结构实验作业</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
         
     </div>
 
@@ -495,18 +442,6 @@ mjx-container[display="true"] + br {
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Sep 02 2022 21:50:25 GMT+0800">2022-09-02</span></span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/Atcoder%E9%A2%98%E8%A7%A3/">Atcoder题解</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
         
         
     </div>
@@ -538,18 +473,6 @@ mjx-container[display="true"] + br {
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Aug 17 2022 14:12:44 GMT+0800">2022-08-17</span></span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/Codeforces%E9%A2%98%E8%A7%A3/">Codeforces题解</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
         
         
     </div>
@@ -584,18 +507,6 @@ mjx-container[display="true"] + br {
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Aug 14 2022 14:12:44 GMT+0800">2022-08-14</span></span>
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/Codeforces%E9%A2%98%E8%A7%A3/">Codeforces题解</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
         
     </div>
 
@@ -624,18 +535,6 @@ mjx-container[display="true"] + br {
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Jul 07 2022 00:02:25 GMT+0800">2022-07-07</span></span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/Codeforces%E9%A2%98%E8%A7%A3/">Codeforces题解</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
         
         
     </div>
@@ -668,18 +567,6 @@ mjx-container[display="true"] + br {
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri May 13 2022 19:19:23 GMT+0800">2022-05-13</span></span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
         
         
     </div>
@@ -718,18 +605,6 @@ mjx-container[display="true"] + br {
     <div class="home-article-meta-info">
         <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu May 05 2022 18:17:30 GMT+0800">2022-05-05</span></span>
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
         
     </div>
 
@@ -761,19 +636,25 @@ mjx-container[display="true"] + br {
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
+            
+<footer class="footer">
     <div class="info-container">
         <div class="copyright-info info-item">
             &copy;
             
-              <span>2022</span>
-              -
+                <span>2020</span> -
             
-            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">LZC</a>
+            2022
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">LZC</a>
+            
         </div>
         
         <div class="theme-info info-item">
-            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题
+            &nbsp;
+            <a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.6</a>
         </div>
         
         
@@ -797,7 +678,7 @@ mjx-container[display="true"] + br {
         </li>
 
         <li class="tools-item tool-expand-width flex-center">
-            <i class="fas fa-arrows-alt-h"></i>
+            <i class="fas fa-up-right-and-down-left-from-center"></i>
         </li>
 
         <li class="tools-item tool-dark-light-toggle flex-center">
@@ -842,53 +723,17 @@ mjx-container[display="true"] + br {
 
 
 
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/dark-light-toggle.js"></script>
 
 
 
 
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
 
 
 
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/lazyload.js"></script>
-
-
-<div class="post-scripts pjax">
+<div class="post-scripts">
     
 </div>
-
-
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        window.pjax = new Pjax({
-            selectors: [
-                'head title',
-                '.page-container',
-                '.pjax'
-            ],
-            history: true,
-            debug: false,
-            cacheBust: false,
-            timeout: 0,
-            analytics: false,
-            currentUrlFullReload: false,
-            scrollRestoration: false,
-            // scrollTo: true,
-        });
-
-        document.addEventListener('pjax:send', () => {
-            KEEP.utils.pjaxProgressBarStart();
-        });
-
-        document.addEventListener('pjax:complete', () => {
-            KEEP.utils.pjaxProgressBarEnd();
-            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-            KEEP.refresh();
-        });
-    });
-</script>
 
 
 

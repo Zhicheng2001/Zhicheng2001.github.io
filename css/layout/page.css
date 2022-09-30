@@ -12,6 +12,12 @@ keep-tablet()
 keep-tablet()
 keep-mobile()
 }
+.page-container .page-main-content.home .transparent-1 {
+  background: var(--header-transparent-background-1);
+}
+.page-container .page-main-content.home .transparent-2 {
+  background: var(--header-transparent-background-2);
+}
 .header-shrink .page-container .page-main-content {
   padding-top: $header-shrink-height;
 keep-tablet()
