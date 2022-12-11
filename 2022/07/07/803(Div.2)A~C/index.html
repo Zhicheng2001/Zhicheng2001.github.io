@@ -16,16 +16,17 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/l-solid.svg">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/regular.min.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/solid.min.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/brands.min.css">
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/brands.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/l-solid.svg","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":{"enable":true}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.6"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/logo.svg","avatar":"/images/touxiang.jpg","font_size":null,"font_family":"STKaiti","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":null,"font_color":null,"hitokoto":true},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":true,"use":"valine","valine":{"appid":null,"appkey":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.5.2"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"};
   </script>
 <meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
@@ -150,9 +151,7 @@ mjx-container[display="true"] + br {
 
     
         <span class="pjax-progress-bar"></span>
-        <span class="pjax-progress-icon">
-            <i class="fas fa-circle-notch fa-spin"></i>
-        </span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
     
 </div>
 
@@ -197,17 +196,17 @@ mjx-container[display="true"] + br {
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/categories"
+                               href="/tags"
                             >
-                                分类
+                                标签
                             </a>
                         </li>
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/tags"
+                               href="/categories"
                             >
-                                标签
+                                分类
                             </a>
                         </li>
                     
@@ -246,12 +245,12 @@ mjx-container[display="true"] + br {
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/categories">分类</a>
+                       href="/tags">标签</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/tags">标签</a>
+                       href="/categories">分类</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
@@ -275,31 +274,41 @@ mjx-container[display="true"] + br {
 
                 
                     <div class="fade-in-down-animation">
-    <div class="article-content-container">
+    <div class="post-page-container">
+        <div class="article-content-container">
 
-        <div class="article-title">
-            <span class="title-hover-animation">803(Div.2)A~C</span>
-        </div>
+            <div class="article-title">
+                <span class="title-hover-animation">803(Div.2)A~C</span>
+            </div>
 
-        
-            <div class="article-header">
-                <div class="avatar">
-                    <img src="/images/tx.png">
-                </div>
-                <div class="info">
-                    <div class="author">
-                        <span class="name">LZC</span>
-                        
-                            <span class="author-label">Lv3</span>
-                        
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/touxiang.jpg">
                     </div>
-                    <div class="meta-info">
-                        <div class="article-meta-info">
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">LZC</span>
+                            
+                                <span class="author-label">Lv3</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
         <span class="pc">2022-07-07 00:02:25</span>
         <span class="mobile">2022-07-07 00:02</span>
     </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2022-08-18 01:48:59</span>
+    </span>
+    
     
         <span class="article-categories article-meta-item">
             <i class="fas fa-folder"></i>&nbsp;
@@ -326,19 +335,15 @@ mjx-container[display="true"] + br {
         </span>
     
     
-        <span class="article-pv article-meta-item">
-            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-        </span>
-    
 </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-        
+            
 
-        <div class="article-content markdown-body">
-            <h1 id="Codeforces-Round-803-Div-2"><a href="#Codeforces-Round-803-Div-2" class="headerlink" title="Codeforces Round #803 (Div. 2)"></a><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698">Codeforces Round #803 (Div. 2)<i class="fas fa-external-link-alt"></i></a></h1><h2 id="A-XOR-Mixup"><a href="#A-XOR-Mixup" class="headerlink" title="A. XOR Mixup"></a><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/A">A. XOR Mixup<i class="fas fa-external-link-alt"></i></a></h2><p><strong>题目大意</strong>：有一个长度为n的数组包含x和n-1个元素，其中x是其他n-1个元素的按位异或，从这个数组中找出x.<br><strong>思路</strong>：因为n最大为100，所以这题直接暴力枚举就行了.</p>
+            <div class="article-content keep-markdown-body">
+                <h1 id="Codeforces-Round-803-Div-2"><a href="#Codeforces-Round-803-Div-2" class="headerlink" title="Codeforces Round #803 (Div. 2)"></a><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698">Codeforces Round #803 (Div. 2)<i class="fas fa-external-link-alt"></i></a></h1><h2 id="A-XOR-Mixup"><a href="#A-XOR-Mixup" class="headerlink" title="A. XOR Mixup"></a><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/A">A. XOR Mixup<i class="fas fa-external-link-alt"></i></a></h2><p><strong>题目大意</strong>：有一个长度为n的数组包含x和n-1个元素，其中x是其他n-1个元素的按位异或，从这个数组中找出x.<br><strong>思路</strong>：因为n最大为100，所以这题直接暴力枚举就行了.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">{</span><br><span class="line">	int n;</span><br><span class="line">	int res;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)	cin &gt;&gt; a[i];</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)</span><br><span class="line">	{</span><br><span class="line">		res = a[1];</span><br><span class="line">		for (int j = 2;j &lt;= n;j ++)</span><br><span class="line">		{</span><br><span class="line">			if (j == i)	continue;</span><br><span class="line">			else	res = res ^ a[j];</span><br><span class="line">		}</span><br><span class="line">		if (res == a[i])</span><br><span class="line">		{</span><br><span class="line">			cout &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">			return;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
 <h2 id="B-Rising-Sand"><a href="#B-Rising-Sand" class="headerlink" title="B. Rising Sand"></a><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/B">B. Rising Sand<i class="fas fa-external-link-alt"></i></a></h2><p><strong>题目大意</strong>：给一组数，定义ans为<strong>a[2]~a[n-1]<strong>中值大于相邻两个数之和的元素个数。使用一种不限次数的操作选择连续长度为</strong>m</strong>的序列均加上1。求ans的最大可能值。<br><strong>思路</strong>：<br>分类讨论<br>当m == 1时，数组中的每一个数都可以随便加，所以最大值为数组中不相邻的个数，即(n - 1) / 2.<br>当m &gt;= 2时，直接暴力模拟即可。</p>
@@ -346,49 +351,103 @@ mjx-container[display="true"] + br {
 
 <h2 id="C-3SUM-Closure"><a href="#C-3SUM-Closure" class="headerlink" title="C. 3SUM Closure"></a><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/c">C. 3SUM Closure<i class="fas fa-external-link-alt"></i></a></h2><p><strong>题目大意</strong>：一个长度为n的数组，如果对任意的 1 &lt;= i &lt; j  &lt; k &lt;= n,存在1 &lt;= l &lt;= n，使a[i] + a[j] + a[k] = a[l] 满足，则这个数组是3SUM-closed的。<br>判断数组是不是3SUM-closed。<br><strong>思路</strong>：如果数组有三个正数，选择三个最大的，它们之和必然大于其中任何一个，所以必然不成立。因此，数组最多只能有2个正数。负数同理，最多只能有两个负数。<br>0对答案的贡献<br>没有0，两正一负<br>1个0，一正一负<br>2个0，一负或一正</p>
 
-        </div>
+            </div>
 
-        
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li>
+            <span class="type">本文标题</span>：<span class="content">803(Div.2)A~C</span>
+        </li>
+        <li>
+            <span class="type">本文作者</span>：<span class="content">LZC</span>
+        </li>
+        <li>
+            <span class="type">创建时间</span>：<span class="content">2022-07-07 00:02:25</span>
+        </li>
+        <li class="post-link">
+            <span class="type">本文链接</span>：<span class="content">2022/07/07/803(Div.2)A~C/</span>
+        </li>
+        <li>
+            <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
+        </li>
+    </ul>
+</div>
 
-        
+                </div>
+            
 
-        
-            <div class="article-nav">
-                
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/08/14/813(Div.2)A~C/"
-                        >
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2022/08/14/813(Div.2)A~C/"
+                            >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
-                            <span class="title flex-center">
+                                <span class="title flex-center">
                                 <span class="post-nav-title-item">813(Div.2)A~C</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
-                        </a>
-                    </div>
-                
-                
-                    <div class="article-next">
-                        <a class="next"
-                           rel="next"
-                           href="/2022/05/13/%E6%B5%85%E8%B0%88%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/"
-                        >
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2022/05/13/%E6%B5%85%E8%B0%88%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/"
+                            >
                             <span class="title flex-center">
                                 <span class="post-nav-title-item">浅谈连通分量</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
-                            <span class="right arrow-icon flex-center">
+                                <span class="right arrow-icon flex-center">
                               <i class="fas fa-chevron-right"></i>
                             </span>
-                        </a>
-                    </div>
-                
-            </div>
-        
+                            </a>
+                        </div>
+                    
+                </div>
+            
 
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;评论
+    </div>
+    
+        
+            
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Codeforces-Round-803-Div-2"><span class="nav-text">Codeforces Round #803 (Div. 2)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-XOR-Mixup"><span class="nav-text">A. XOR Mixup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#B-Rising-Sand"><span class="nav-text">B. Rising Sand</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-3SUM-Closure"><span class="nav-text">C. 3SUM Closure</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
         
     </div>
 </div>
@@ -406,7 +465,7 @@ mjx-container[display="true"] + br {
         <div class="copyright-info info-item">
             &copy;
             
-                <span>2020</span> -
+                <span>2022</span> -
             
             2022
             
@@ -415,25 +474,8 @@ mjx-container[display="true"] + br {
             
         </div>
         
-            <script async data-pjax
-                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <div class="website-count info-item">
-                
-                    <span id="busuanzi_container_site_uv">
-                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
-                    </span>
-                
-                
-                    <span id="busuanzi_container_site_pv">
-                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
-                    </span>
-                
-            </div>
-        
         <div class="theme-info info-item">
-            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题
-            &nbsp;
-            <a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.6</a>
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.5.2</a>
         </div>
         
         
@@ -449,8 +491,17 @@ mjx-container[display="true"] + br {
     <ul class="tools-list">
         <!-- TOC aside toggle -->
         
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
 
         <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
         
     </ul>
 </div>
@@ -467,10 +518,6 @@ mjx-container[display="true"] + br {
 
         <li class="tools-item tool-font-adjust-minus flex-center">
             <i class="fas fa-search-minus"></i>
-        </li>
-
-        <li class="tools-item tool-expand-width flex-center">
-            <i class="fas fa-up-right-and-down-left-from-center"></i>
         </li>
 
         <li class="tools-item tool-dark-light-toggle flex-center">
@@ -502,10 +549,8 @@ mjx-container[display="true"] + br {
 
     </div>
 
-    
-
-    <div class="image-viewer-container">
-    <img src="">
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
 </div>
 
 
@@ -515,22 +560,32 @@ mjx-container[display="true"] + br {
 
 
 
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/dark-light-toggle.js"></script>
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/dark-light-toggle.js"></script>
 
 
 
 
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/code-copy.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/code-block.js"></script>
 
 
 
 
 <div class="post-scripts pjax">
     
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/toc.js"></script>
+        
+    
 </div>
 
 
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/libs/pjax.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/libs/pjax.min.js"></script>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
         window.pjax = new Pjax({

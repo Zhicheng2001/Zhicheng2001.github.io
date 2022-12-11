@@ -16,16 +16,17 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/l-solid.svg">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/regular.min.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/solid.min.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/brands.min.css">
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/brands.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/l-solid.svg","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":{"enable":true}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.6"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/logo.svg","avatar":"/images/touxiang.jpg","font_size":null,"font_family":"STKaiti","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":null,"font_color":null,"hitokoto":true},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":true,"use":"valine","valine":{"appid":null,"appkey":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.5.2"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"};
   </script>
 <meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
@@ -150,9 +151,7 @@ mjx-container[display="true"] + br {
 
     
         <span class="pjax-progress-bar"></span>
-        <span class="pjax-progress-icon">
-            <i class="fas fa-circle-notch fa-spin"></i>
-        </span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
     
 </div>
 
@@ -197,17 +196,17 @@ mjx-container[display="true"] + br {
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/categories"
+                               href="/tags"
                             >
-                                分类
+                                标签
                             </a>
                         </li>
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/tags"
+                               href="/categories"
                             >
-                                标签
+                                分类
                             </a>
                         </li>
                     
@@ -246,12 +245,12 @@ mjx-container[display="true"] + br {
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/categories">分类</a>
+                       href="/tags">标签</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/tags">标签</a>
+                       href="/categories">分类</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
@@ -275,31 +274,41 @@ mjx-container[display="true"] + br {
 
                 
                     <div class="fade-in-down-animation">
-    <div class="article-content-container">
+    <div class="post-page-container">
+        <div class="article-content-container">
 
-        <div class="article-title">
-            <span class="title-hover-animation">AcWing 243. 一个简单的整数问题2</span>
-        </div>
+            <div class="article-title">
+                <span class="title-hover-animation">AcWing 243. 一个简单的整数问题2</span>
+            </div>
 
-        
-            <div class="article-header">
-                <div class="avatar">
-                    <img src="/images/tx.png">
-                </div>
-                <div class="info">
-                    <div class="author">
-                        <span class="name">LZC</span>
-                        
-                            <span class="author-label">Lv3</span>
-                        
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/touxiang.jpg">
                     </div>
-                    <div class="meta-info">
-                        <div class="article-meta-info">
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">LZC</span>
+                            
+                                <span class="author-label">Lv3</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
         <span class="pc">2022-10-28 21:33:30</span>
         <span class="mobile">2022-10-28 21:33</span>
     </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2022-10-30 18:57:08</span>
+    </span>
+    
     
         <span class="article-categories article-meta-item">
             <i class="fas fa-folder"></i>&nbsp;
@@ -337,19 +346,15 @@ mjx-container[display="true"] + br {
         </span>
     
     
-        <span class="article-pv article-meta-item">
-            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-        </span>
-    
 </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-        
+            
 
-        <div class="article-content markdown-body">
-            <blockquote>
+            <div class="article-content keep-markdown-body">
+                <blockquote>
 <p>线段树不是一个算法，而是一个对区间进行修改、维护的工具。</p>
 </blockquote>
 <h2 id="AcWing-243-一个简单的整数问题2"><a href="#AcWing-243-一个简单的整数问题2" class="headerlink" title="AcWing 243. 一个简单的整数问题2"></a><a class="link" target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/244/">AcWing 243. 一个简单的整数问题2<i class="fas fa-external-link-alt"></i></a></h2><p><strong>题目大意:</strong></p>
@@ -365,57 +370,111 @@ mjx-container[display="true"] + br {
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">int n,m;</span><br><span class="line">int w[N];</span><br><span class="line">struct node{</span><br><span class="line">	int l,r;</span><br><span class="line">	int sum,add;</span><br><span class="line">}tr[N * 4];</span><br><span class="line"></span><br><span class="line">void pushup(int u){</span><br><span class="line">	tr[u].sum = tr[u &lt;&lt; 1].sum + tr[u &lt;&lt; 1|1].sum;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">void pushdown(int u){</span><br><span class="line">	//&amp;引用</span><br><span class="line">	auto &amp;root = tr[u],&amp;left = tr[u &lt;&lt; 1],&amp;right = tr[u &lt;&lt; 1|1];</span><br><span class="line">	if (root.add){</span><br><span class="line">		left.add += root.add,left.sum += (left.r - left.l + 1) * root.add;</span><br><span class="line">		right.add += root.add,right.sum += (right.r - right.l + 1) * root.add;</span><br><span class="line">		root.add = 0;</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">void build(int u,int l,int r){</span><br><span class="line">	if (l == r)	tr[u] = {l,r,w[r],0};</span><br><span class="line">	else{</span><br><span class="line">		tr[u] = {l,r};</span><br><span class="line">		int mid = l + r &gt;&gt; 1;</span><br><span class="line">		build(u &lt;&lt; 1,l,mid),build(u &lt;&lt; 1|1,mid + 1,r);</span><br><span class="line">		pushup(u);</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">void modify(int u,int l,int r,int d) {</span><br><span class="line">	if (tr[u].l &gt;= l &amp;&amp; tr[u].r &lt;= r) {</span><br><span class="line">		tr[u].sum += (tr[u].r - tr[u].l + 1) * d;</span><br><span class="line">		tr[u].add += d;</span><br><span class="line">	}else {  //分裂</span><br><span class="line">		pushdown(u);</span><br><span class="line">		int mid = tr[u].l + tr[u].r &gt;&gt; 1;</span><br><span class="line">		if (l &lt;= mid)	modify(u &lt;&lt; 1,l,r,d);</span><br><span class="line">		if (r &gt; mid)	modify(u &lt;&lt; 1|1,l,r,d);</span><br><span class="line">		pushup(u);</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">int query(int u,int l,int r) {</span><br><span class="line">	if (tr[u].l &gt;= l &amp;&amp; tr[u].r &lt;= r)	return tr[u].sum;</span><br><span class="line">	</span><br><span class="line">	pushdown(u);</span><br><span class="line">	int mid = tr[u].l + tr[u].r &gt;&gt; 1;</span><br><span class="line">	int sum = 0;</span><br><span class="line">	if (l &lt;= mid)	sum = query(u &lt;&lt; 1,l,r);</span><br><span class="line">	if (r &gt; mid)	sum += query(u &lt;&lt; 1|1,l,r);</span><br><span class="line">	return sum;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">void solve()</span><br><span class="line">{</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)	cin &gt;&gt; w[i];</span><br><span class="line">	build(1,1,n);</span><br><span class="line">	char ch;</span><br><span class="line">	int l,r,d;</span><br><span class="line">	while(m --) {</span><br><span class="line">		cin &gt;&gt; ch &gt;&gt; l &gt;&gt; r;</span><br><span class="line">		if (ch == 'C') {</span><br><span class="line">			cin &gt;&gt; d;</span><br><span class="line">			modify(1,l,r,d);</span><br><span class="line">		} else {</span><br><span class="line">			cout &lt;&lt; query(1,l,r) &lt;&lt; '\n';</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
 
-        </div>
+            </div>
 
-        
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li>
+            <span class="type">本文标题</span>：<span class="content">AcWing 243. 一个简单的整数问题2</span>
+        </li>
+        <li>
+            <span class="type">本文作者</span>：<span class="content">LZC</span>
+        </li>
+        <li>
+            <span class="type">创建时间</span>：<span class="content">2022-10-28 21:33:30</span>
+        </li>
+        <li class="post-link">
+            <span class="type">本文链接</span>：<span class="content">2022/10/28/AcWing 243. 一个简单的整数问题2/</span>
+        </li>
+        <li>
+            <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
+        </li>
+    </ul>
+</div>
 
-        
-            <ul class="post-tags-box">
-                
-                    <li class="tag-item">
-                        <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">#线段树</a>&nbsp;
-                    </li>
-                
-            </ul>
-        
+                </div>
+            
 
-        
-            <div class="article-nav">
-                
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/11/19/%E6%96%B0%E5%86%A0%E6%82%A3%E7%97%85%E8%AE%B0%E5%BD%95/"
-                        >
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">#线段树</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2022/11/19/%E6%96%B0%E5%86%A0%E6%82%A3%E7%97%85%E8%AE%B0%E5%BD%95/"
+                            >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
-                            <span class="title flex-center">
+                                <span class="title flex-center">
                                 <span class="post-nav-title-item">新冠患病记录</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
-                        </a>
-                    </div>
-                
-                
-                    <div class="article-next">
-                        <a class="next"
-                           rel="next"
-                           href="/2022/10/28/AcWing%20245.%20%E4%BD%A0%E8%83%BD%E5%9B%9E%E7%AD%94%E8%BF%99%E4%BA%9B%E9%97%AE%E9%A2%98%E5%90%97/"
-                        >
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2022/10/28/AcWing%20245.%20%E4%BD%A0%E8%83%BD%E5%9B%9E%E7%AD%94%E8%BF%99%E4%BA%9B%E9%97%AE%E9%A2%98%E5%90%97/"
+                            >
                             <span class="title flex-center">
                                 <span class="post-nav-title-item">AcWing 245. 你能回答这些问题吗</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
-                            <span class="right arrow-icon flex-center">
+                                <span class="right arrow-icon flex-center">
                               <i class="fas fa-chevron-right"></i>
                             </span>
-                        </a>
-                    </div>
-                
-            </div>
-        
+                            </a>
+                        </div>
+                    
+                </div>
+            
 
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;评论
+    </div>
+    
+        
+            
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AcWing-243-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%982"><span class="nav-text">AcWing 243. 一个简单的整数问题2</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
         
     </div>
 </div>
@@ -433,7 +492,7 @@ mjx-container[display="true"] + br {
         <div class="copyright-info info-item">
             &copy;
             
-                <span>2020</span> -
+                <span>2022</span> -
             
             2022
             
@@ -442,25 +501,8 @@ mjx-container[display="true"] + br {
             
         </div>
         
-            <script async data-pjax
-                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <div class="website-count info-item">
-                
-                    <span id="busuanzi_container_site_uv">
-                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
-                    </span>
-                
-                
-                    <span id="busuanzi_container_site_pv">
-                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
-                    </span>
-                
-            </div>
-        
         <div class="theme-info info-item">
-            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题
-            &nbsp;
-            <a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.6</a>
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.5.2</a>
         </div>
         
         
@@ -476,8 +518,17 @@ mjx-container[display="true"] + br {
     <ul class="tools-list">
         <!-- TOC aside toggle -->
         
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
 
         <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
         
     </ul>
 </div>
@@ -494,10 +545,6 @@ mjx-container[display="true"] + br {
 
         <li class="tools-item tool-font-adjust-minus flex-center">
             <i class="fas fa-search-minus"></i>
-        </li>
-
-        <li class="tools-item tool-expand-width flex-center">
-            <i class="fas fa-up-right-and-down-left-from-center"></i>
         </li>
 
         <li class="tools-item tool-dark-light-toggle flex-center">
@@ -529,10 +576,8 @@ mjx-container[display="true"] + br {
 
     </div>
 
-    
-
-    <div class="image-viewer-container">
-    <img src="">
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
 </div>
 
 
@@ -542,22 +587,32 @@ mjx-container[display="true"] + br {
 
 
 
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/dark-light-toggle.js"></script>
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/dark-light-toggle.js"></script>
 
 
 
 
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/code-copy.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/code-block.js"></script>
 
 
 
 
 <div class="post-scripts pjax">
     
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/toc.js"></script>
+        
+    
 </div>
 
 
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/libs/pjax.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/libs/pjax.min.js"></script>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
         window.pjax = new Pjax({

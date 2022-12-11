@@ -14,16 +14,17 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/l-solid.svg">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/regular.min.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/solid.min.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/fontawesome/css/brands.min.css">
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/brands.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/tx.png","favicon":"/images/l-solid.svg","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":{"enable":true}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.6"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/logo.svg","avatar":"/images/touxiang.jpg","font_size":null,"font_family":"STKaiti","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":null,"font_color":null,"hitokoto":true},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":true,"use":"valine","valine":{"appid":null,"appkey":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.5.2"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"};
   </script>
 <meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
@@ -148,9 +149,7 @@ mjx-container[display="true"] + br {
 
     
         <span class="pjax-progress-bar"></span>
-        <span class="pjax-progress-icon">
-            <i class="fas fa-circle-notch fa-spin"></i>
-        </span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
     
 </div>
 
@@ -164,7 +163,7 @@ mjx-container[display="true"] + br {
         
             <div class="description hitokoto">
                 
-                    <div>Keep writing and Keep loving.</div>
+                    <div class="desc-item"></div>
                 
             </div>
         
@@ -179,42 +178,46 @@ mjx-container[display="true"] + br {
                 
                     
                         
-                            <span class="s-icon-item github">
-                                <a target="_blank" href="https://github.com/Zhicheng2001">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </span>
+                        <div class="tooltip s-icon-item "
+                             data-content="GitHub"
+                             data-name="github"
+                             
+                        >
+                            
+                                
+                                    <a target="_blank" href="https://github.com/Zhicheng2001">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                
+                            
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
                         
-                    
-                
-                    
-                
-                    
-                        
-                            <span class="s-icon-item qq">
-                                <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=4bSi8tWnxUISGwq2CcYay59seKeYVQKq&noverify=0&personal_qrcode_source=3">
-                                    <i class="fab fa-qq"></i>
-                                </a>
-                            </span>
-                        
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                            <span class="s-icon-item email">
+                        <div class="tooltip s-icon-item "
+                             data-content="Email"
+                             data-name="email"
+                             
+                        >
+                            
                                 <a href="mailto:zhicheng_1003@163.com">
                                     <i class="fas fa-envelope"></i>
                                 </a>
-                            </span>
-                        
+                            
+                        </div>
                     
                 
             </div>
@@ -224,7 +227,7 @@ mjx-container[display="true"] + br {
 
     
 
-    <div class="page-main-content home">
+    <div class="page-main-content is-home">
 
         <div class="page-main-content-top">
             
@@ -260,17 +263,17 @@ mjx-container[display="true"] + br {
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/categories"
+                               href="/tags"
                             >
-                                分类
+                                标签
                             </a>
                         </li>
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/tags"
+                               href="/categories"
                             >
-                                标签
+                                分类
                             </a>
                         </li>
                     
@@ -309,12 +312,12 @@ mjx-container[display="true"] + br {
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/categories">分类</a>
+                       href="/tags">标签</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/tags">标签</a>
+                       href="/categories">分类</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
@@ -350,7 +353,7 @@ mjx-container[display="true"] + br {
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         先看README！！！
 源码下载
@@ -358,9 +361,15 @@ mjx-container[display="true"] + br {
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Dec 09 2022 11:15:41 GMT+0800">2022-12-09</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Dec 09 2022 11:20:42 GMT+0800">
+                2022-12-09
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -377,7 +386,7 @@ mjx-container[display="true"] + br {
         
     </div>
 
-    <a href="/2022/12/09/%E5%AE%9E%E9%AA%8C8/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/12/09/%E5%AE%9E%E9%AA%8C8/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -392,16 +401,22 @@ mjx-container[display="true"] + br {
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         方舱隔离记录11.1811.18中午被通知要转运，下午到了石家庄国际会展中心3号舱。我们到的时候这个方舱已经有了一半人，之后陆续来了好几波人，到晚上时这个能容纳800多人的方舱也装满了。展厅的灯光很刺眼，声音很嘈杂，幸好带了耳塞。
 11.19这里好像...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Nov 21 2022 09:31:45 GMT+0800">2022-11-21</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Dec 09 2022 11:30:17 GMT+0800">
+                2022-12-09
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -430,7 +445,7 @@ mjx-container[display="true"] + br {
         
     </div>
 
-    <a href="/2022/11/21/%E6%96%B9%E8%88%B1%E9%9A%94%E7%A6%BB%E8%AE%B0%E5%BD%95/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/11/21/%E6%96%B9%E8%88%B1%E9%9A%94%E7%A6%BB%E8%AE%B0%E5%BD%95/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -445,7 +460,7 @@ mjx-container[display="true"] + br {
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         新冠患病记录D1无症状
 D2无症状
@@ -462,9 +477,15 @@ D4起床体温38℃
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Nov 19 2022 08:22:30 GMT+0800">2022-11-19</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Nov 27 2022 21:45:22 GMT+0800">
+                2022-11-27
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -493,7 +514,7 @@ D4起床体温38℃
         
     </div>
 
-    <a href="/2022/11/19/%E6%96%B0%E5%86%A0%E6%82%A3%E7%97%85%E8%AE%B0%E5%BD%95/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/11/19/%E6%96%B0%E5%86%A0%E6%82%A3%E7%97%85%E8%AE%B0%E5%BD%95/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -508,7 +529,7 @@ D4起床体温38℃
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         
 线段树不是一个算法，而是一个对区间进行修改、维护的工具。
@@ -521,9 +542,15 @@ Q l r，表示询问数列中第个数的...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Oct 28 2022 21:33:30 GMT+0800">2022-10-28</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Oct 30 2022 18:57:08 GMT+0800">
+                2022-10-30
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -552,7 +579,7 @@ Q l r，表示询问数列中第个数的...
         
     </div>
 
-    <a href="/2022/10/28/AcWing%20243.%20%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%982/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/28/AcWing%20243.%20%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B4%E6%95%B0%E9%97%AE%E9%A2%982/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -567,7 +594,7 @@ Q l r，表示询问数列中第个数的...
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         
 线段树不是一个算法，而是一个对区间进行修改、维护的工具。
@@ -581,9 +608,15 @@ AcWing 245. 你能回答这些问题吗题目大意：
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Oct 28 2022 20:33:30 GMT+0800">2022-10-28</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Oct 30 2022 18:57:21 GMT+0800">
+                2022-10-30
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -612,7 +645,7 @@ AcWing 245. 你能回答这些问题吗题目大意：
         
     </div>
 
-    <a href="/2022/10/28/AcWing%20245.%20%E4%BD%A0%E8%83%BD%E5%9B%9E%E7%AD%94%E8%BF%99%E4%BA%9B%E9%97%AE%E9%A2%98%E5%90%97/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/28/AcWing%20245.%20%E4%BD%A0%E8%83%BD%E5%9B%9E%E7%AD%94%E8%BF%99%E4%BA%9B%E9%97%AE%E9%A2%98%E5%90%97/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -627,7 +660,7 @@ AcWing 245. 你能回答这些问题吗题目大意：
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         
 线段树不是一个算法，而是一个对区间进行修改、维护的工具。
@@ -643,9 +676,15 @@ AcWing 1275. 最大数题目大意：
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Oct 28 2022 19:42:33 GMT+0800">2022-10-28</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Oct 30 2022 18:57:32 GMT+0800">
+                2022-10-30
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -674,7 +713,7 @@ AcWing 1275. 最大数题目大意：
         
     </div>
 
-    <a href="/2022/10/28/AcWing%201275.%20%E6%9C%80%E5%A4%A7%E6%95%B0/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/28/AcWing%201275.%20%E6%9C%80%E5%A4%A7%E6%95%B0/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -689,7 +728,7 @@ AcWing 1275. 最大数题目大意：
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         先看README！！！
 源码下载
@@ -697,9 +736,15 @@ AcWing 1275. 最大数题目大意：
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Oct 28 2022 16:40:30 GMT+0800">2022-10-28</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Oct 28 2022 20:47:07 GMT+0800">
+                2022-10-28
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -716,7 +761,7 @@ AcWing 1275. 最大数题目大意：
         
     </div>
 
-    <a href="/2022/10/28/%E5%AE%9E%E9%AA%8C6/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/28/%E5%AE%9E%E9%AA%8C6/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -731,7 +776,7 @@ AcWing 1275. 最大数题目大意：
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         先看README！！！
 源码下载
@@ -739,9 +784,15 @@ AcWing 1275. 最大数题目大意：
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Oct 17 2022 20:34:45 GMT+0800">2022-10-17</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Oct 17 2022 20:56:07 GMT+0800">
+                2022-10-17
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -758,7 +809,7 @@ AcWing 1275. 最大数题目大意：
         
     </div>
 
-    <a href="/2022/10/17/%E5%AE%9E%E9%AA%8C5/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/17/%E5%AE%9E%E9%AA%8C5/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -773,7 +824,7 @@ AcWing 1275. 最大数题目大意：
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         先看README！！！
 源码下载
@@ -781,9 +832,15 @@ AcWing 1275. 最大数题目大意：
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Oct 07 2022 21:34:45 GMT+0800">2022-10-07</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Oct 07 2022 21:43:38 GMT+0800">
+                2022-10-07
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -800,7 +857,7 @@ AcWing 1275. 最大数题目大意：
         
     </div>
 
-    <a href="/2022/10/07/%E5%AE%9E%E9%AA%8C4/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/07/%E5%AE%9E%E9%AA%8C4/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -815,15 +872,21 @@ AcWing 1275. 最大数题目大意：
                     </a>
                 </h3>
 
-                <div class="home-article-content markdown-body">
+                <div class="home-article-content keep-markdown-body">
                     
                         浅谈KMP算法KMP是什么？Knuth-Morris-Pratt（简称KMP）是一种高效的字符串匹配算法，用来在主字符串中查找模式字符串（子字符串）的位置，例如在**主串”Hebei Normal University”中查找模式串”Universi...
                     
                 </div>
 
-                <div class="home-article-meta-info-container">
+                
+<div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Oct 03 2022 20:45:02 GMT+0800">2022-10-03</span></span>
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Oct 30 2022 18:57:50 GMT+0800">
+                2022-10-30
+            </span>
+        </span>
         
             <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
                 <ul>
@@ -857,7 +920,7 @@ AcWing 1275. 最大数题目大意：
         
     </div>
 
-    <a href="/2022/10/03/%E6%B5%85%E8%B0%88KMP%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2022/10/03/%E6%B5%85%E8%B0%88KMP%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -891,7 +954,7 @@ AcWing 1275. 最大数题目大意：
         <div class="copyright-info info-item">
             &copy;
             
-                <span>2020</span> -
+                <span>2022</span> -
             
             2022
             
@@ -900,25 +963,8 @@ AcWing 1275. 最大数题目大意：
             
         </div>
         
-            <script async data-pjax
-                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <div class="website-count info-item">
-                
-                    <span id="busuanzi_container_site_uv">
-                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
-                    </span>
-                
-                
-                    <span id="busuanzi_container_site_pv">
-                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
-                    </span>
-                
-            </div>
-        
         <div class="theme-info info-item">
-            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题
-            &nbsp;
-            <a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.6</a>
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.5.2</a>
         </div>
         
         
@@ -939,10 +985,6 @@ AcWing 1275. 最大数题目大意：
 
         <li class="tools-item tool-font-adjust-minus flex-center">
             <i class="fas fa-search-minus"></i>
-        </li>
-
-        <li class="tools-item tool-expand-width flex-center">
-            <i class="fas fa-up-right-and-down-left-from-center"></i>
         </li>
 
         <li class="tools-item tool-dark-light-toggle flex-center">
@@ -974,10 +1016,8 @@ AcWing 1275. 最大数题目大意：
 
     </div>
 
-    
-
-    <div class="image-viewer-container">
-    <img src="">
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
 </div>
 
 
@@ -988,12 +1028,14 @@ AcWing 1275. 最大数题目大意：
 
 
 
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/dark-light-toggle.js"></script>
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/dark-light-toggle.js"></script>
 
 
 
 
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/code-copy.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/code-block.js"></script>
 
 
 
@@ -1003,7 +1045,7 @@ AcWing 1275. 最大数题目大意：
 </div>
 
 
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.6/source/js/libs/pjax.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/libs/pjax.min.js"></script>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
         window.pjax = new Pjax({
