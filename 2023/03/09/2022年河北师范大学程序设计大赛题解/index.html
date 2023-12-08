@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="LZC">
+    
+    <title>
+        
+            2022年河北师范大学程序设计大赛题解 |
+        
+        Lzc&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/font/css/brands.min.css">
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"lizc.cn","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/logo.svg","avatar":"/images/touxiang.jpg","first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"悟已往之不谏，知来者之可追。","hitokoto":false},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":true,"share":true,"reward":{"enable":true,"img_link":"/images/reward.jpg","text":"1分，不能再多了！"}},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"version":"3.8.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+            <a class="site-name border-box" href="/">
+               Lzc&#39;s blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        2022年河北师范大学程序设计大赛题解
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/touxiang.jpg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">LZC</span>
+                                
+                                    <span class="author-label">Lv3</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2023-03-09 20:47:44</span>
+                <span class="mobile">2023-03-09 20:47</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Mon Mar 20 2023 19:31:01 GMT+0800">2023-03-20 19:31:01</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="article-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E6%A0%A1%E8%B5%9B%E9%A2%98%E8%A7%A3/">校赛题解</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+            <span class="meta-info-item article-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>5.2k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item article-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>20 分钟</span>
+            </span>
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <h1 id="2022年河北师范大学程序设计大赛题解"><a class="markdownIt-Anchor" href="#2022年河北师范大学程序设计大赛题解"></a> 2022年河北师范大学程序设计大赛题解</h1>
+<h2 id="a-百廿师大"><a class="markdownIt-Anchor" href="#a-百廿师大"></a> A-百廿师大</h2>
+<h3 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述"></a> 问题描述：</h3>
+<p>2022年10月15日，欣逢河北师范大学120周年华诞，学校将隆重举办系列庆典活动。</p>
+<p>春秋代序，岁月沧桑。1902年顺天府学堂创建于北京，1906年北洋女师范学堂发轫于天津。两支主脉，筚路蓝缕，自强不息，崇尚真理，爱国担当，开时代教育新风。1996年，原河北师范大学、河北师范学院、河北教育学院、河北职业技术师范学院合并，组建新河北师范大学。</p>
+<p>四源汇流，弦歌赓续。学校秉持“怀天下、求真知”校训，坚持“学博为师、德高为范”办学底色，传承红色基因，不忘初心使命。乘高教改革发展长风，抓省部共建和“双一流”建设机遇，围绕建设高水平综合性师范大学目标，致力内涵式高质量发展，肩负人才培养、科学研究、社会服务、文化传承创新、国际交流合作重要使命，努力向党和人民交出满意答卷。</p>
+<p>立德树人，思源怀远。学校120周年庆典，旨在宣示庄严使命，展示办学成就，总结办学经验，共谋未来发展。</p>
+<p>百廿师大，120周年华诞之日距今天数几何？</p>
+<p><strong>输入：</strong></p>
+<p>无输入</p>
+<p><strong>输出:</strong></p>
+<p>输出共一行，包括一个正整数n。n表示今天离河北师范大学120周年校庆的日子还有多少天（不包括今天）。<br>
+例：距离2022年4月1日则为 1 天。</p>
+<p><strong>样例输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//无</span><br></pre></td></tr></table></figure>
+<p><strong>样例输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//无</span><br></pre></td></tr></table></figure>
+<h3 id="拙见"><a class="markdownIt-Anchor" href="#拙见"></a> 拙见：</h3>
+<p><s>打开屏幕右下角日历去数</s></p>
+<p>此比赛是2022年3月31日进行的，所以距离2022年10月15日有31 * 3 + 30 * 3 + 15 = 198天</p>
+<h3 id="code"><a class="markdownIt-Anchor" href="#code"></a> CODE：</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	cout &lt;&lt; <span class="number">31</span> * <span class="number">3</span> + <span class="number">30</span> * <span class="number">3</span> + <span class="number">15</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="b-汉堡店的校庆套餐"><a class="markdownIt-Anchor" href="#b-汉堡店的校庆套餐"></a> B-汉堡店的校庆套餐</h2>
+<h3 id="问题描述-2"><a class="markdownIt-Anchor" href="#问题描述-2"></a> 问题描述：</h3>
+<p>喜迎校庆，食堂的汉堡店为此推出了许多的组合套餐。一份汉堡一份饮料，配出生活新气象！</p>
+<p>汉堡店一共有n种汉堡，同时也有n种汽水，当你购买购买某种汉堡的时候，只要同时购买对应的饮料（即汉堡和饮料的下标相同），就可以享受到校庆专属优惠！</p>
+<p>喜欢吃汉堡的河小师当然不会错过这个活动，河小师对不同的饮料和汉堡会有不同的满足度，现在河小师该买哪个套餐，才能获得最大的满足度呢？</p>
+<p>给定两个数组，长度均为n。第一个数组给定所有的汉堡满足度，第二个数组给定所有饮料的满足度，河小师可以购买下标相同的饮料和汉堡，问购买第几组套餐，河小师能获得最大满足度。（若存在多组最大满足度套餐，输出<strong>下标最小</strong>的一组，下标从<strong>1</strong>开始。）</p>
+<p><strong>输入：</strong></p>
+<p>输入共三行。</p>
+<p>第一行，包括一个正整数n（1 &lt;= n &lt;= 2e5），代表汉堡和饮料的种类数。</p>
+<p>第二行，包括n个数 a[1],a[2],…,a[n] （1 &lt;= a[i] &lt;= 2e5）分别表示每种汉堡的满足度。</p>
+<p>第三行，包括n个数b[1],b[2],…,b[n] (1 &lt;= b[i] &lt;= 2e5)，分别表示每种饮料的满足度。</p>
+<p><strong>输出:</strong></p>
+<p>输出共一行，包括一个正整数。表示选择的套餐的下标。</p>
+<p><strong>样例输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 2 3</span><br><span class="line">1 2 1</span><br></pre></td></tr></table></figure>
+<p><strong>样例输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<h3 id="拙见-2"><a class="markdownIt-Anchor" href="#拙见-2"></a> 拙见：</h3>
+<p>输出a[i] + b[i]最大的组合套餐的下标。</p>
+<h3 id="code-2"><a class="markdownIt-Anchor" href="#code-2"></a> CODE：</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> n,ans,maxV = <span class="number">-1</span>;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(n + <span class="number">1</span>)</span>,<span class="title">b</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i ++) cin &gt;&gt; a[i];</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i ++) {</span><br><span class="line">        cin &gt;&gt; b[i];</span><br><span class="line">        b[i] += a[i];</span><br><span class="line">        <span class="keyword">if</span> (b[i] &gt; maxV) ans = i,maxV = b[i];</span><br><span class="line">    }</span><br><span class="line">	cout &lt;&lt; ans;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="c-多少台阶"><a class="markdownIt-Anchor" href="#c-多少台阶"></a> C-多少台阶</h2>
+<h3 id="问题描述-3"><a class="markdownIt-Anchor" href="#问题描述-3"></a> 问题描述：</h3>
+<p>享受完美食后，河小师发现食堂门口的台阶贴了喜迎校庆的贴纸，河小师发现，所有阶数为a的倍数或b的倍数的台阶都被贴上了贴纸，好奇的河小师想知道总共有多少台阶上被贴了贴纸。</p>
+<p>一共有n个台阶，所有阶数为a的倍数的台阶或者是b的倍数都被贴上了贴纸，求出一共有多少台阶被贴上了贴纸。</p>
+<p><strong>输入：</strong></p>
+<p>第一行输入一个数t，表示样例数量。(1 &lt;= t &lt;= 1e4)</p>
+<p>输入共t行，每行包括三个正整数n,a,b。（1 &lt;= n &lt;= 2e9，1 &lt;= a &lt;=2e9，1 &lt;= b &lt;= 2e9）</p>
+<p><strong>输出:</strong></p>
+<p>输出共一行，包括一个正整数。被贴上贴纸的台阶总数。</p>
+<p><strong>样例输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">10 2 3</span><br><span class="line">10 3 4</span><br><span class="line">10 4 5</span><br></pre></td></tr></table></figure>
+<p><strong>样例输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">7</span><br><span class="line">5</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
+<h3 id="拙见-3"><a class="markdownIt-Anchor" href="#拙见-3"></a> 拙见：</h3>
+<p>容斥原理</p>
+<p>能被a染色的台阶数量加上能被b染色的台阶数量，再减去能被a和b的最小公倍数染色的台阶数目</p>
+<p>最小公倍数 = a * b / 最大公约数</p>
+<h3 id="code-3"><a class="markdownIt-Anchor" href="#code-3"></a> CODE：</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> </span>{</span><br><span class="line">	ll n,a,b;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; a &gt;&gt; b;</span><br><span class="line">	cout &lt;&lt; n / a + n / b - n / (a * b / __gcd(a,b)) &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> t;</span><br><span class="line">	cin &gt;&gt; t;</span><br><span class="line">	<span class="keyword">while</span>(t --) <span class="built_in">solve</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="d-广场的字符游戏"><a class="markdownIt-Anchor" href="#d-广场的字符游戏"></a> D-广场的字符游戏</h2>
+<h3 id="问题描述-4"><a class="markdownIt-Anchor" href="#问题描述-4"></a> 问题描述：</h3>
+<p>穿过公教楼，河小师来到了四方广场，这里正在进行校庆游戏，每个人会得到一个由字符’0’和字符’1’组成的字符串，每一次操作可以将其中的任意一个0改成1，也可以将任意一个1改成0，改动之后只要保证不存在任何以101或是010构成的子序列即可完成游戏，获得奖励。河小师怎么样才能以最少的操作次数来解决这个问题呢？</p>
+<p>注：某个序列的子序列是从最初序列选出一部分元素但不破坏他们在原序列中的相对顺序而形成的新序列。例如：110001，可以选出第一个，第三个，第六个字符组成101这个子序列。</p>
+<p><strong>输入：</strong></p>
+<p>输入第一行为数据组数t，表示一共有t组数据。（1 &lt;= t&lt;= 1e3）</p>
+<p>每组数据共一行，包括一个字符串s。（1 &lt;= s.size() &lt;= 1e3）</p>
+<p><strong>输出:</strong></p>
+<p>输出共一行，包括一个正整数。表示解决问题的最少的操作次数。</p>
+<p><strong>样例输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">7</span><br><span class="line">001</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">010</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">001100</span><br></pre></td></tr></table></figure>
+<p><strong>样例输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">0</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<h3 id="拙见-4"><a class="markdownIt-Anchor" href="#拙见-4"></a> 拙见：</h3>
+<p>题中所述<code>101</code>和<code>010</code>其实是<code>1……10……01……0</code>和<code>0……01……10……0</code>这种若干个连续数字的序列。</p>
+<p>因此要使得这个序列满足条件，只有四种形式</p>
+<p><code>000……000</code> <code>111……111</code> <code>1……10……0</code> <code>0……01……1</code></p>
+<p>统计<code>0</code>和<code>1</code>的数量，取最小值，这一步是当令序列变成<code>0……0</code>和<code>1……1</code>时，所需要的操作次数。</p>
+<p>此外需要枚举一个<code>0</code>和<code>1</code>的分界点，取最小值，这一步是当令序列变成<code>1……10……0</code> 和<code>0……01……1</code>时，所需要的操作次数。</p>
+<h3 id="code-4"><a class="markdownIt-Anchor" href="#code-4"></a> CODE：</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> </span>{</span><br><span class="line">	string s;</span><br><span class="line">	cin &gt;&gt; s;</span><br><span class="line">	<span class="type">int</span> one = <span class="number">0</span>,zero = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; s.<span class="built_in">size</span>();i ++)</span><br><span class="line">		<span class="keyword">if</span> (s[i] == <span class="string">'1'</span>)	one ++;</span><br><span class="line">		<span class="keyword">else</span> zero ++;</span><br><span class="line">	<span class="type">int</span> ans = <span class="built_in">min</span>(one,zero);</span><br><span class="line">	<span class="type">int</span> a = <span class="number">0</span>,b = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; s.<span class="built_in">size</span>();i ++) {	<span class="comment">//枚举分界点</span></span><br><span class="line">		<span class="keyword">if</span> (s[i] == <span class="string">'1'</span>) a ++;</span><br><span class="line">		<span class="keyword">else</span> b ++;</span><br><span class="line">		ans = <span class="built_in">min</span>(ans,b + one - a); <span class="comment">//1……10……0形式</span></span><br><span class="line">		ans = <span class="built_in">min</span>(ans,a + zero - b); <span class="comment">//0……01……1形式</span></span><br><span class="line">	}</span><br><span class="line">	cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> t;cin &gt;&gt; t;</span><br><span class="line">	<span class="keyword">while</span>(t --) <span class="built_in">solve</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="e-图书馆借书"><a class="markdownIt-Anchor" href="#e-图书馆借书"></a> E-图书馆借书</h2>
+<h3 id="问题描述-5"><a class="markdownIt-Anchor" href="#问题描述-5"></a> 问题描述：</h3>
+<p>获得了奖励，河小师开开心心的去图书馆学习，河小师了解到，图书馆最多能放n本书。一开始图书馆里有满满当当的n本书，河小师在第一天的时候会在早上归还m本书，并在晚上的时候借走一本书，第二天的时候在早上归还m本书，并在晚上的借走两本书… 第i天的时候会在早上归还m本书，并在晚上的时候借走i本书，到第几天的时候，图书馆的书第一次被借完呢？</p>
+<p>图书馆可以存放的书籍数量最多为n本，多余的书河小师会带回宿舍之后再进行归还。</p>
+<p><strong>输入：</strong></p>
+<p>输入共一行，包括两个正整数n,m。（1 ≤ n, m ≤ 1e18）</p>
+<p>n表示图书馆的书籍最大容量，m表示每次的还书数。</p>
+<p><strong>输出:</strong></p>
+<p>输出共一行，包括一个正整数。表示在第几天图书馆的书第一次被借完。</p>
+<p><strong>样例输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5 3</span><br></pre></td></tr></table></figure>
+<p><strong>样例输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
+<p>样例解释：<br>
+第1天应该归还3本但是图书馆满了没有还书，只借了1本书，图书馆还有4本书<br>
+第2天应该归还3本但是图书馆只能容纳1本书，故还1本书，借了2本书，图书馆还有3本书<br>
+第3天应该归还3本但是图书馆只能容纳2本书，故还2本书，借了3本书，图书馆还有2本书<br>
+第4天还3本书，借了4本书，图书馆还有1本书<br>
+第5天还3本书，应该借5本书，但是图书馆只有4本书了，所以借了4本，第一次没有剩余书本。</p>
+<h3 id="拙见-5"><a class="markdownIt-Anchor" href="#拙见-5"></a> 拙见：</h3>
+<p>两种情况，<code>n &lt;= m</code>和<code>n &gt; m</code>.</p>
+<p>当<code>n &lt;= m</code>时，每一天早上要还的书都能填满图书馆的容量，所以当第n天时，第一次将所有n本书借走。</p>
+<p>当<code>n &gt; m</code>时，由于每天都要还m本书，所以在前m天中图书馆每天的书只会减少1，在第m天时，图书馆此时剩余n - m本书；在第m天以后，图书馆的书每天会减少1,2,3,……本书，可以得知这是一个公差为1的等差数列。我们的问题是求哪天能第一次将图书馆中的书全部借出，所以从第m + 1天开始，求这个等差数列的前<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>项和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">S_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>为多少时，刚好能<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>≥</mo><mi>n</mi><mo>−</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">S_n \ge n - m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span>。由于公差<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，所以前n项和公式为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><mi>n</mi><mo>∗</mo><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">S_n = \frac {n * (n + 1)}   2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">∗</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>。由于这个符合单调性，所以可以用二分来查找。最后答案为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">S_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>中的n + m。</p>
+<p>关于二分的范围，当n为最大的数据1e18时，大约是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>x</mi><mo>∗</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac><mo>=</mo><mn>1</mn><mi>e</mi><mn>18</mn></mrow><annotation encoding="application/x-tex">\frac {x * (x + 1)} 2 = 1e18</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mbin mtight">∗</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">x</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord mathnormal">e</span><span class="mord">1</span><span class="mord">8</span></span></span></span>，即<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>=</mo><mn>2</mn><mi>e</mi><mn>18</mn></mrow><annotation encoding="application/x-tex">x^2 + x = 2e18</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord mathnormal">e</span><span class="mord">1</span><span class="mord">8</span></span></span></span>，所以可以近似为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mn>2</mn><mi>e</mi><mn>18</mn><mo separator="true">,</mo><mi>x</mi><mo>=</mo><mn>2</mn><mi>e</mi><mn>9</mn></mrow><annotation encoding="application/x-tex">x^2 = 2e18, x = 2e9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">2</span><span class="mord mathnormal">e</span><span class="mord">1</span><span class="mord">8</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord mathnormal">e</span><span class="mord">9</span></span></span></span>，因此二分的右边最小为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>e</mi><mn>9</mn></mrow><annotation encoding="application/x-tex">2e9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord mathnormal">e</span><span class="mord">9</span></span></span></span>。</p>
+<h3 id="code-5"><a class="markdownIt-Anchor" href="#code-5"></a> CODE：</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	ll n,m;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	<span class="keyword">if</span> (n &lt;= m) cout &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	{</span><br><span class="line">		ll l = <span class="number">-1</span>,r = <span class="number">2e9</span> + <span class="number">10</span>;</span><br><span class="line">		<span class="keyword">while</span>(l + <span class="number">1</span> != r) {</span><br><span class="line">			ll mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span> (mid * (mid + <span class="number">1</span>) / <span class="number">2</span> &gt;= n - m)	r = mid;</span><br><span class="line">			<span class="keyword">else</span> l = mid;</span><br><span class="line">		}</span><br><span class="line">		cout &lt;&lt; r + m &lt;&lt; endl;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="f-爱学习的河小师"><a class="markdownIt-Anchor" href="#f-爱学习的河小师"></a> F-爱学习的河小师</h2>
+<h3 id="问题描述-6"><a class="markdownIt-Anchor" href="#问题描述-6"></a> 问题描述：</h3>
+<p>河小师开始学习啦，他打开一本有趣的算法书，从前往后有n道有趣的题目，每个题目都有一个难度值。因为河小师拥有着勇于挑战的精神，所以做的下一题的难度值和题号都必须高于当前做的题并且河小师只能按题号递增顺序做题（第一题做哪个可以任意选择，若河小师选择做第i题，那么下一个做的题目只能从第i+1个题到第n个题里选择），如何挑选决定去做的题，河小师能做到最多的题目数量呢？</p>
+<p>给定n个题目的难度值，从小到大依次输出河小师选择的题目难度</p>
+<p>如果有多个答案，请输出其中按数值（注：区别于按单个字符的ASCII码值）进行比较的字典序最小的那个答案。</p>
+<p><strong>输入：</strong></p>
+<p>输入共两行。</p>
+<p>第一行包括一个正整数n，表示数组的长度。（0 &lt;= n &lt;= 2e5）</p>
+<p>第二行给定n个正整数a1,a2,a3,…,a[i],…,a[n]，第i题表示题号为i的题目的难度值。（0 &lt;= a[i] &lt;= 1e9）</p>
+<p><strong>输出:</strong></p>
+<p>输出共一行，从小到大依次输出河小师选择的题目难度。</p>
+<p><strong>样例输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">样例输入一：</span><br><span class="line">9</span><br><span class="line">2 1 5 3 6 4 8 9 7</span><br><span class="line"></span><br><span class="line">样例输入二：</span><br><span class="line">5</span><br><span class="line">1 2 8 6 4</span><br></pre></td></tr></table></figure>
+<p><strong>样例输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">样例输出一：</span><br><span class="line">1 3 4 8 9</span><br><span class="line"></span><br><span class="line">样例输出二：</span><br><span class="line">1 2 4</span><br></pre></td></tr></table></figure>
+<p><strong>提示:</strong></p>
+<p>样例一解释：河小师选择第2题，第4题，第6题，第7题和第8题，故难度依次为1，3，4，8，9.</p>
+<h3 id="拙见-6"><a class="markdownIt-Anchor" href="#拙见-6"></a> 拙见：</h3>
+<p>这个题本质上是求<a class="link" target="_blank" rel="noopener" href="https://lzc.wiki/2023/03/10/%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97/">最长上升子序列<i class="fas fa-external-link-alt"></i></a>。</p>
+<p>由于数组的长度最大为2e5，所以不能用<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>的DP来做，应该用贪心+二分来优化，并且在每次记录下dp[i]的长度。二分的部分可以用C++的lower_bound()函数代替。</p>
+<p>至于最小字典序输出，只需要从后往前找，具有相同长度的，就是最小字典序。</p>
+<p>证明，样例二的dp数组为<code>1 2 3 3 3</code>，这个数组是有性质的，比如dp[3],dp[4],dp[5]都为3，那么则说明a[3] <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo></mrow><annotation encoding="application/x-tex">\le</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span></span></span></span> a[4] <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo></mrow><annotation encoding="application/x-tex">\le</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span></span></span></span> a[5]，可以证明如果a[5] <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo></mrow><annotation encoding="application/x-tex">\ge</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≥</span></span></span></span> a[4]的话，那么dp[5]一定比dp[4]要大。</p>
+<h3 id="code-6"><a class="markdownIt-Anchor" href="#code-6"></a> CODE：</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> dp[N],f[N],a[N],ans[N],len,n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i ++)	cin &gt;&gt; a[i];</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i ++) {</span><br><span class="line">		<span class="type">int</span> idx;</span><br><span class="line">		<span class="keyword">if</span> (a[i] &gt; f[len]) {</span><br><span class="line">			f[++ len] = a[i];</span><br><span class="line">			idx = len;</span><br><span class="line">		} <span class="keyword">else</span> idx = <span class="built_in">lower_bound</span>(&amp;f[<span class="number">1</span>],&amp;f[len],a[i]) - &amp;f[<span class="number">0</span>];</span><br><span class="line">		dp[i] = idx;</span><br><span class="line">		len = <span class="built_in">max</span>(len,idx);</span><br><span class="line">		f[idx] = a[i];</span><br><span class="line">	}</span><br><span class="line">	<span class="type">int</span> cnt = len;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = n;i &gt;= <span class="number">1</span>;i --)</span><br><span class="line">		<span class="keyword">if</span> (dp[i] == len) </span><br><span class="line">			ans[len --] = a[i];</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= cnt;i ++)</span><br><span class="line">		cout &lt;&lt; ans[i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="g-真知树上真知果"><a class="markdownIt-Anchor" href="#g-真知树上真知果"></a> G-真知树上真知果</h2>
+<h3 id="问题描述-7"><a class="markdownIt-Anchor" href="#问题描述-7"></a> 问题描述：</h3>
+<p>河小师学的有些渴了，想寻些水果充饥解渴。相传（传说往往虚无缥缈），河北师范大学里有一颗神奇的树，叫真知树。这颗树上有n个节点，在这n个节点里，隐藏着许许多多美味多汁的真知果，当你发现有三个节点两两之间的最短路的长度可以构成一个三角形的时候，你就可以发现一个真知果。（节点可以重复使用，但是三个相同节点只能发现一个真知果）</p>
+<p>聪明的你可以计算一下真知树上有多少真知果吗？</p>
+<p><strong>输入：</strong></p>
+<p>第一行包括一个正整数n, 表示树的节点个数。(1≤n≤1e5)</p>
+<p>接下来n−1行, 每一行三个整数u, v, w 表示节点u 和 v之间有一条边权为w的边。(1≤w≤1e5,1≤u,v≤n)</p>
+<p><strong>输出:</strong></p>
+<p>一行共一个整数, 表示真知果的数量。</p>
+<p><strong>样例输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">7 </span><br><span class="line">1 2 1 </span><br><span class="line">1 3 1 </span><br><span class="line">2 4 1 </span><br><span class="line">2 5 1 </span><br><span class="line">3 6 1 </span><br><span class="line">3 7 1</span><br></pre></td></tr></table></figure>
+<p><strong>样例输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8</span><br></pre></td></tr></table></figure>
+<h3 id="拙见-7"><a class="markdownIt-Anchor" href="#拙见-7"></a> 拙见：</h3>
+<p><a class="link" target="_blank" rel="noopener" href="http://oj.daimayuan.top/problem/505">#505. 三角果计数<i class="fas fa-external-link-alt"></i></a></p>
+<p>将样例画出以后发现，构成三角形的条件在本题中与权值并无关系，只要不是在一条路径上的三个点就可以构成一个三角形。三点之间应直接或间接连接同一节点，我们把这个同一节点称为中心节点。</p>
+<p>可以发现当且仅当这个中心节点的度大于等于3时，这个中心节点可以产生贡献。把这个中心节点的度分成三部分，这三部分的节点数分别为多少，三部分相乘的结果就是这个中心节点的贡献值。</p>
+<p>因此答案就是所有中心节点的贡献值的累加.</p>
+<p><img lazyload="" alt="三部分" data-src="https://s1.ax1x.com/2023/03/14/pplfuDS.png"></p>
+<p>如当节点2的贡献值为1 * 1 * 4 = 4.</p>
+<p>dfs时维护一个数组，统计每个节点的度。</p>
+<h3 id="code-7"><a class="markdownIt-Anchor" href="#code-7"></a> CODE：</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; g[N];</span><br><span class="line"><span class="type">int</span> siz[N];</span><br><span class="line"><span class="type">int</span> n,ans;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> u,<span class="type">int</span> v)</span> </span>{</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; g[u].<span class="built_in">size</span>();i ++) {</span><br><span class="line">        <span class="type">int</span> t = g[u][i];</span><br><span class="line">        <span class="keyword">if</span> (t != v) {</span><br><span class="line">            <span class="built_in">dfs</span>(t,u);</span><br><span class="line">            ans += siz[u] * siz[t] * (n - siz[u] - siz[t] - <span class="number">1</span>); <span class="comment">//三部分相乘</span></span><br><span class="line">            siz[u] += siz[t];</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    siz[u] ++; <span class="comment">//自身</span></span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt; n;i ++) {</span><br><span class="line">        <span class="type">int</span> u,v,w;</span><br><span class="line">        cin &gt;&gt; u &gt;&gt; v &gt;&gt; w;</span><br><span class="line">        g[u].<span class="built_in">push_back</span>(v);</span><br><span class="line">        g[v].<span class="built_in">push_back</span>(u);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">dfs</span>(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="h-真知树旁"><a class="markdownIt-Anchor" href="#h-真知树旁"></a> H-真知树旁</h2>
+<h3 id="问题描述-8"><a class="markdownIt-Anchor" href="#问题描述-8"></a> 问题描述：</h3>
+<p>真知树旁，还有一颗有根树，它也拥有个节点，每个节点有一个权值a[i]。同时我们知道，树上逆序对就是一个由当前节点和它的父节点组成的二元对，同时这两个节点满足子节点的权值小于父节点的权值。</p>
+<p>对于一颗完全m叉树，节点i的子节点很明显就是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>m</mi><mo>∗</mo><mo stretchy="false">(</mo><mi>i</mi><mtext>−</mtext><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><mn>2</mn><mo separator="true">,</mo><mi>m</mi><mo>∗</mo><mo stretchy="false">(</mo><mi>i</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[m*(i−1)+2,m*(i+1)]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">i</span><span class="mord">−</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mclose">]</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[1,n]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">]</span></span></span></span>交集中的所有正整数。</p>
+<p>现在我们想要知道，在这颗包含n个节点，同时每个节点的权值分别为 的有根树上。河小师抱着怀天下求真知的精神，她想知道若这课树是完全m叉树，其树上逆序对的数量有多少。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><mi>n</mi><mtext>−</mtext><mn>1.</mn></mrow><annotation encoding="application/x-tex">m=1,2,…,n−1.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mord">−</span><span class="mord">1</span><span class="mord">.</span></span></span></span></p>
+<p><strong>输入：</strong></p>
+<p>第一行包括一个正整数 n , 表示有根树上结点的个数。 (2≤n≤2e5)</p>
+<p>第二行包含 n 个正整数， 分别表示结点的权值(1≤ai≤1e9)</p>
+<p><strong>输出:</strong></p>
+<p>输出一行 n−1 个整数分别表示m=1,2,…,n−1时树上逆序对数</p>
+<p><strong>样例输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">5 4 5 4 3</span><br></pre></td></tr></table></figure>
+<p><strong>样例输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 2 3 3</span><br></pre></td></tr></table></figure>
+<h3 id="拙见-8"><a class="markdownIt-Anchor" href="#拙见-8"></a> 拙见：</h3>
+<h3 id="code-8"><a class="markdownIt-Anchor" href="#code-8"></a> CODE：</h3>
+<h2 id="i-夜幕落星河"><a class="markdownIt-Anchor" href="#i-夜幕落星河"></a> I-夜幕落星河</h2>
+<h3 id="问题描述-9"><a class="markdownIt-Anchor" href="#问题描述-9"></a> 问题描述：</h3>
+<p>夜色渐浓，黄昏不住。</p>
+<p>月光触碰夜幕，银河拂过云朵，万千城市共此点亮灯火。</p>
+<p>学习了一天的河小师眼中落满星河，看星星一颗，两颗，三颗，四颗，连成线！</p>
+<p>河小师一共看见了n颗星星，由上文可知，星星之间是可以连线的，它们一共连成了m条星线。当一些星线组成一个环的时候，就会产生奇幻效应，这个环内的所有点之间会产生非常大的吸引力，导致这个环内的所有点之间可以互相传送。环和环之间同样会产生吸引力，若两个环包含的星星数目相同，则两个环之间也可以相互传送。</p>
+<p>河小师想起了牛郎织女的童话故事，织女会随机出现在一个包含k个点的环上，但是织女没有时间等待牛郎慢慢寻找她，天帝只给织女s秒钟的时间和牛郎相见，牛郎从沿着星线从一个星星走到另一个星星需要花费1秒的时间，在环内和环间传送不会花费时间，牛郎特别期待能见到织女，河小师想知道牛郎在哪些星星上出发，能在s秒内见到织女，聪明的同学们，你们能帮帮河小师吗。</p>
+<h5 id="数据保证只存在简单环即去掉环内任意一条边这个环就不存在了"><a class="markdownIt-Anchor" href="#数据保证只存在简单环即去掉环内任意一条边这个环就不存在了"></a> 数据保证只存在简单环，即去掉环内任意一条边这个环就不存在了</h5>
+<p><strong>输入：</strong></p>
+<p>第一行共四个正整数n,m,k,s。(2&lt;=n&lt;=1e5,1&lt;=m&lt;=2e5，2&lt;=k&lt;=25,0&lt;=s&lt;=100)</p>
+<p>n表示星星的数目，m表示星线的数目，k表示织女出现的环包含的点数，s为天帝允许织女等待牛郎的时间</p>
+<p><strong>输出:</strong></p>
+<p>输出一个数表示答案</p>
+<p><strong>样例输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">11 13 2 1</span><br><span class="line">1 2</span><br><span class="line">2 3</span><br><span class="line">3 4</span><br><span class="line">4 5</span><br><span class="line">5 6</span><br><span class="line">6 7</span><br><span class="line">7 8</span><br><span class="line">8 9</span><br><span class="line">9 10</span><br><span class="line">10 11</span><br><span class="line">2 3</span><br><span class="line">4 7</span><br><span class="line">10 11</span><br></pre></td></tr></table></figure>
+<p><strong>样例输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
+<p>样例解释：<br>
+1号星星到达点数为2个点的环需要1秒，2、3、10、11号星星本身就在环内，互相传送不需要花费时间，4、5、6、7、9号星星到达星星数为2的环需要1秒，8号至少需要两秒不符合条件（1种方案是先到达星星4、5、6、7组成的环，再到达2、3组成的环，需要2秒。第二种方案是先到达9号星星，再到达10、11组成的环，因为星星数相同的环之间传送不需要花费时间，不管织女在哪个环上，都可以传送到达）。所以牛郎在10个点的任意一个点出发都可以在1秒之内找到织女</p>
+<h3 id="拙见-9"><a class="markdownIt-Anchor" href="#拙见-9"></a> 拙见：</h3>
+<h3 id="code-9"><a class="markdownIt-Anchor" href="#code-9"></a> CODE：</h3>
+
+                </div>
+
+                
+                        
+<div class="article-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="post-title border-box text-ellipsis">
+                2022年河北师范大学程序设计大赛题解
+            </div>
+
+            <div class="post-link border-box text-ellipsis">
+                2023/03/09/2022年河北师范大学程序设计大赛题解/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">LZC</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2023-03-09 20:47</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">
+                        <i class="fa-brands fa-creative-commons"></i>
+                        <i class="fa-brands fa-creative-commons-by"></i>
+                        <i class="fa-brands fa-creative-commons-nc"></i>
+                        <i class="fa-brands fa-creative-commons-sa"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+                    <div class="reward-author-container border-box flex-center">
+    <div class="reward-btn keep-button border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="1分，不能再多了！"
+            data-tooltip-img-url="/images/reward.jpg"
+            data-tooltip-img-trigger="click"
+            data-tooltip-img-style="top: -8px;"
+    >
+        <i class="fa-solid fa-hand-holding-heart"></i>
+    </div>
+</div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2023/10/27/Eclipse%E8%BF%9E%E6%8E%A5MySQL/"
+                                   title="浅谈Eclipse连接MySQL"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">浅谈Eclipse连接MySQL</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2022/11/21/%E6%96%B9%E8%88%B1%E9%9A%94%E7%A6%BB%E8%AE%B0%E5%BD%95/"
+                                   title="方舱隔离记录"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">方舱隔离记录</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2022%E5%B9%B4%E6%B2%B3%E5%8C%97%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E9%A2%98%E8%A7%A3"><span class="nav-text"> 2022年河北师范大学程序设计大赛题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-%E7%99%BE%E5%BB%BF%E5%B8%88%E5%A4%A7"><span class="nav-text"> A-百廿师大</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-%E6%B1%89%E5%A0%A1%E5%BA%97%E7%9A%84%E6%A0%A1%E5%BA%86%E5%A5%97%E9%A4%90"><span class="nav-text"> B-汉堡店的校庆套餐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-2"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-2"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-2"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-%E5%A4%9A%E5%B0%91%E5%8F%B0%E9%98%B6"><span class="nav-text"> C-多少台阶</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-3"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-3"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-3"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d-%E5%B9%BF%E5%9C%BA%E7%9A%84%E5%AD%97%E7%AC%A6%E6%B8%B8%E6%88%8F"><span class="nav-text"> D-广场的字符游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-4"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-4"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-4"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#e-%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%80%9F%E4%B9%A6"><span class="nav-text"> E-图书馆借书</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-5"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-5"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-5"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#f-%E7%88%B1%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%B2%B3%E5%B0%8F%E5%B8%88"><span class="nav-text"> F-爱学习的河小师</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-6"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-6"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-6"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#g-%E7%9C%9F%E7%9F%A5%E6%A0%91%E4%B8%8A%E7%9C%9F%E7%9F%A5%E6%9E%9C"><span class="nav-text"> G-真知树上真知果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-7"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-7"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-7"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#h-%E7%9C%9F%E7%9F%A5%E6%A0%91%E6%97%81"><span class="nav-text"> H-真知树旁</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-8"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-8"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-8"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#i-%E5%A4%9C%E5%B9%95%E8%90%BD%E6%98%9F%E6%B2%B3"><span class="nav-text"> I-夜幕落星河</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-9"><span class="nav-text"> 问题描述：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E4%BF%9D%E8%AF%81%E5%8F%AA%E5%AD%98%E5%9C%A8%E7%AE%80%E5%8D%95%E7%8E%AF%E5%8D%B3%E5%8E%BB%E6%8E%89%E7%8E%AF%E5%86%85%E4%BB%BB%E6%84%8F%E4%B8%80%E6%9D%A1%E8%BE%B9%E8%BF%99%E4%B8%AA%E7%8E%AF%E5%B0%B1%E4%B8%8D%E5%AD%98%E5%9C%A8%E4%BA%86"><span class="nav-text"> 数据保证只存在简单环，即去掉环内任意一条边这个环就不存在了</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-9"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-9"><span class="nav-text"> CODE：</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2022</span>&nbsp;-&nbsp;2023
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">LZC</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+                <div class="icp-info info-item default">
+                    <a class=""
+                       target="_blank"
+                       href="https://beian.miit.gov.cn"
+                    >
+                        冀ICP备2022030677号
+                    </a>
+                </div>
+            
+
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://cloud.tencent.com/">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="腾讯云"><img src="/images/deploy-provider/tencent_cloud.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2022%E5%B9%B4%E6%B2%B3%E5%8C%97%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E9%A2%98%E8%A7%A3"><span class="nav-text"> 2022年河北师范大学程序设计大赛题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-%E7%99%BE%E5%BB%BF%E5%B8%88%E5%A4%A7"><span class="nav-text"> A-百廿师大</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-%E6%B1%89%E5%A0%A1%E5%BA%97%E7%9A%84%E6%A0%A1%E5%BA%86%E5%A5%97%E9%A4%90"><span class="nav-text"> B-汉堡店的校庆套餐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-2"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-2"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-2"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-%E5%A4%9A%E5%B0%91%E5%8F%B0%E9%98%B6"><span class="nav-text"> C-多少台阶</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-3"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-3"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-3"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d-%E5%B9%BF%E5%9C%BA%E7%9A%84%E5%AD%97%E7%AC%A6%E6%B8%B8%E6%88%8F"><span class="nav-text"> D-广场的字符游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-4"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-4"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-4"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#e-%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%80%9F%E4%B9%A6"><span class="nav-text"> E-图书馆借书</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-5"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-5"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-5"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#f-%E7%88%B1%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%B2%B3%E5%B0%8F%E5%B8%88"><span class="nav-text"> F-爱学习的河小师</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-6"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-6"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-6"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#g-%E7%9C%9F%E7%9F%A5%E6%A0%91%E4%B8%8A%E7%9C%9F%E7%9F%A5%E6%9E%9C"><span class="nav-text"> G-真知树上真知果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-7"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-7"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-7"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#h-%E7%9C%9F%E7%9F%A5%E6%A0%91%E6%97%81"><span class="nav-text"> H-真知树旁</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-8"><span class="nav-text"> 问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-8"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-8"><span class="nav-text"> CODE：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#i-%E5%A4%9C%E5%B9%95%E8%90%BD%E6%98%9F%E6%B2%B3"><span class="nav-text"> I-夜幕落星河</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-9"><span class="nav-text"> 问题描述：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E4%BF%9D%E8%AF%81%E5%8F%AA%E5%AD%98%E5%9C%A8%E7%AE%80%E5%8D%95%E7%8E%AF%E5%8D%B3%E5%8E%BB%E6%8E%89%E7%8E%AF%E5%86%85%E4%BB%BB%E6%84%8F%E4%B8%80%E6%9D%A1%E8%BE%B9%E8%BF%99%E4%B8%AA%E7%8E%AF%E5%B0%B1%E4%B8%8D%E5%AD%98%E5%9C%A8%E4%BA%86"><span class="nav-text"> 数据保证只存在简单环，即去掉环内任意一条边这个环就不存在了</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%99%E8%A7%81-9"><span class="nav-text"> 拙见：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-9"><span class="nav-text"> CODE：</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/dark-light-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/libs/anime.min.js"></script>
+
+<!-- local-search -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/local-search.js"></script>
+
+
+<!-- code-block -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/code-block.js"></script>
+
+
+<!-- lazyload -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/lazyload.js"></script>
+
+
+<div class="pjax">
+    
+        <!-- post-helper -->
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/post/post-helper.js"></script>
+
+        <!-- toc -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/post/toc.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/post/copyright-info.js"></script>
+        
+
+        <!-- share -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/post/share.js"></script>
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

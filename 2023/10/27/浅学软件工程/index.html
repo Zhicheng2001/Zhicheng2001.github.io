@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="LZC">
+    
+    <title>
+        
+            浅学软件工程 |
+        
+        Lzc&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/font/css/brands.min.css">
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"lizc.cn","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/logo.svg","avatar":"/images/touxiang.jpg","first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"悟已往之不谏，知来者之可追。","hitokoto":false},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":true,"share":true,"reward":{"enable":true,"img_link":"/images/reward.jpg","text":"1分，不能再多了！"}},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"version":"3.8.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+            <a class="site-name border-box" href="/">
+               Lzc&#39;s blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        浅学软件工程
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/touxiang.jpg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">LZC</span>
+                                
+                                    <span class="author-label">Lv3</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2023-10-27 10:43:28</span>
+                <span class="mobile">2023-10-27 10:43</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Fri Nov 03 2023 10:50:53 GMT+0800">2023-11-03 10:50:53</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="article-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">软件工程</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item article-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>8.1k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item article-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>27 分钟</span>
+            </span>
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <h2 id="浅学软件工程"><a class="markdownIt-Anchor" href="#浅学软件工程"></a> 浅学软件工程</h2>
+<h2 id="三-软件过程模型"><a class="markdownIt-Anchor" href="#三-软件过程模型"></a> 三、软件过程模型</h2>
+<h3 id="什么是软件过程模型"><a class="markdownIt-Anchor" href="#什么是软件过程模型"></a> 什么是软件过程模型？</h3>
+<p>软件过程模型是一种软件过程的抽象表示法。</p>
+<p>软件过程模型是对软件开发的复杂过程的抽象描述，是从一个特定的角度表现一个过程一般使用直观的图形来表示软件开发的复杂过程。</p>
+<h3 id="传统的软件过程模型"><a class="markdownIt-Anchor" href="#传统的软件过程模型"></a> 传统的软件过程模型</h3>
+<h4 id="瀑布模型"><a class="markdownIt-Anchor" href="#瀑布模型"></a> 瀑布模型</h4>
+<blockquote>
+<p>应用最广泛的过程模型。</p>
+</blockquote>
+<p>瀑布模型是将软件生存周期的各项活动规定为按固定顺序（线性）而连接的若干阶段工作，最终得到软件产品。</p>
+<p>因过程形如瀑布，因此得名<strong>瀑布模型</strong>。</p>
+ <img lazyload="" alt="rjgc_pbmx" data-src="/picture/rjgc_pbmx.jpg" style="zoom:50%;">
+<p><strong>特点：</strong></p>
+<ul>
+<li>顺序性和依赖性</li>
+<li>推迟实现</li>
+<li>质量保证</li>
+</ul>
+<h4 id="增量模型"><a class="markdownIt-Anchor" href="#增量模型"></a> 增量模型</h4>
+<p>**增量模型（incremental mode）**也称为渐增模型，是在项目的开发过程中以一系列的增量方式开发系统。</p>
+<p>把待开发的软件系统<strong>模块化</strong>，将每个模块作为一个增量组件，从而分批次地分析、设计、编码和测试这些增量组件。</p>
+<p>运用增量模型的软件开发过程是<strong>递增式</strong>的过程。</p>
+<p>相对于瀑布模型，采用增量模型进行开发，开发人员不需要一次性地把整个软件产品提交给用户，而是<strong>分批次地进行提交</strong>。</p>
+<h4 id="螺旋模型"><a class="markdownIt-Anchor" href="#螺旋模型"></a> 螺旋模型</h4>
+<p>**螺旋模型（spiral model）**是由Barry Boehm正式提出的模型，它将瀑布模型和快速原型模型结合起来，不仅体现了两个模型的优点，而且还强调了其他模型均忽略的风险分析，<strong>特别适合于大型复杂的系统。</strong></p>
+<p>螺旋模型采用一种<strong>周期性</strong>的方法来进行系统开发。这会导致开发出众多的中间版本。项目经理在早期就能够为客户证实某些概念。该模型是快速原型法，以进化的开发方式为中心，在每个项目阶段使用瀑布模型。</p>
+<p>这种模型的每一个周期都包括<strong>需求定义、风险分析、工程实现和评审</strong>4个阶段，由这4个阶段进行迭代。</p>
+<img lazyload="" alt="rjgc_lxmx" data-src="/picture/rjgc_lxmx.jpg">
+<h3 id="面向对象模型"><a class="markdownIt-Anchor" href="#面向对象模型"></a> 面向对象模型</h3>
+<h4 id="构件集成模型"><a class="markdownIt-Anchor" href="#构件集成模型"></a> 构件集成模型</h4>
+<p>构件集成模型利用模块化方法将整个系统模块化，并在一定构建模型的支持下重用构件库中的软件构件，通过组合手段提高应用软件系统过程的效率和质量。</p>
+<p>构件集成模型融合螺旋模型的许多特征，本质上是演化型的，开发过程是迭代的。</p>
+<h4 id="统一过程模型"><a class="markdownIt-Anchor" href="#统一过程模型"></a> 统一过程模型</h4>
+<p>统一过程模型（Unified Process，UP）是风险驱动的、基于用例技术的、以架构为中心的、迭代的、可配置的软件开发流程。</p>
+<p>UP是一个面向对象且基于网络的程序开发方法论。它可以为所有方面和层次的程序开发提供指导方针、模板以及用例支持。</p>
+<p>统一过程模型是在重复一系列组成系统生存周期的循环。每一次循环包括4个阶段：<strong>初始、细化、构造和移交</strong>，每个阶段又进一步细分为多次迭代的过程，每次循环迭代会产生一个新的版本，每个版本都是一个准备交付的产品。</p>
+<img lazyload="" alt="rjgc_tygcmx" data-src="/picture/rjgc_tygcmx.jpg">
+<h2 id="四-敏捷软件开发方法"><a class="markdownIt-Anchor" href="#四-敏捷软件开发方法"></a> 四、敏捷软件开发方法</h2>
+<blockquote>
+<p>Agile Software Development（敏捷软件开发）</p>
+</blockquote>
+<h3 id="什么是敏捷agile"><a class="markdownIt-Anchor" href="#什么是敏捷agile"></a> 什么是敏捷（Agile）？</h3>
+<p>敏捷是一种通过创造变化和响应变化<strong>在不确定和混乱的环境中取得成功</strong>的能力。</p>
+<p>敏捷开发是一种应对快速变化的需求的一种软件开发能力。</p>
+<p>敏捷是一个描述软件开发方法的术语，它强调增量交付、团队协作、持续规划和持续学习。</p>
+<p><strong>敏捷</strong>这个术语是2001年在<em>敏捷宣言</em>中提出的。</p>
+<h3 id="敏捷宣言"><a class="markdownIt-Anchor" href="#敏捷宣言"></a> 敏捷宣言</h3>
+<blockquote>
+<p>我们应重视：</p>
+<ul>
+<li><strong>个体和交互</strong>胜过流程和工具。</li>
+<li><strong>有效用的软件</strong>胜过全面的文档。</li>
+<li><strong>客户协作</strong>胜过合同协商。</li>
+<li><strong>响应变化</strong>胜过遵循计划。</li>
+</ul>
+</blockquote>
+<p>在发表《<a class="link" target="_blank" rel="noopener" href="http://agilemanifesto.org/">敏捷宣言<i class="fas fa-external-link-alt"></i></a>》之前，很多敏捷实践已经存在并使用了，例如：Scrum、XP、KanBan等。</p>
+<p>发表《敏捷宣言》之后，有了统一的指导方针，形成了联合体的形式。</p>
+<h3 id="什么是敏捷软件开发agile-software-development"><a class="markdownIt-Anchor" href="#什么是敏捷软件开发agile-software-development"></a> 什么是敏捷软件开发（Agile Software Development）？</h3>
+<p>敏捷软件开发是基于敏捷宣言定义的价值观和原则的一系列方法和实践的总称。自组织、跨职能团队运用适合他们自身环境的实践进行演进得出解决方案。</p>
+<p>敏捷不是指某一种具体的方法论、过程或框架，而是一组价值观和原则。</p>
+<p>符合敏捷价值观和原则的开发方法包括：</p>
+<ul>
+<li>极限编程（XP）</li>
+<li>Scrum</li>
+<li>精益软件开发（Lean Software Development）</li>
+<li>动态系统开发方法（DSDM）</li>
+<li>特征驱动开发（Feature Driver Development）</li>
+<li>水晶开发（Crystal Clear）</li>
+</ul>
+<h3 id="敏捷软件开发过程"><a class="markdownIt-Anchor" href="#敏捷软件开发过程"></a> 敏捷软件开发过程</h3>
+<ol>
+<li>需求计划：确定项目目标和需求</li>
+<li>迭代规划：小步快跑的实现过程</li>
+<li>计划冲刺：确定冲刺目标和任务</li>
+<li>日常站会：保持沟通与协作</li>
+<li>迭代审查：展示交付成果并获得反馈</li>
+<li>迭代回顾：持续改进的机会</li>
+</ol>
+<h3 id="scrum开发过程"><a class="markdownIt-Anchor" href="#scrum开发过程"></a> Scrum开发过程</h3>
+<h4 id="定义与目的"><a class="markdownIt-Anchor" href="#定义与目的"></a> 定义与目的</h4>
+<p>Scrum本指橄榄球运动中的“争球”的动作——团队通力合作，在场地内传球。</p>
+<p>以Scrum命名，目的是让开发人员像打橄榄球一样迅猛并充满激情，通过团队合作，提高工作效率。</p>
+<p>Scrum就是以<code>交付</code> 和<code>迭代</code>为核心的方法。</p>
+<p>每过一小段时间就停下工作，检查一下已经完成了哪些任务，这些任务是不是应该自己做的，思考有没有更好的方法。</p>
+<h4 id="三个角色"><a class="markdownIt-Anchor" href="#三个角色"></a> 三个角色</h4>
+<p>Scrum中的人员分为3个角色：<strong>产品所有者（Product Owner）, Scrum Master，开发团队(Team)。</strong></p>
+<ul>
+<li>产品所有者：定义所有产品功能，决定产品发布的内容以及日期，对产品的投入产出负责，根据市场变化对需要开发的功能排列优先顺序，合理地调整产品功能和迭代顺序，认同或者拒绝迭代的交付。</li>
+<li>ScrumMaster ：ScrumMaster不是项目经理，他没有分配任务的权力，没有考核的权力，没有下命令的权力，他指导项目组的成员按照Scrum的原则、方法做事情，领导团队完成Scrum的实践以及体现其价值，排除团队遇到的困难，确保团队胜任其工作，并保持高效的生产率，使得团队紧密合作，使得团队个人具有多方面职能的工作能力，保护团队不受到外来无端影响。</li>
+<li>开发团队：经典团队拥有 5-9 人，团队成员包含程序员、测试员、用户体验设计等等，团队关系在一个迭代中应该是固定的，个人的职能可以在新迭代开始时发生调整，团队自我组织和管理（自组织，自驱动），团队成员都全职工作。</li>
+</ul>
+<h4 id="五个会议"><a class="markdownIt-Anchor" href="#五个会议"></a> 五个会议</h4>
+<p>Scrum 整个开发过程分为五个会议:</p>
+<ol>
+<li><strong>待办事项整理会议（Backlog Grooming Meeting）</strong></li>
+</ol>
+<p>迭代计划会议开始之前3天召开，Product Owner与Scrum Master必须参加，关键开发者或架构师需要参加；时间控制在30分钟到1小时。</p>
+<ol start="2">
+<li><strong>迭代计划会议（Sprint Planning Meeting）</strong></li>
+</ol>
+<p>产品负责人建立产品功能列表（Product Backlog）。产品功能列表是一组条目化需求，它必须从客户价值角度描述，并按优先级排序。</p>
+<p>Scrum Master召集相关人员召开迭代计划会，迭代计划会在每个迭代第一天召开，目的是选择本次迭代的Backlog和估算本次迭代的工作量。</p>
+<ol start="3">
+<li><strong>每日站会（Standup Meeting）</strong></li>
+</ol>
+<p>团队内部利用每日立会来沟通进度，15分钟结束，开发团队利用燃尽图来展示整体进度；如无特殊原因，迭代期内无变更，在每日站会上团队成员需要回答以下3个问题：</p>
+<ul>
+<li>昨天你做了什么?</li>
+<li>今天你将要做什么?</li>
+<li>你有需要帮助的地方吗?</li>
+</ul>
+<p>这些都是团队成员的彼此承诺。</p>
+<ol start="4">
+<li><strong>评审会（Retrospective Meeting）</strong></li>
+</ol>
+<p>小组向产品负责人展示迭代工作结果，产品负责人给出评价和反馈。以用户故事是否能成功交付来评价任务完成情况。整个团队都需要参加，ScrumMaster、产品所有者、团队，可能还有客户，时间控制在1-2小时内。</p>
+<ol start="5">
+<li><strong>反思会（Retrospective Meeting）</strong></li>
+</ol>
+<p>在每个迭代后召开简短的反思会，总结哪些事情做得好，哪些事情做得不好。做得好的保留，不好的摒弃。会议得出这样的结论：开始做什么、继续做什么、停止做什么，一般控制在15-30分钟。</p>
+<h4 id="十二原则"><a class="markdownIt-Anchor" href="#十二原则"></a> 十二原则</h4>
+<p>这十二原则作为敏捷开发对于软件开发流程的指导性纲领，也是对敏捷宣言进行了具有实际操作意义的解释。</p>
+<p>我们遵循以下准则：</p>
+<ol>
+<li>我们的最高目标是，通过尽早和持续地交付有价值的软件来满足客户。</li>
+<li>欢迎对需求提出变更——即使是在项目开发后期。要善于利用需求变更，帮助客户获得竞争优势。</li>
+<li>要不断交付可用的软件，周期从几周到几个月不等，且越短越好。</li>
+<li>项目过程中，业务人员与开发人员必须在一起工作。</li>
+<li>要善于激励项目人员，给他们以所需要的环境和支持，并相信他们能够完成任务。</li>
+<li>无论是团队内还是团队间，最有效的沟通方法是面对面的交谈。</li>
+<li>可用的软件是衡量进度的主要指标。</li>
+<li>敏捷过程提倡可持续的开发。项目方、开发人员和用户应该能够保持恒久稳定的进展速度。</li>
+<li>对技术的精益求精以及对设计的不断完善将提升敏捷性。</li>
+<li>要做到简洁，即尽最大可能减少不必要的工作。这是一门艺术。</li>
+<li>最佳的架构、需求和设计出自于自组织的团队。</li>
+<li>团队要定期反省如何能够做到更有效，并相应地调整团队的行为</li>
+</ol>
+<h3 id="极限编程"><a class="markdownIt-Anchor" href="#极限编程"></a> 极限编程</h3>
+<p><strong>极限编程是一种敏捷软件开发方法，它强调快速反馈、持续集成、测试驱动开发、简单设计和重构等实践。</strong></p>
+<p>极限编程的目标是提高软件开发的质量和效率，同时降低开发成本和风险。</p>
+<p>极限编程是第一批敏捷开发方法中最具实效的一种。在各种敏捷方法中，极限编程最为重视工程实践。</p>
+<p>在极限编程中，开发人员需要遵循以下实践：</p>
+<ul>
+<li><strong>快速反馈</strong>：团队成员理解客户在开发过程中给出的反馈，并能够迅速做出反应。</li>
+<li><strong>假设简单</strong>：开发人员需要专注于当前重要的工作，遵循所有问题都可以简单地解决原则。</li>
+<li><strong>增量变化</strong>：对产品一小步一小步的改变比一次性的大改变效果更好。</li>
+<li><strong>拥抱变化</strong>：如果客户认为产品需要改变，作为程序员，他们应该支持这个决定，并拟定如何实现新需求的计划。</li>
+<li><strong>高质量的工作</strong>：一个工作出色的团队，他们能够创造出有价值的产品，并为此感到自豪。</li>
+</ul>
+<h4 id="五个价值"><a class="markdownIt-Anchor" href="#五个价值"></a> 五个价值</h4>
+<ul>
+<li><strong>沟通</strong>：团队中的每个人都互通工作。</li>
+<li><strong>简单性</strong>：开发人员努力编写简单的代码，为产品带来更多价值，因为这样可以节省时间和精力。</li>
+<li><strong>反馈</strong>：团队成员经常交付软件，获取有关软件的反馈，并根据新的需求改进产品。</li>
+<li><strong>尊重</strong>：每个被分配到项目中的人都为一个共同的目标做出贡献。</li>
+<li><strong>勇气</strong>：成员客观地评估自己的失误造成的后果而不是找借口，并且随时准备应对变化。</li>
+</ul>
+<h3 id="xp和scrum的核心区别"><a class="markdownIt-Anchor" href="#xp和scrum的核心区别"></a> XP和Scrum的核心区别</h3>
+<p><strong>XP 更关注技术和工程实践，而 Scrum 更关注团队协作和管理实践。</strong></p>
+<h3 id="结对编程"><a class="markdownIt-Anchor" href="#结对编程"></a> 结对编程</h3>
+<blockquote>
+<p>设计和编程都是人的活动。忘记这一点，将会失去一切。——Bjarne Stroustrup</p>
+</blockquote>
+<h4 id="什么是结对编程"><a class="markdownIt-Anchor" href="#什么是结对编程"></a> 什么是结对编程？</h4>
+<p>结对编程（Pair programming）来自于极限编程(eXtreme Programming)。</p>
+<p>顾名思义，结对编程就是由<strong>两个程序员用同一台电脑完成同一个任务</strong>，由一个人负责编写代码，另一个负责审查代码，从而能够时时刻刻的进行代码评审。</p>
+<h4 id="结对编程的优点"><a class="markdownIt-Anchor" href="#结对编程的优点"></a> 结对编程的优点</h4>
+<p><strong>从项目角度，提高了产品质量</strong></p>
+<p>结对编程时，两个人共同完成一个功能，可以避免个人的误区存在，通常个人的想法难免有局限性，自己看自己写的代码总是觉得怎么都对。每个人站在不同的角度能够看到彼此的误差。</p>
+<p><strong>从团队角度，更好的实现了知识传递和分享，让成员关系更融洽</strong></p>
+<p>不可否认，结对这种面对面的沟通交流方式，对于知识和技能的传递是最好的形式。同时，这种即时的沟通交流也让同事之间关系变得融洽，相对比那种每个人一个格子间闷头写代码，更利于创建和谐的团队氛围。</p>
+<p><strong>培养新人，促进沟通，提升团队整体能力。</strong></p>
+<p>通过结对，年轻的团队成员可以向其他小伙伴学习，包括快捷键、算法、语法、SQL、设计、解决问题的思路、做事方式等等，1对1面对面师傅带徒弟式的学习是新技能get最快的方式之一。</p>
+<h2 id="五-软件需求分析"><a class="markdownIt-Anchor" href="#五-软件需求分析"></a> 五、软件需求分析</h2>
+<p>在软件开发前，进行有效的软件需求分析是非常重要的。</p>
+<p>通过深入了解需求，可以防止项目在后续不断扩大，导致预算超支或项目延期，也能确保软件在实际使用中能够满足用户期望，提高用户满意度。</p>
+<h3 id="可行性分析"><a class="markdownIt-Anchor" href="#可行性分析"></a> 可行性分析</h3>
+<h4 id="什么是可行性分析"><a class="markdownIt-Anchor" href="#什么是可行性分析"></a> 什么是可行性分析</h4>
+<p>检查并确定是否值得为项目或产品投入时间、金钱和资源。</p>
+<p>这样的评估活动称为“<strong>可行性分析</strong>”。</p>
+<h4 id="为什么要进行可行性分析"><a class="markdownIt-Anchor" href="#为什么要进行可行性分析"></a> 为什么要进行可行性分析</h4>
+<p>在软件项目开发过程中，只要资源和时间不受限制，几乎所有项目都是可行的。</p>
+<p>然而由于受到资源和交付时间的限制，使得软件系统的开发变得越来越困难。因此尽早对软件项目的可行性进行细致而谨慎的分析是十分必要的。</p>
+<p>进行可行性分析才能明确系统是否值得做，避免投资损失，能否带来经济效益、企业效益或社会效益。</p>
+<h4 id="可行性分析的主要任务是什么"><a class="markdownIt-Anchor" href="#可行性分析的主要任务是什么"></a> 可行性分析的主要任务是什么</h4>
+<p>可行性分析的目的不是解决问题，而是<strong>确定问题是否可解并且是否值得去解决。</strong></p>
+<h4 id="可行性分析的主要过程"><a class="markdownIt-Anchor" href="#可行性分析的主要过程"></a> 可行性分析的主要过程</h4>
+<ol>
+<li>检查系统规模和目标，明确限制或约束条件</li>
+<li>研究正在使用的系统</li>
+<li>导出新系统的高层次逻辑模型</li>
+<li>提出可行性解决方案并评估比较</li>
+<li>选择合适的解决方案</li>
+<li>撰写可行性分析报告并提交审查</li>
+</ol>
+<p>可行性分析主要集中在以下四个方面：</p>
+<ul>
+<li>
+<p><strong>经济可行性分析</strong></p>
+</li>
+<li>
+<p><strong>技术可行性分析</strong></p>
+</li>
+<li>
+<p><strong>法律可行性分析</strong></p>
+</li>
+<li>
+<p><strong>实施方案的选择</strong></p>
+</li>
+</ul>
+<h5 id="经济可行性分析"><a class="markdownIt-Anchor" href="#经济可行性分析"></a> 经济可行性分析</h5>
+<p>软件开发需要有投资，有投资就需要有收益。</p>
+<p>经济可行性分析的目的是从经济角度评价一个新项目是否可行、是否划算，帮助投资人或用户正确投资。</p>
+<h5 id="技术可行性分析"><a class="markdownIt-Anchor" href="#技术可行性分析"></a> 技术可行性分析</h5>
+<p>主要考虑：</p>
+<ul>
+<li>开发风险：在给定的限制范围内，能否设计出系统并实现必要的功能和性能。</li>
+<li>资源可用性：是否有充足的技术人员可以支配。</li>
+<li>技术条件：相关的技术条件是否能够支持系统的开发。</li>
+</ul>
+<h5 id="法律可行性分析"><a class="markdownIt-Anchor" href="#法律可行性分析"></a> 法律可行性分析</h5>
+<p>开发的软件项目是否会触犯法律法规</p>
+<h3 id="什么是软件需求"><a class="markdownIt-Anchor" href="#什么是软件需求"></a> 什么是软件需求</h3>
+<p><strong>软件需求分析是软件开发过程中的首要步骤，它旨在收集、理解和明确定义软件系统的需求和目标。</strong></p>
+<p>软件需求包括<strong>4个不同的层次</strong>：</p>
+<ul>
+<li>**业务需求：**反映了组织结构或客户对系统、产品高层次的目标要求，它们在项目视图与范围文档中予以说明。</li>
+<li><strong>用户需求</strong>：站在用户的角度描述软件产品必须要完成的业务功能，这在使用实例文档或场景说明中予以详细描述。</li>
+<li><strong>功能需求</strong>：站在开发人员的角度定义了必须实现的软件功能，使得用户能完成他们的任务，从而满足了业务需求。</li>
+<li><strong>非功能需求</strong>：指逻辑上与软件相关的整体特性需求的集合，给用户提供处理能力并满足业务需求。</li>
+</ul>
+<p>非功能需求可分为：</p>
+<ul>
+<li>产品需求：描述产品行为的需求，包括系统运行速度和内存消耗等性能需求、出错率等可靠性需求和可用性需求。</li>
+<li>机构需求：客户和开发者所在机构中的政策和规定要求。</li>
+<li>外部需求：包括所有的系统外部因素和开发过程。</li>
+</ul>
+<h3 id="需求分析过程"><a class="markdownIt-Anchor" href="#需求分析过程"></a> 需求分析过程</h3>
+<p>需求分析主要是理解客户需要什么、分析要求、评价可行性、协商合理的方案、无歧义地详细说明方案、确认规格说明、管理需求以至将这些需求转化为可行系统。</p>
+<h4 id="沟通"><a class="markdownIt-Anchor" href="#沟通"></a> 沟通</h4>
+<p>当确定了商业需求或发现了潜在的新市场时开始。</p>
+<p>在项目起始阶段，软件工程师会询问一些似乎与项目无直接关系的问题，目的是对问题、方案需求方、客户和开发人员之间初步的交流和合作的效果建立基本的协商准备。</p>
+<h4 id="导出需求"><a class="markdownIt-Anchor" href="#导出需求"></a> 导出需求</h4>
+<p><strong>确定系统范围</strong>：系统的范围就是系统的边界，是客户和开发者共同关心的部分。</p>
+<p><strong>理解客户需要</strong>：客户/用户并不完全确定需要什么，系统工程师的任务是确定业务需求、需求冲突，说明有歧义和不可测试的需求。</p>
+<p><strong>易变问题</strong>：由于各种原因如客户讲不清楚、业务发生变化等，需求随时间变化。</p>
+<p><strong>识别真正的客户与用户</strong>：识别真正的客户不是一件容易的事情，项目要面对多方的客户，有时他们的利益各不相同给。</p>
+<p><strong>正确理解客户的需求</strong>：客户可能会说出客户不需要的、模糊、混乱矛盾的信息，甚至可能夸大或弱化真正的需求。</p>
+<p><strong>耐心听取客户意见</strong>：获取需求应能够从客户凌乱的建议和观点整理出真正的需求，耐心分析客户不确定性需求和过分需求，并进行沟通。</p>
+<p><strong>尽量使用符合客户语言习惯的表达</strong>：使用符合客户熟悉的术语进行交流。</p>
+<h4 id="精化需求"><a class="markdownIt-Anchor" href="#精化需求"></a> 精化需求</h4>
+<p>开发一个精确的技术模型，用以说明软件的功能、特征和约束。</p>
+<p>精化是一个分析建模动作，由一系列建模和求精任务构成。</p>
+<p>精化的结果是形成一个分析模型，该模型定义了问题的信息域、功能域和行为域。</p>
+<h4 id="可行性研究"><a class="markdownIt-Anchor" href="#可行性研究"></a> 可行性研究</h4>
+<p>可行性研究的目的是确定用最小的代价，在尽可能短的时间内确定问题是否能够解决。</p>
+<p>从技术可行性、经济可行性、管理可行性和时间可行性4个方面研究每种方案的可行性。</p>
+<h4 id="与客户和用户协商"><a class="markdownIt-Anchor" href="#与客户和用户协商"></a> 与客户和用户协商</h4>
+<p>用户和客户提出了过高的目标要求，或者提出了相互冲突的要求，这就需要工程师通过协商和沟通的过程来调节这些冲突和问题。</p>
+<h4 id="编写需求规格说明"><a class="markdownIt-Anchor" href="#编写需求规格说明"></a> 编写需求规格说明</h4>
+<p>一个规格说明可以是一份写好的文档、一套图形化的模型、一个形式化的数学模型、一组使用场景、一个原型或以上各项的任意组合。</p>
+<p>对于大型系统而言，文档最好采用自然语言描述（人话）和图形化模型来编写。</p>
+<p>软件需求规格（Software Requirement Sepcification, SRS）是需求分析任务的最终“产品”，是客户、管理者、分析工程师、测试工程师、维护工程师<strong>交流的标准和依据</strong>。SRS说明文档描述了系统的数据、功能、行为、性能需求、设计约束、验收标准以及其他与需求相关的信息。</p>
+<p>计算机软件需求规格说明规范现行标准：<a class="link" target="_blank" rel="noopener" href="https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=2790825C43AD0B69E3C38C140BFFCFE6">国家标准|GB/T 9385-2008 (samr.gov.cn)<i class="fas fa-external-link-alt"></i></a></p>
+<h4 id="验证需求"><a class="markdownIt-Anchor" href="#验证需求"></a> 验证需求</h4>
+<p>验证需求包括正确性、一致性、完整性、可行性、必要性、可检验性、可跟踪性及最后的签字确认。</p>
+<h4 id="管理需求"><a class="markdownIt-Anchor" href="#管理需求"></a> 管理需求</h4>
+<p>管理需求是对需求进行组织、控制和文档化的系统方法。</p>
+<h3 id="会谈技术"><a class="markdownIt-Anchor" href="#会谈技术"></a> 会谈技术</h3>
+<h4 id="非正式会谈"><a class="markdownIt-Anchor" href="#非正式会谈"></a> 非正式会谈</h4>
+<p>非正式会谈将提出一些可自由回答的问题来鼓励会谈人员表达自己的想法。</p>
+<p>非正式会谈一般从其他话题入手，建立融洽的氛围后，才开始转到项目的事情上来。</p>
+<p>一般2~4个小时。</p>
+<h4 id="正式会谈"><a class="markdownIt-Anchor" href="#正式会谈"></a> 正式会谈</h4>
+<p>正式会谈将提出一些事先准备号的议题。</p>
+<p>会谈者要准备一份有关会谈结果概要的书面报告，以便进一步陈述或者增加忽略的项目。</p>
+<h3 id="调查技术"><a class="markdownIt-Anchor" href="#调查技术"></a> 调查技术</h3>
+<p>获得需求的另外一种方法是向客户组织的相关人员发调查表。</p>
+<h4 id="确定调查内容"><a class="markdownIt-Anchor" href="#确定调查内容"></a> 确定调查内容</h4>
+<p><sup>当需要对数百人进行个人意见调查时</sup>，调查技术十分有效。</p>
+<p>先于主要的用户进行非正式会谈。在对此次会谈理解的基础上制定调查表，分发给所有客户组织人员。</p>
+<h4 id="可靠可信分析"><a class="markdownIt-Anchor" href="#可靠可信分析"></a> 可靠可信分析</h4>
+<p>虽然问卷调查对于有大量用户的项目而言是一个非常好的方法。然而由于问卷题目设置不当或者题目内容的不合理，也会导致得出错误的结论。</p>
+<p>因此，需要根据问卷调查结果进行问卷可靠可信分析。</p>
+<p>可靠可信分析的目的是检查问卷的指标设置是否合理，指标之间是否存在关联，以及结果是否可信等。</p>
+<p>进行可靠可信分析的基本方法是层次分析法。</p>
+<h3 id="场景分析技术"><a class="markdownIt-Anchor" href="#场景分析技术"></a> 场景分析技术</h3>
+<p>若能把人与一个软件系统交互的过程用一个场景来描述，人们就容易理解并评论它。</p>
+<p>需求分析从对场景的评论中得到信息，然后将其以形式化方式表示出来。这种方法称为场景分析，或情景分析。</p>
+<p>场景开始于一个框架，在导出过程中，细节被逐渐增加，指导产生交互的一个完整的描述。</p>
+<p>绝大多数情况，一个场景可能包括如下内容：</p>
+<ul>
+<li>在场景开始部分有一个系统状态描述</li>
+<li>一个关于标准事件流的描述</li>
+<li>一个关于哪儿会出错，以及如果处理错误的描述</li>
+<li>有关其他可能在同一时间进行的活动的信息</li>
+<li>在场景完成后系统状态的描述</li>
+</ul>
+<hr>
+<h2 id="六-结构化分析"><a class="markdownIt-Anchor" href="#六-结构化分析"></a> 六、结构化分析</h2>
+<blockquote>
+<p>结构化分析（Structured Analysis，SA）方法是一种传统的系统建模技术，其过程是<strong>创建描述信息内容和数据流的模型</strong>，依据功能和行为对系统进行划分，并描述必须建立的系统要素。</p>
+</blockquote>
+<p>结构化分析方法一般采用以下指导性原则：</p>
+<ul>
+<li>理解问题</li>
+<li>开发模型</li>
+<li>描述需求</li>
+<li>建立系统模型</li>
+<li>确定需求优先级</li>
+<li>验证需求</li>
+</ul>
+<h3 id="结构化分析模型"><a class="markdownIt-Anchor" href="#结构化分析模型"></a> 结构化分析模型</h3>
+<blockquote>
+<p>结构化分析方法是一种半形式化的建模技术，其过程是对系统信息进行分析，抽取其本质要素，创建描述数据和行为的模型。</p>
+</blockquote>
+<p>结构化分析模型必须分别达到以下主要目标：<strong>描述客户需求，建立软件设计的基础，定义在软件完成后可以确认的一组需求。</strong></p>
+<p>面向数据的模型主要刻画软件中所涉及的数据及其关系，用来确定系统的数据结构和存储模型。</p>
+<p>面向系统行为的模型包括两种类型模型：</p>
+<ol>
+<li><strong>数据流模型</strong>：用来描述系统中的数据处理过程。</li>
+<li><strong>状态转化模型</strong>：用来描述系统如何对事件做出响应。</li>
+</ol>
+<p>结构化分析模型分别用**数据字典（Data Dictionary，DD）、数据流图（Data Flow Diagram，DFD）、状态转换图（State Transition Diagram，STD）、实体关系图（Entity Relationship Diagram，ERD）**等描述。</p>
+<blockquote>
+<p>分析模型结构的核心是<strong>数据字典</strong>，包含了软件使用或生产的所有数据对象描述的中心库）。</p>
+</blockquote>
+<h3 id="面向数据流的建模方法"><a class="markdownIt-Anchor" href="#面向数据流的建模方法"></a> 面向数据流的建模方法</h3>
+<blockquote>
+<p>结构化分析是面向数据流进行需求分析的方法，是一种建模活动。</p>
+</blockquote>
+<h4 id="数据流图待详细"><a class="markdownIt-Anchor" href="#数据流图待详细"></a> 数据流图（待详细）</h4>
+<blockquote>
+<p>期末可能考给案例画数据流图</p>
+</blockquote>
+<img lazyload="" alt="rjgc_sjtfh" data-src="/picture/rjgc_tygcmx.jpg">
+<p>用数据流图描述系统处理过程是一种很直观的方式。</p>
+<p><strong>数据流图的基本要点是描绘“做什么”，而不考虑“怎么做”。</strong></p>
+<h4 id="数据字典"><a class="markdownIt-Anchor" href="#数据字典"></a> 数据字典</h4>
+<blockquote>
+<p>Data Dictionary, DD</p>
+</blockquote>
+<p>数据字典是对数据流图中包含的所有元素的定义的集合，是分析模型中出现的所有名字的一个集合，并包括有关命名实体的描述。</p>
+<h5 id="符号"><a class="markdownIt-Anchor" href="#符号"></a> 符号</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th>含义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">=</td>
+<td>被定义为</td>
+<td>姓名 = 10字符</td>
+</tr>
+<tr>
+<td style="text-align:center">+</td>
+<td>与</td>
+<td>x = a + b，x由a和b组成</td>
+</tr>
+<tr>
+<td style="text-align:center">[…|…]</td>
+<td>或</td>
+<td>x = [a|b]，x由a或b组成</td>
+</tr>
+<tr>
+<td style="text-align:center">m{…}n或{…}<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mrow></mrow><mi>m</mi><mi>n</mi></msubsup></mrow><annotation encoding="application/x-tex">^n _m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.911392em;vertical-align:-0.247em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-2.4530000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></td>
+<td>重复</td>
+<td>x = 1{b}5或x = {b}<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mrow></mrow><mn>1</mn><mn>5</mn></msubsup></mrow><annotation encoding="application/x-tex">^5_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0622159999999998em;vertical-align:-0.24810799999999997em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4518920000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24810799999999997em;"><span></span></span></span></span></span></span></span></span></span>，表示x中最少出现1次b，最多5次，m下限，n上限</td>
+</tr>
+<tr>
+<td style="text-align:center">(…)</td>
+<td>可选</td>
+<td>x = (a) 表示a可在x中出现，也可不出现</td>
+</tr>
+<tr>
+<td style="text-align:center">…</td>
+<td>连接符</td>
+<td>x = 0…9，x可取0~9中任意一个符。</td>
+</tr>
+</tbody>
+</table>
+<h5 id="数据流条目"><a class="markdownIt-Anchor" href="#数据流条目"></a> 数据流条目</h5>
+<p>列出该数据流的各组成数据项</p>
+<p>数据流的组成成员是数据项，数据项条目是不可再分解的数据单位。</p>
+<p>例：</p>
+<blockquote>
+<p>名字：订货报表</p>
+<p>别名：订货信息</p>
+<p>描述：每天一次需要订货的零件表</p>
+<p>定义：订货报表=零件编号+零件名称+订货数量+价格+1{供应者}3</p>
+<p>位置：输出到打印机</p>
+<p>​			零件编号=8位字符</p>
+<p>​			零件名称=20位字符</p>
+<p>​			订货数量=[1|2|3|4|5]</p>
+<p>​			价格={零件单价}</p>
+<p>​			供应者=24位字符</p>
+</blockquote>
+<p>这种数据字典卡片主要包含：<strong>名字、别名、描述、定义、位置</strong></p>
+<h2 id="七-结构化设计"><a class="markdownIt-Anchor" href="#七-结构化设计"></a> 七、结构化设计</h2>
+<blockquote>
+<p>设计：一种软件开发活动，定义实现需要规约所需的软件结构</p>
+</blockquote>
+<p>设计的目标：</p>
+<ul>
+<li>依据需求规约在一个抽象层上建立系统软件模型，包括软件体系结构（数据和程序结构），以及详细的处理算法。</li>
+<li>给出软件解决方案，产生设计规格说明书。</li>
+</ul>
+<p>结构化设计分为：</p>
+<ul>
+<li><strong>总体设计</strong>：确定系统的整体模块结构（系统实现所需要的软件模块以及这些模块之间的调用关系）。</li>
+<li><strong>详细设计</strong>：详细描述模块。</li>
+</ul>
+<h3 id="整体框架"><a class="markdownIt-Anchor" href="#整体框架"></a> 整体框架</h3>
+<img lazyload="" alt="rjgc_jghsj" data-src="/picture/rjgc_jghsj.png">
+<ol>
+<li>
+<p>体系结构设计（MSD）：定义软件模块及其之间的关系，从分析模型（如数据流图）导出。</p>
+</li>
+<li>
+<p>接口设计：</p>
+<p><strong>外部接口设计</strong>：根据分析模型中的顶层数据流图得到，包括用户界面、目标系统与其他硬件设备、软件系统的外部接口</p>
+<p><strong>内部接口设计</strong>：系统内部各种元素间的接口</p>
+</li>
+<li>
+<p>数据设计：根据数据字典确定软件涉及的文件系统的结构及数据库的表结构</p>
+</li>
+</ol>
+<h3 id="模块化设计"><a class="markdownIt-Anchor" href="#模块化设计"></a> 模块化设计</h3>
+<blockquote>
+<p>分而治之</p>
+</blockquote>
+<h4 id="基本概念"><a class="markdownIt-Anchor" href="#基本概念"></a> 基本概念</h4>
+<p><strong>精化</strong>：基于模块化原理“高内聚，低耦合”将初始的MSD转化为最终可详细设计使用的MSD。</p>
+<p><strong>模块</strong>：执行一个特殊任务的一组程序和数据结构。</p>
+<p><strong>模块化</strong>：把系统分解成若干模块的过程，使得程序能够被理性的管理。</p>
+<h4 id="高内聚-低耦合"><a class="markdownIt-Anchor" href="#高内聚-低耦合"></a> 高内聚 低耦合</h4>
+<blockquote>
+<p>内聚：一个模块之内各成分之间相互依赖程度的度量。</p>
+<p>耦合：不同模块间相互依赖程度的度量。</p>
+</blockquote>
+<p>英：</p>
+<blockquote>
+<p><strong>高内聚</strong>：High Cohesion; Strong cohesion; Maximize Cohesion</p>
+<p>cohesion  美 [koʊˈhiʒ(ə)n] n.<strong>内聚力；结合；凝聚性；黏合</strong></p>
+<p><strong>低耦合</strong>：Low Coupling; loosely coupled; Minimize Coupling</p>
+<p>coupling  美 [ˈkʌp(ə)lɪŋ] n.<strong>联轴器；连接；联结；结合</strong></p>
+</blockquote>
+<h5 id="内聚类型由低到高"><a class="markdownIt-Anchor" href="#内聚类型由低到高"></a> 内聚类型（由低到高）</h5>
+<ol>
+<li>偶然内聚：一个模块之内各成分之间没有任何关系。</li>
+<li>逻辑内聚：几个逻辑上相关的功能放在同一模块中。</li>
+<li>时间内聚：一个模块完成的功能必须在同一时间内完成，而这些功能只是因为时间因素关联在一起。</li>
+<li>过程内聚：处理成分必须以特定的次序执行。</li>
+<li>通信内聚：各成分都操作在同一数据集或生成同一数据集。</li>
+<li>顺序内聚：各成分与一个功能相关，且一个成分的输出作为另一成分的输入。</li>
+<li>功能内聚：模块的所有成分对完成单一功能是最基本的，且该模块对完成这一功能而言是充分必要的。</li>
+</ol>
+<h5 id="耦合类型由高到低"><a class="markdownIt-Anchor" href="#耦合类型由高到低"></a> 耦合类型（由高到低）</h5>
+<ol>
+<li>内容耦合：一个模块直接修改或操作另一个模块的数据。</li>
+<li>公共耦合：两个及以上的模块共引用一个全局数据项。</li>
+<li>控制耦合：一个模块向另一个模块传递控制信号。</li>
+<li>标记耦合：两个模块至少有一个通过界面传递的公共参数，包含内部数据，如数组，字符串等。</li>
+<li>数据耦合：模块间通过参数传递基本类型的数据。</li>
+</ol>
+<p>耦合的强度所依赖的因素：</p>
+<ol>
+<li>模块间的引用</li>
+<li>模块间传递的数据量</li>
+<li>模块间的施加控制量</li>
+<li>模块间接口复杂度</li>
+</ol>
+<h3 id="软件结构图"><a class="markdownIt-Anchor" href="#软件结构图"></a> 软件结构图</h3>
+<blockquote>
+<p>结构图（Structure Chart，SC）是精确表达软件结构的图形表示方法，它以特定的符号表示模块、模块间的调用关系和模块间信息的传递。</p>
+</blockquote>
+<h4 id="主要构成"><a class="markdownIt-Anchor" href="#主要构成"></a> 主要构成</h4>
+<ol>
+<li>模块（Module）：用矩形框表示，框内为模块名，说明模块功能。</li>
+<li>调用：用箭头表示，一般是上层调用下层。</li>
+<li>数据：调用点头旁的短箭头表示调用时从一个模块传给另一个模块的数据。短箭头旁注有信息名字，常用尾端带有空心圆的短箭头表示数据信息，用尾端带有实心圆的短箭头表示控制信息。</li>
+<li>条件符号：当模块A有条件的调用模块B时，在模块A的调用箭头尾部标以菱形符号。</li>
+<li>循环符号：当模块A反复的调用其他模块时，在调用箭头尾部标以弧形符号。</li>
+</ol>
+<h3 id="软件体系结构模型"><a class="markdownIt-Anchor" href="#软件体系结构模型"></a> 软件体系结构模型</h3>
+<h3 id="体系结构模式"><a class="markdownIt-Anchor" href="#体系结构模式"></a> 体系结构模式</h3>
+
+                </div>
+
+                
+                        
+<div class="article-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="post-title border-box text-ellipsis">
+                浅学软件工程
+            </div>
+
+            <div class="post-link border-box text-ellipsis">
+                2023/10/27/浅学软件工程/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">LZC</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2023-10-27 10:43</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">
+                        <i class="fa-brands fa-creative-commons"></i>
+                        <i class="fa-brands fa-creative-commons-by"></i>
+                        <i class="fa-brands fa-creative-commons-nc"></i>
+                        <i class="fa-brands fa-creative-commons-sa"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">软件工程</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+                    <div class="reward-author-container border-box flex-center">
+    <div class="reward-btn keep-button border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="1分，不能再多了！"
+            data-tooltip-img-url="/images/reward.jpg"
+            data-tooltip-img-trigger="click"
+            data-tooltip-img-style="top: -8px;"
+    >
+        <i class="fa-solid fa-hand-holding-heart"></i>
+    </div>
+</div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2023/10/27/%E6%B5%85%E5%AD%A6%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"
+                                   title="浅学编译原理"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">浅学编译原理</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%85%E5%AD%A6%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B"><span class="nav-text"> 浅学软件工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 三、软件过程模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 什么是软件过程模型？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E7%BB%9F%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 传统的软件过程模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 瀑布模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A2%9E%E9%87%8F%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 增量模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%9E%BA%E6%97%8B%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 螺旋模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 面向对象模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E4%BB%B6%E9%9B%86%E6%88%90%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 构件集成模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%9F%E4%B8%80%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 统一过程模型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-%E6%95%8F%E6%8D%B7%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95"><span class="nav-text"> 四、敏捷软件开发方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7agile"><span class="nav-text"> 什么是敏捷（Agile）？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%8F%E6%8D%B7%E5%AE%A3%E8%A8%80"><span class="nav-text"> 敏捷宣言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91agile-software-development"><span class="nav-text"> 什么是敏捷软件开发（Agile Software Development）？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%8F%E6%8D%B7%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="nav-text"> 敏捷软件开发过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scrum%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="nav-text"> Scrum开发过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%8E%E7%9B%AE%E7%9A%84"><span class="nav-text"> 定义与目的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E4%B8%AA%E8%A7%92%E8%89%B2"><span class="nav-text"> 三个角色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E4%B8%AA%E4%BC%9A%E8%AE%AE"><span class="nav-text"> 五个会议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E4%BA%8C%E5%8E%9F%E5%88%99"><span class="nav-text"> 十二原则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E7%BC%96%E7%A8%8B"><span class="nav-text"> 极限编程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E4%B8%AA%E4%BB%B7%E5%80%BC"><span class="nav-text"> 五个价值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xp%E5%92%8Cscrum%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB"><span class="nav-text"> XP和Scrum的核心区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B"><span class="nav-text"> 结对编程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B"><span class="nav-text"> 什么是结对编程？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-text"> 结对编程的优点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94-%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-text"> 五、软件需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-text"> 可行性分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-text"> 什么是可行性分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%BF%9B%E8%A1%8C%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-text"> 为什么要进行可行性分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BB%BB%E5%8A%A1%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> 可行性分析的主要任务是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90%E7%9A%84%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B"><span class="nav-text"> 可行性分析的主要过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%8F%E6%B5%8E%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-text"> 经济可行性分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-text"> 技术可行性分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B3%95%E5%BE%8B%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-text"> 法律可行性分析</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82"><span class="nav-text"> 什么是软件需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="nav-text"> 需求分析过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B2%9F%E9%80%9A"><span class="nav-text"> 沟通</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%87%BA%E9%9C%80%E6%B1%82"><span class="nav-text"> 导出需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B2%BE%E5%8C%96%E9%9C%80%E6%B1%82"><span class="nav-text"> 精化需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6"><span class="nav-text"> 可行性研究</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8E%E5%AE%A2%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E5%8D%8F%E5%95%86"><span class="nav-text"> 与客户和用户协商</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E9%9C%80%E6%B1%82%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E"><span class="nav-text"> 编写需求规格说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81%E9%9C%80%E6%B1%82"><span class="nav-text"> 验证需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E9%9C%80%E6%B1%82"><span class="nav-text"> 管理需求</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%9A%E8%B0%88%E6%8A%80%E6%9C%AF"><span class="nav-text"> 会谈技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%9E%E6%AD%A3%E5%BC%8F%E4%BC%9A%E8%B0%88"><span class="nav-text"> 非正式会谈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A3%E5%BC%8F%E4%BC%9A%E8%B0%88"><span class="nav-text"> 正式会谈</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E6%9F%A5%E6%8A%80%E6%9C%AF"><span class="nav-text"> 调查技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A1%AE%E5%AE%9A%E8%B0%83%E6%9F%A5%E5%86%85%E5%AE%B9"><span class="nav-text"> 确定调查内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E9%9D%A0%E5%8F%AF%E4%BF%A1%E5%88%86%E6%9E%90"><span class="nav-text"> 可靠可信分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF"><span class="nav-text"> 场景分析技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD-%E7%BB%93%E6%9E%84%E5%8C%96%E5%88%86%E6%9E%90"><span class="nav-text"> 六、结构化分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%8C%96%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 结构化分析模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E6%95%B0%E6%8D%AE%E6%B5%81%E7%9A%84%E5%BB%BA%E6%A8%A1%E6%96%B9%E6%B3%95"><span class="nav-text"> 面向数据流的建模方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE%E5%BE%85%E8%AF%A6%E7%BB%86"><span class="nav-text"> 数据流图（待详细）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8"><span class="nav-text"> 数据字典</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7"><span class="nav-text"> 符号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%B5%81%E6%9D%A1%E7%9B%AE"><span class="nav-text"> 数据流条目</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83-%E7%BB%93%E6%9E%84%E5%8C%96%E8%AE%BE%E8%AE%A1"><span class="nav-text"> 七、结构化设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B4%E4%BD%93%E6%A1%86%E6%9E%B6"><span class="nav-text"> 整体框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E8%AE%BE%E8%AE%A1"><span class="nav-text"> 模块化设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text"> 基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AB%98%E5%86%85%E8%81%9A-%E4%BD%8E%E8%80%A6%E5%90%88"><span class="nav-text"> 高内聚 低耦合</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%86%85%E8%81%9A%E7%B1%BB%E5%9E%8B%E7%94%B1%E4%BD%8E%E5%88%B0%E9%AB%98"><span class="nav-text"> 内聚类型（由低到高）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%80%A6%E5%90%88%E7%B1%BB%E5%9E%8B%E7%94%B1%E9%AB%98%E5%88%B0%E4%BD%8E"><span class="nav-text"> 耦合类型（由高到低）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E5%9B%BE"><span class="nav-text"> 软件结构图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E6%9E%84%E6%88%90"><span class="nav-text"> 主要构成</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 软件体系结构模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%A8%A1%E5%BC%8F"><span class="nav-text"> 体系结构模式</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2022</span>&nbsp;-&nbsp;2023
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">LZC</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+                <div class="icp-info info-item default">
+                    <a class=""
+                       target="_blank"
+                       href="https://beian.miit.gov.cn"
+                    >
+                        冀ICP备2022030677号
+                    </a>
+                </div>
+            
+
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://cloud.tencent.com/">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="腾讯云"><img src="/images/deploy-provider/tencent_cloud.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%85%E5%AD%A6%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B"><span class="nav-text"> 浅学软件工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 三、软件过程模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 什么是软件过程模型？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E7%BB%9F%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 传统的软件过程模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 瀑布模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A2%9E%E9%87%8F%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 增量模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%9E%BA%E6%97%8B%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 螺旋模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 面向对象模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E4%BB%B6%E9%9B%86%E6%88%90%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 构件集成模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%9F%E4%B8%80%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 统一过程模型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-%E6%95%8F%E6%8D%B7%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95"><span class="nav-text"> 四、敏捷软件开发方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7agile"><span class="nav-text"> 什么是敏捷（Agile）？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%8F%E6%8D%B7%E5%AE%A3%E8%A8%80"><span class="nav-text"> 敏捷宣言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91agile-software-development"><span class="nav-text"> 什么是敏捷软件开发（Agile Software Development）？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%8F%E6%8D%B7%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="nav-text"> 敏捷软件开发过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scrum%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="nav-text"> Scrum开发过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%8E%E7%9B%AE%E7%9A%84"><span class="nav-text"> 定义与目的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E4%B8%AA%E8%A7%92%E8%89%B2"><span class="nav-text"> 三个角色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E4%B8%AA%E4%BC%9A%E8%AE%AE"><span class="nav-text"> 五个会议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E4%BA%8C%E5%8E%9F%E5%88%99"><span class="nav-text"> 十二原则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E7%BC%96%E7%A8%8B"><span class="nav-text"> 极限编程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E4%B8%AA%E4%BB%B7%E5%80%BC"><span class="nav-text"> 五个价值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xp%E5%92%8Cscrum%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB"><span class="nav-text"> XP和Scrum的核心区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B"><span class="nav-text"> 结对编程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B"><span class="nav-text"> 什么是结对编程？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-text"> 结对编程的优点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94-%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-text"> 五、软件需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-text"> 可行性分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-text"> 什么是可行性分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%BF%9B%E8%A1%8C%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-text"> 为什么要进行可行性分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BB%BB%E5%8A%A1%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> 可行性分析的主要任务是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90%E7%9A%84%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B"><span class="nav-text"> 可行性分析的主要过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%8F%E6%B5%8E%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-text"> 经济可行性分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-text"> 技术可行性分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B3%95%E5%BE%8B%E5%8F%AF%E8%A1%8C%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-text"> 法律可行性分析</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82"><span class="nav-text"> 什么是软件需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="nav-text"> 需求分析过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B2%9F%E9%80%9A"><span class="nav-text"> 沟通</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%87%BA%E9%9C%80%E6%B1%82"><span class="nav-text"> 导出需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B2%BE%E5%8C%96%E9%9C%80%E6%B1%82"><span class="nav-text"> 精化需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6"><span class="nav-text"> 可行性研究</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8E%E5%AE%A2%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E5%8D%8F%E5%95%86"><span class="nav-text"> 与客户和用户协商</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E9%9C%80%E6%B1%82%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E"><span class="nav-text"> 编写需求规格说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81%E9%9C%80%E6%B1%82"><span class="nav-text"> 验证需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E9%9C%80%E6%B1%82"><span class="nav-text"> 管理需求</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%9A%E8%B0%88%E6%8A%80%E6%9C%AF"><span class="nav-text"> 会谈技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%9E%E6%AD%A3%E5%BC%8F%E4%BC%9A%E8%B0%88"><span class="nav-text"> 非正式会谈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A3%E5%BC%8F%E4%BC%9A%E8%B0%88"><span class="nav-text"> 正式会谈</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E6%9F%A5%E6%8A%80%E6%9C%AF"><span class="nav-text"> 调查技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A1%AE%E5%AE%9A%E8%B0%83%E6%9F%A5%E5%86%85%E5%AE%B9"><span class="nav-text"> 确定调查内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E9%9D%A0%E5%8F%AF%E4%BF%A1%E5%88%86%E6%9E%90"><span class="nav-text"> 可靠可信分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF"><span class="nav-text"> 场景分析技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD-%E7%BB%93%E6%9E%84%E5%8C%96%E5%88%86%E6%9E%90"><span class="nav-text"> 六、结构化分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%8C%96%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 结构化分析模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E6%95%B0%E6%8D%AE%E6%B5%81%E7%9A%84%E5%BB%BA%E6%A8%A1%E6%96%B9%E6%B3%95"><span class="nav-text"> 面向数据流的建模方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE%E5%BE%85%E8%AF%A6%E7%BB%86"><span class="nav-text"> 数据流图（待详细）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8"><span class="nav-text"> 数据字典</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7"><span class="nav-text"> 符号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%B5%81%E6%9D%A1%E7%9B%AE"><span class="nav-text"> 数据流条目</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83-%E7%BB%93%E6%9E%84%E5%8C%96%E8%AE%BE%E8%AE%A1"><span class="nav-text"> 七、结构化设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B4%E4%BD%93%E6%A1%86%E6%9E%B6"><span class="nav-text"> 整体框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E8%AE%BE%E8%AE%A1"><span class="nav-text"> 模块化设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text"> 基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AB%98%E5%86%85%E8%81%9A-%E4%BD%8E%E8%80%A6%E5%90%88"><span class="nav-text"> 高内聚 低耦合</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%86%85%E8%81%9A%E7%B1%BB%E5%9E%8B%E7%94%B1%E4%BD%8E%E5%88%B0%E9%AB%98"><span class="nav-text"> 内聚类型（由低到高）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%80%A6%E5%90%88%E7%B1%BB%E5%9E%8B%E7%94%B1%E9%AB%98%E5%88%B0%E4%BD%8E"><span class="nav-text"> 耦合类型（由高到低）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E5%9B%BE"><span class="nav-text"> 软件结构图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E6%9E%84%E6%88%90"><span class="nav-text"> 主要构成</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%A8%A1%E5%9E%8B"><span class="nav-text"> 软件体系结构模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%A8%A1%E5%BC%8F"><span class="nav-text"> 体系结构模式</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/dark-light-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/libs/anime.min.js"></script>
+
+<!-- local-search -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/local-search.js"></script>
+
+
+<!-- code-block -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/code-block.js"></script>
+
+
+<!-- lazyload -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/lazyload.js"></script>
+
+
+<div class="pjax">
+    
+        <!-- post-helper -->
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/post/post-helper.js"></script>
+
+        <!-- toc -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/post/toc.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/post/copyright-info.js"></script>
+        
+
+        <!-- share -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/post/share.js"></script>
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

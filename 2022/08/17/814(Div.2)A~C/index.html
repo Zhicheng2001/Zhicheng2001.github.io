@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="LZC">
+    
+    <title>
+        
+            814(Div.2)A~C |
+        
+        Lzc&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/font/css/brands.min.css">
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"lizc.cn","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/logo.svg","avatar":"/images/touxiang.jpg","first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"悟已往之不谏，知来者之可追。","hitokoto":false},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":true,"share":true,"reward":{"enable":true,"img_link":"/images/reward.jpg","text":"1分，不能再多了！"}},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"version":"3.8.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+            <a class="site-name border-box" href="/">
+               Lzc&#39;s blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        814(Div.2)A~C
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/touxiang.jpg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">LZC</span>
+                                
+                                    <span class="author-label">Lv3</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2022-08-17 14:12:44</span>
+                <span class="mobile">2022-08-17 14:12</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Sat Aug 20 2022 15:42:59 GMT+0800">2022-08-20 15:42:59</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="article-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/Codeforces%E9%A2%98%E8%A7%A3/">Codeforces题解</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+            <span class="meta-info-item article-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.2k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item article-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>5 分钟</span>
+            </span>
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <h1 id="codeforces-round-814-div-2"><a class="markdownIt-Anchor" href="#codeforces-round-814-div-2"></a> <a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1719">Codeforces Round #814 (Div. 2)<i class="fas fa-external-link-alt"></i></a></h1>
+<h2 id="a-chip-game"><a class="markdownIt-Anchor" href="#a-chip-game"></a> <a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1719/problem/A">A. Chip Game<i class="fas fa-external-link-alt"></i></a></h2>
+<p><strong>题目大意：</strong></p>
+<p>有一个n*m的棋盘，开局时棋子在左下角，两个玩家轮流移动，每次只能向上或向右移动奇数个格子，最后不能移动的玩家就输了。</p>
+<p><strong>思路：</strong></p>
+<p>由于每个人每次只能移动奇数个格子，我们可以直接移动最大奇数格子数，所以第一个玩家Burenka想赢的话，一定是在第三轮赢得比赛。</p>
+<p>当n和m同为偶数时，最少2轮结束游戏，Tonya赢</p>
+<p>当n和m同为奇数时，最少4轮结束游戏，Tonya赢</p>
+<p>当n和m奇偶性不同时，最少3轮结束游戏，Burenka赢</p>
+<p><strong>AC Code</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">{</span><br><span class="line">	int n,m;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	string a = "Burenka";</span><br><span class="line">	string b = "Tonya";</span><br><span class="line">	if ((n % 2 == 0 &amp;&amp; m % 2 == 0) || (n % 2 == 1 &amp;&amp; m % 2 == 1))</span><br><span class="line">		cout &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">	else cout &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">	</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="b-mathematical-circus"><a class="markdownIt-Anchor" href="#b-mathematical-circus"></a> <a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1719/problem/B">B. Mathematical Circus<i class="fas fa-external-link-alt"></i></a></h2>
+<p><strong>题目大意：</strong></p>
+<p>给定两个数n,k，是否能用1~n所有的数组成<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac n 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.040392em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>个数对{a,b}，满足(a+k)*b能被4整除。</p>
+<p>如果满足条件则输出YES后输出全部结果，如果不满足条件则输出NO。</p>
+<p><strong>思路1：</strong></p>
+<p>要想满足条件，则一定要有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac n 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.040392em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>个数对。</p>
+<p>分类讨论：</p>
+<ol>
+<li>
+<p>k为奇数时，(a+k) * b为偶数*偶数，则能被4整除。</p>
+</li>
+<li>
+<p>k为偶数时</p>
+<p>​		1). k能被4整除：只要a和b其中一个有一个奇数，就不能满足(a + k) * b能被4整除，所以输出NO</p>
+<p>​		2). k不能被4整数：则只要给每个奇数分配一个偶数就可以，b能被4整除时，a为奇数；a+k能被4整除时，b为奇数。</p>
+</li>
+</ol>
+<p><strong>AC Code</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">{</span><br><span class="line">	int n,k;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">	if (n == 2 &amp;&amp; k == 0)</span><br><span class="line">	{</span><br><span class="line">		puts("NO");</span><br><span class="line">		return;</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	if (k % 4 == 0)</span><br><span class="line">	{</span><br><span class="line">		puts("NO");</span><br><span class="line">		return;</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	if (k &amp; 1)</span><br><span class="line">	{</span><br><span class="line">		puts("YES");</span><br><span class="line">		for (int i = 1;i &lt;= n;i += 2)	</span><br><span class="line">			printf("%lld %lld\n",i,i + 1);</span><br><span class="line">	}</span><br><span class="line">	else</span><br><span class="line">	{</span><br><span class="line">		puts("YES");</span><br><span class="line">		for (int i = 2;i &lt;= n;i += 4)</span><br><span class="line">			printf("%lld %lld\n",i,i - 1);</span><br><span class="line">		for (int i = 3;i &lt;= n;i += 4)</span><br><span class="line">			printf("%lld %lld\n",i,i + 1);</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p><strong>思路2：</strong></p>
+<p>要想满足条件，则一定要有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac n 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.040392em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>个数对。</p>
+<p>直接枚举相邻数对{1,2}、{3,4}…{n - 1,n}。</p>
+<p>对于每个数对{x,y}，如果(x + k) * y能被4整除，则添加进答案，否则如果(y + k) * x能被4整除，则添加进答案，如果都不能则不添加。</p>
+<p><strong>AC Code</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">{</span><br><span class="line">	int n,k;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">	vector&lt;PII&gt; ans;</span><br><span class="line">	for (int i = 1;i &lt;= n;i += 2)</span><br><span class="line">	{</span><br><span class="line">		int a = i,b = i + 1;</span><br><span class="line">		int x = (a + k) * b,y = (b + k) * a;</span><br><span class="line">		if (x % 4 == 0)	ans.push_back({a,b});</span><br><span class="line">		else if (y % 4 == 0) ans.push_back({b,a});</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	if (ans.size() == n / 2)</span><br><span class="line">	{</span><br><span class="line">		puts("YES");</span><br><span class="line">		for (auto it:ans)</span><br><span class="line">			cout &lt;&lt; it.first &lt;&lt; ' ' &lt;&lt; it.second &lt;&lt; '\n';</span><br><span class="line">	}</span><br><span class="line">	else</span><br><span class="line">		puts("NO");</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="c-fighting-tournament"><a class="markdownIt-Anchor" href="#c-fighting-tournament"></a> <a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1719/problem/C">C. Fighting Tournament<i class="fas fa-external-link-alt"></i></a></h2>
+<p><strong>题目大意：</strong></p>
+<p>有n名运动员参加比赛，标号为1~n。第i名运动员的实力是a[i] (1 &lt;= a[i] &lt;= n)。每个运动员的实力都是不同的。</p>
+<p>一开始，运动员按标号从小到大排成一列，第一位为1号运动员。</p>
+<p>每一轮比赛，队头的两个人记性格斗，赢的人变成队头，输的人排到队尾。</p>
+<p>q次询问，每次询问给出i和k，问i号运动员在前k次比赛中赢了几场。</p>
+<p><strong>思路：</strong></p>
+<p>当某个人的能量为n时，则无人能赢他，所以我们先找到能量最大的人，记为max。</p>
+<p>所以出现在max后面的人，都没有赢的机会。</p>
+<p>先初始化每个人第一次能赢的场次和最后一次能赢的场次。</p>
+<p>对于每次询问，可以分类讨论：</p>
+<p>选手i在max后面，则能赢的场次为0</p>
+<ol>
+<li>如果k小于选手i第一次赢需要耗费的场次，则能赢的场次为0</li>
+<li>如果选手i第一次赢需要耗费的场次为0，则说明他没赢过，最后赢的场次为0</li>
+<li>如果k大于选手i最后一次赢得场次，则他能赢的场次为 最后一次赢-第一次赢 + 1</li>
+<li>如果k小于选手i最后一次硬的场次，则他能赢的场次为 k - 第一次赢 +1</li>
+<li>如果选手i为max，则他能赢的场次为 k - 第一次赢 + 1</li>
+</ol>
+<p><strong>AC Code</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">{</span><br><span class="line">	int n,q,k;</span><br><span class="line">	int maxx = -INF;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; q;</span><br><span class="line">	</span><br><span class="line">	vector&lt;int&gt; a(n + 1);</span><br><span class="line">	vector&lt;PII&gt; res(n + 1);</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)</span><br><span class="line">	{</span><br><span class="line">		cin &gt;&gt; a[i];</span><br><span class="line">		if (a[i] == n)	maxx = i;</span><br><span class="line">	}</span><br><span class="line">	int mx = a[1],idx = 1,cnt = 1;</span><br><span class="line">	for (int i = 2;i &lt;= n;i ++)</span><br><span class="line">	{</span><br><span class="line">		if (a[i] &lt; mx)</span><br><span class="line">		{</span><br><span class="line">			if (res[idx].second == 0)	res[idx].first = cnt;</span><br><span class="line">			res[idx].second = cnt;</span><br><span class="line">		}</span><br><span class="line">		else</span><br><span class="line">		{</span><br><span class="line">			mx = a[i];</span><br><span class="line">			idx = i;</span><br><span class="line">			res[idx].first = cnt;</span><br><span class="line">			res[idx].second = cnt;</span><br><span class="line">		}</span><br><span class="line">		cnt ++;</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	while(q --)</span><br><span class="line">	{</span><br><span class="line">		cin &gt;&gt; idx &gt;&gt; k;</span><br><span class="line">		int ans = 0;</span><br><span class="line">		bool can = idx &gt; maxx || idx &gt; k + 1 || res[idx].first &gt; k || res[idx].first == 0;</span><br><span class="line">		if (!can &amp;&amp; idx == maxx)	ans = k - res[maxx].first + 1;</span><br><span class="line">		else if (!can)</span><br><span class="line">		{</span><br><span class="line">			if (k &gt;= res[idx].second) ans = res[idx].second - res[idx].first + 1;</span><br><span class="line">			else ans = k - res[idx].first + 1;</span><br><span class="line">		}</span><br><span class="line">		cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+                </div>
+
+                
+                        
+<div class="article-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="post-title border-box text-ellipsis">
+                814(Div.2)A~C
+            </div>
+
+            <div class="post-link border-box text-ellipsis">
+                2022/08/17/814(Div.2)A~C/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">LZC</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2022-08-17 14:12</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">
+                        <i class="fa-brands fa-creative-commons"></i>
+                        <i class="fa-brands fa-creative-commons-by"></i>
+                        <i class="fa-brands fa-creative-commons-nc"></i>
+                        <i class="fa-brands fa-creative-commons-sa"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+                    <div class="reward-author-container border-box flex-center">
+    <div class="reward-btn keep-button border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="1分，不能再多了！"
+            data-tooltip-img-url="/images/reward.jpg"
+            data-tooltip-img-trigger="click"
+            data-tooltip-img-style="top: -8px;"
+    >
+        <i class="fa-solid fa-hand-holding-heart"></i>
+    </div>
+</div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2022/09/02/Convex%20Quadrilateral(ABC266%20c)/"
+                                   title="Convex Quadrilateral(ABC266 c)"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Convex Quadrilateral(ABC266 c)</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2022/08/14/813(Div.2)A~C/"
+                                   title="813(Div.2)A~C"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">813(Div.2)A~C</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#codeforces-round-814-div-2"><span class="nav-text"> Codeforces Round #814 (Div. 2)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-chip-game"><span class="nav-text"> A. Chip Game</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-mathematical-circus"><span class="nav-text"> B. Mathematical Circus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-fighting-tournament"><span class="nav-text"> C. Fighting Tournament</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2022</span>&nbsp;-&nbsp;2023
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">LZC</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+                <div class="icp-info info-item default">
+                    <a class=""
+                       target="_blank"
+                       href="https://beian.miit.gov.cn"
+                    >
+                        冀ICP备2022030677号
+                    </a>
+                </div>
+            
+
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://cloud.tencent.com/">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="腾讯云"><img src="/images/deploy-provider/tencent_cloud.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#codeforces-round-814-div-2"><span class="nav-text"> Codeforces Round #814 (Div. 2)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-chip-game"><span class="nav-text"> A. Chip Game</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-mathematical-circus"><span class="nav-text"> B. Mathematical Circus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-fighting-tournament"><span class="nav-text"> C. Fighting Tournament</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/dark-light-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/libs/anime.min.js"></script>
+
+<!-- local-search -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/local-search.js"></script>
+
+
+<!-- code-block -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/code-block.js"></script>
+
+
+<!-- lazyload -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/lazyload.js"></script>
+
+
+<div class="pjax">
+    
+        <!-- post-helper -->
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/post/post-helper.js"></script>
+
+        <!-- toc -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/post/toc.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/post/copyright-info.js"></script>
+        
+
+        <!-- share -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/post/share.js"></script>
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.8.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
