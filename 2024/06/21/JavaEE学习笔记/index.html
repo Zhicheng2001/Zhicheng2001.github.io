@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="LZC">
+    
+    <title>
+        
+            JavaEE学习笔记 |
+        
+        Lzc&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/favicon.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"lizc.cn","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Lzc's blog","author":"LZC","avatar":"/images/touxiang.jpg","logo":null,"favicon":"/images/favicon.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories","links":"/links","about":"/about"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":true},"social_contact":{"enable":true,"links":{"github":"https://github.com/Zhicheng2001","weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":"zhicheng_1003@163.com"}},"scroll":{"progress_bar":true,"percent":true,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":true,"share":true,"reward":{"enable":true,"img_link":"/images/reward.jpg","text":"1分，不能再多了！"}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":null,"reaction":false,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2022,"word_count":false,"site_deploy":{"enable":true,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{"links":[{"name":"Lucy","link":"https://lucy23.blog/","description":null,"avatar":"https://lucy23.blog/img/cat-tou2.png"}]},"version":"4.1.3"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+            <a class="site-name border-box" href="/">
+               Lzc&#39;s blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                HOME
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >HOME</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >ARCHIVES</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >CATEGORIES</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links"
+                    >LINKS</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about"
+                    >ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        JavaEE学习笔记
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/touxiang.jpg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">LZC</span>
+                                
+                                    <span class="author-badge">Lv3</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-06-21 21:56:20</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Mon Oct 16 2023 16:31:29 GMT+0800">2023-10-16 16:31:29</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/javaWeb/">javaWeb</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    <h1 id="JavaEE"><a href="#JavaEE" class="headerlink" title="JavaEE"></a>JavaEE</h1><h2 id="doGet-和-doPost"><a href="#doGet-和-doPost" class="headerlink" title="doGet() 和 doPost()"></a>doGet() 和 doPost()</h2><h3 id="doGet"><a href="#doGet" class="headerlink" title="doGet()"></a>doGet()</h3><p>维基百科定义：</p>
+<blockquote>
+<p>GET requests a representation of the specified resource.</p>
+<p>Note that GET should not be used for operations that cause side-effects, such as using it for taking actions in web applications. One reason for this is that GET may be used arbitrarily by robots or crawlers, which should not need to consider the side effects that a request should cause.</p>
+</blockquote>
+<p><strong>GET请求指定资源的表示形式。</strong></p>
+<p><strong>注意，GET不应该用于产生副作用的操作，比如在web应用程序中使用它来执行操作。这样做的一个原因是，GET可能会被机器人或爬虫任意使用，它们应该不需要考虑请求应该引起的副作用。</strong> </p>
+<p>当浏览器使用get方式提交数据时，servlet需要提供doGet()方法。</p>
+<p><strong>明文显示</strong>：doGet方法在提交表单时会<strong>在url后面显示提交的内容</strong>（不安全）。</p>
+<p><strong>长度限制</strong>：doGet方法只能提交256个字符（1024字节），因为get方式数据的传输载体是URL（提交方式能form，也能任意URL链接）。</p>
+<p><strong>会用到get方式的情景：</strong></p>
+<ul>
+<li>form默认的提交方式</li>
+<li>如果通过一个超链访问某个地址</li>
+<li>如果在地址栏直接输入某个地址</li>
+<li>ajax指定使用get方式的时候</li>
+</ul>
+<p>关于GET方法还有一个称呼是<strong>幂等(idempotent)方法</strong>（无论操作多少次，结果一致）。</p>
+<h3 id="doPost"><a href="#doPost" class="headerlink" title="doPost()"></a>doPost()</h3><p>维基百科定义：</p>
+<blockquote>
+<p>POST submits data to be processed (e.g., from an HTML form) to the identified resource.<br>The data is included in the body of the request. This may result in the creation of a new resource or the updates of existing resources or both.</p>
+</blockquote>
+<p><strong>POST将待处理的数据(例如，来自HTML表单)提交给所标识的资源。</strong><br><strong>数据包含在请求的主体中。这可能会导致创建新资源或更新现有资源，或者两者都有。</strong></p>
+<p>当浏览器使用post方式提交数据的时候，servlet需要提供doPost()方法。</p>
+<p>用于客户端传输数据到服务器端，也会有副作用。</p>
+<p><strong>隐藏数据</strong>：post方法使用表单传输，不会明文显示数据。</p>
+<p><strong>长度大</strong>：POST也是有长度限制的，不是一般说的POST不限制，默认是2097152，不同的Web Server实现不同。</p>
+<p><strong>会用到post方式的情景：</strong></p>
+<ul>
+<li>在form上显示设置 method&#x3D;”post”的时候</li>
+<li>ajax指定post方式的时候</li>
+</ul>
+<p>在servlet文件中，由<code>service(request, response) </code>方法功能是判断用户发出是什么请求，如果是get则调用子类（HttpSevr）的doGet方法，如果是post则调用子类（HttpSevr）的doPost方法。</p>
+<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><ul>
+<li>get方式采用<code>URL</code>跳转方式请求，post方法采用<code>表单</code>提交方式请求。</li>
+<li>get请求会有cache，post不会有cache。</li>
+<li>get请求会保留在浏览历史中，post不会。</li>
+<li>get请求可以保存到书签（本质是个URL），post不能。</li>
+<li>get请求长度小，post请求长度大。</li>
+<li><strong>get请求应该只用于获取数据，post请求处理敏感信息。</strong></li>
+</ul>
+<hr>
+<h2 id="隐藏域"><a href="#隐藏域" class="headerlink" title="隐藏域"></a>隐藏域</h2><h3 id="HTML表单隐藏域"><a href="#HTML表单隐藏域" class="headerlink" title="HTML表单隐藏域"></a>HTML表单隐藏域</h3><p>隐藏域是用来收集或发送信息的不可见元素，对于网页访问者来说，隐藏域是不可见的。当表单被提交时，隐藏域就会将信息用设置时定义的名称和值发送到服务器。</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type=&quot;hidden&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>一般用于隐藏不希望用户看见的信息，在提交表单时，将伴随用户提交的请求将信息传送。用于存放在表单，被提交时需要提交却不需要显示的参数值的容器。</p>
+<hr>
+<h2 id="Referer——防盗链"><a href="#Referer——防盗链" class="headerlink" title="Referer——防盗链"></a>Referer——防盗链</h2><p><strong>Referer</strong>是HTTP请求requset header的一部分，当浏览器向web服务器发送请求的时候，头信息中就包含Referer</p>
+<p><strong>Referer</strong>的内容就是<strong>当前页面的上一页面</strong>。</p>
+<p><code>Referer</code>其实是<code>Referrer</code>的错误拼写，发现错误时已经广泛使用，修改成本高，于是就将错就错了。</p>
+<h3 id="为什么使用Referer"><a href="#为什么使用Referer" class="headerlink" title="为什么使用Referer"></a>为什么使用Referer</h3><p><strong>referrer	英&#x2F; rɪˈfɜːrə &#x2F;</strong><br><strong>$n$.推荐人，上线；介绍人</strong></p>
+<p><code>Referer</code>字段告诉了服务器，用户在访问当前资源之前的位置，用来用户跟踪。</p>
+<p>一言以蔽之，<strong>你从哪来?</strong></p>
+<h3 id="Referer的使用"><a href="#Referer的使用" class="headerlink" title="Referer的使用"></a>Referer的使用</h3><p>Referer是一个可选字段。</p>
+<p>浏览器的 JavaScript 引擎提供<code>document.referrer</code>属性，可以查看当前页面的引荐来源。注意，这里采用的是正确拼写。</p>
+<p>空Referer的定义为<code> Referer=&quot;&quot; || Referer=null</code></p>
+<p>当没有上一请求地址时，Referer是空。</p>
+<p>直接在浏览器的地址栏中输入一个资源的URL地址，这种方式请求不包含Referer。</p>
+<p>允许Referer为空，则允许浏览器或者重定向直接URL访问资源；</p>
+<p>不允许为空，则直接输入URL访问会被拦截。</p>
+<p>在servlet中使用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">referer</span> <span class="operator">=</span> request.getHeader(<span class="string">&quot;Referer&quot;</span>);</span><br><span class="line"><span class="keyword">if</span> (referer==<span class="literal">null</span>||<span class="string">&quot;&quot;</span>.equals(referer)||!referer.startsWith(<span class="string">&quot;http://localhost:8081&quot;</span>)) &#123;</span><br><span class="line">	response.sendRedirect(<span class="string">&quot;xxx.html&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line">request.getRequestDispatcher(<span class="string">&quot;xxx.html&quot;</span>).forward(request,response);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="ServletContext"><a href="#ServletContext" class="headerlink" title="ServletContext"></a>ServletContext</h2><p>ServletContext称为<strong>servlet上下文</strong>。</p>
+<p>服务器会为每一个工程创建一个对象，这个对象就是ServletContext对象。</p>
+<p>此对象全局唯一，且工程内所有servlet共享此对象，因此叫做<code>全局应用程序共享对象</code></p>
+<h3 id="servletContext是一个域对象"><a href="#servletContext是一个域对象" class="headerlink" title="servletContext是一个域对象"></a>servletContext是一个域对象</h3><p>域对象是服务器在内存上创建的存储空间，用于在不同动态资源（servlet）之间传递与共享数据。</p>
+<h3 id="读取全局配置参数"><a href="#读取全局配置参数" class="headerlink" title="读取全局配置参数"></a>读取全局配置参数</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//根据指定的参数名获取参数值</span></span><br><span class="line">getServletContext().getInitParameter(name);</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取所有参数名称列表</span></span><br><span class="line">getServletContext().getInitParameterNames();</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="搜索当前工程目录下面的资源文件"><a href="#搜索当前工程目录下面的资源文件" class="headerlink" title="搜索当前工程目录下面的资源文件"></a>搜索当前工程目录下面的资源文件</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//根据相对路径获取服务器上资源的绝对路径</span></span><br><span class="line">getServletContext().getRealPath(path);</span><br><span class="line"></span><br><span class="line"><span class="comment">//根据相对路径获取服务器上资源的输入字节流</span></span><br><span class="line">getServletContext().getResourceAsStream(path);</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取当前工程名字</span></span><br><span class="line">getServletContext().getContextPath();</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="会话跟踪（session-tracking）"><a href="#会话跟踪（session-tracking）" class="headerlink" title="会话跟踪（session tracking）"></a>会话跟踪（session tracking）</h2><blockquote>
+<p><strong>session</strong>  英&#x2F; ˈseʃ(ə)n &#x2F;</p>
+<p>*n.*（某项活动的）一段时间，一场；（议会等的）会议，（法庭的）开庭；学年，上课时间；（酒吧中）演奏会（尤指演奏爱尔兰音乐）；（尤指录音师的）灌录音乐时间；&lt;非正式&gt;酗酒期；基督教长老会的管理机构</p>
+<p>*adj.*（音乐家）伴奏的</p>
+<p><strong>[计算机]会话</strong></p>
+</blockquote>
+<p>HTTP是一种无连接的协议，如果客户端只是单纯请求一个文件，服务器端对其响应，无需知道一系列的请求是否来自同一客户端，也无需担心客户端是否处于连接状态，简单来说，有人请求就直接响应，服务器不会保留之前客户端请求的任何记录。</p>
+<p>因此这种通信协议使得服务器端难以判断所连接的客户端是否是同一个。</p>
+<p>当进行Web程序开发时，需要将相关的请求结合，并维持用户的状态在服务器上，因此引出<strong>会话追踪（session tracking）对同一用户对服务器的连续的请求和接受响应的监视</strong>。</p>
+<h3 id="会话跟踪技术："><a href="#会话跟踪技术：" class="headerlink" title="会话跟踪技术："></a>会话跟踪技术：</h3><ul>
+<li><strong>Cookie</strong></li>
+<li><strong>Session</strong></li>
+<li><strong>URL重写</strong></li>
+<li><strong>隐藏表单域</strong></li>
+</ul>
+<hr>
+<h2 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h2><blockquote>
+<p><strong>cookie</strong> 英&#x2F; ˈkʊki &#x2F;</p>
+<p>*n.*曲奇饼，小甜饼；……样的人；（浏览网页后存储在计算机的）缓存文件；&lt;苏格兰&gt;淡面包；漂亮的年轻女子</p>
+</blockquote>
+<p>Cookie，它的名字源自一种叫 Fortune cookie 的“幸运小饼干”，这种饼干里面有一张小纸条。</p>
+<p>注意：Cookie只支持Ascii字符形式并且不能跨浏览器使用。</p>
+<h3 id="Cookie是什么？"><a href="#Cookie是什么？" class="headerlink" title="Cookie是什么？"></a>Cookie是什么？</h3><p>一些数据信息，类型为<code>小型文本文件</code>，存储于电脑上的文本文件中。</p>
+<h3 id="Cookie有什么用？"><a href="#Cookie有什么用？" class="headerlink" title="Cookie有什么用？"></a>Cookie有什么用？</h3><p>例如登陆过的网站，再次打开就会自动登录。</p>
+<p>浏览器保存了我们的Cookie，里面记录了一些信息，当下一次浏览器向Web服务器发送任何请求时，浏览器会把这些Cookie信息发送到服务器，服务器使用这些信息识别用户。</p>
+<h3 id="Cookie怎么用？"><a href="#Cookie怎么用？" class="headerlink" title="Cookie怎么用？"></a>Cookie怎么用？</h3><h4 id="创建Cookie："><a href="#创建Cookie：" class="headerlink" title="创建Cookie："></a>创建Cookie：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CookieServletOne</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span></span><br><span class="line">            <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line">        <span class="comment">// 创建Cookie</span></span><br><span class="line">        <span class="type">Cookie</span> <span class="variable">cookie</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cookie</span>(<span class="string">&quot;author&quot;</span>,<span class="string">&quot;cicada&quot;</span>);</span><br><span class="line">        <span class="comment">// 设置生命周期 1小时</span></span><br><span class="line">        cookie.setMaxAge(<span class="number">60</span>*<span class="number">60</span>);</span><br><span class="line">        <span class="comment">// 将Cookie添加进Response</span></span><br><span class="line">        response.addCookie(cookie) ;</span><br><span class="line">        response.getWriter().print(<span class="string">&quot;Hello:Cookie&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="获取Cookie："><a href="#获取Cookie：" class="headerlink" title="获取Cookie："></a>获取Cookie：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CookieServletOne</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span></span><br><span class="line">            <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;doPost...&quot;</span>);</span><br><span class="line">        <span class="comment">// 创建Cookie数组接收</span></span><br><span class="line">        Cookie[] cookies = request.getCookies() ;</span><br><span class="line">        <span class="comment">// 遍历接收到的Cookie</span></span><br><span class="line">        <span class="keyword">for</span> (Cookie cookie:cookies)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Name：&quot;</span>+cookie.getName());</span><br><span class="line">            System.out.println(<span class="string">&quot;Value：&quot;</span>+cookie.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">userName</span> <span class="operator">=</span> request.getParameter(<span class="string">&quot;userName&quot;</span>) ;</span><br><span class="line">        response.getWriter().print(<span class="string">&quot;Hello:&quot;</span>+userName);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="更新Cookie："><a href="#更新Cookie：" class="headerlink" title="更新Cookie："></a>更新Cookie：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CookieServletTwo</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span></span><br><span class="line">            <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line">        <span class="comment">// 创建Cookie</span></span><br><span class="line">        <span class="type">Cookie</span> <span class="variable">cookie</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cookie</span>(<span class="string">&quot;author&quot;</span>,<span class="string">&quot;smile&quot;</span>);</span><br><span class="line">        <span class="comment">// 设置生命周期 2小时</span></span><br><span class="line">        cookie.setMaxAge(<span class="number">60</span>*<span class="number">60</span>*<span class="number">2</span>);</span><br><span class="line">        response.addCookie(cookie) ;</span><br><span class="line">        response.getWriter().print(<span class="string">&quot;Hello:Cookie&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="删除Cookie："><a href="#删除Cookie：" class="headerlink" title="删除Cookie："></a>删除Cookie：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CookieServletTwo</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span></span><br><span class="line">            <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line">        Cookie[] cookies = request.getCookies() ;</span><br><span class="line">        <span class="keyword">for</span> (Cookie cookie:cookies)&#123;</span><br><span class="line">            <span class="keyword">if</span> (cookie.getName().equals(<span class="string">&quot;author&quot;</span>))&#123;</span><br><span class="line">                <span class="comment">// 将生命改为0就表示该Cookie被作废了</span></span><br><span class="line">                cookie.setMaxAge(<span class="number">0</span>);</span><br><span class="line">                response.addCookie(cookie);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">String</span> <span class="variable">userName</span> <span class="operator">=</span> request.getParameter(<span class="string">&quot;userName&quot;</span>) ;</span><br><span class="line">        response.getWriter().print(<span class="string">&quot;Hello:&quot;</span>+userName);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Cookie相关接口"><a href="#Cookie相关接口" class="headerlink" title="Cookie相关接口"></a>Cookie相关接口</h4><ul>
+<li>setMaxAge() ：设置cookie过期的时间，单位为秒。</li>
+<li>getMaxAge() ：获取cookie的最大生命周期</li>
+<li>getName() ：获取cookie的名称。名称在创建后不能改变。</li>
+<li>getValue() ：获取与cookie关联的值。</li>
+<li>setValue() ：设置与cookie关联的值。</li>
+</ul>
+<hr>
+<h2 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h2><blockquote>
+<p>Cookie的好兄弟</p>
+</blockquote>
+<h3 id="session是什么"><a href="#session是什么" class="headerlink" title="session是什么?"></a>session是什么?</h3><p>session在Web应用中称为<code>会话控制</code>，是服务器为了保存用户状态而创建的<strong>一个对象，用于存储信息。</strong></p>
+<p>cookie存储在用户端，session存储在服务器端。</p>
+<h3 id="session有什么用？"><a href="#session有什么用？" class="headerlink" title="session有什么用？"></a>session有什么用？</h3><p>由于cookie不能存放大量数据，这时出现了一种新的技术，Session。</p>
+<p>session是存储在服务器端的特殊对象，服务器会为每一个浏览器（客户端）创建一个唯一的session。</p>
+<p>session是服务器端共享，每个浏览器（客户端）独享的。<strong>可以在session存储数据，实现数据共享。</strong></p>
+<h3 id="session怎么用？"><a href="#session怎么用？" class="headerlink" title="session怎么用？"></a>session怎么用？</h3><p>存储在服务器的数据会更加的安全，不容易被窃取，并且session比Cookie使用方便，Session可以存储对象，Cookie只能存储字符串，并且tomcat8.x之后的版本中Cookie可以存储的字符类型有限制。</p>
+<p>最常使用的session是<code>javax.servlet.http.HttpSession</code></p>
+<h4 id="获取HttpSession对象"><a href="#获取HttpSession对象" class="headerlink" title="获取HttpSession对象"></a>获取HttpSession对象</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">HttpSession</span> <span class="variable">session</span> <span class="operator">=</span> request.getSession(<span class="type">boolean</span> create);</span><br></pre></td></tr></table></figure>
+
+<p>得到一个HttpSession对象。</p>
+<p>如果当前请求不属于任何会话，并且create为true，则创建一个会话，否则返回null；如果为false，则与不带参数的形式等价。</p>
+<p><strong>Session的实现依赖于Cookie</strong></p>
+<p>每个Session对象都有一个唯一的<strong>JSESSIONID</strong>，会以Set-cookie响应头的形式将JSESSIONID返回给客户端，客户端再次访问的时候将JSESSIONID发送给服务器。后续请求时，服务器可通过JSESSIONID找到对应的Session对象。</p>
+<p>这个JSESSIONID就是SessionId</p>
+<h4 id="HttpSession的方法"><a href="#HttpSession的方法" class="headerlink" title="HttpSession的方法"></a>HttpSession的方法</h4><p>如<code>HttpServletRequest</code>、<code>ServletContext</code>一样，它们都是域对象，<code>HttpSession</code>也是<strong>域对象</strong>，范围是<strong>当前对话</strong>。</p>
+<p>凡是域对象，都有如下四个操作对象的方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将value对象以name名称绑定到会话</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAttribute</span><span class="params">(String name,Obejct value)</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//获取name值，如果不存在返回null</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">getAttribute</span><span class="params">(String name)</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//从会话中删除name属性，如果不存在不执行，不抛错</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">removeAttribute</span><span class="params">(String name)</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//返回与会话有关的枚举值，没有则返回空枚举</span></span><br><span class="line"><span class="keyword">public</span> Enumeration <span class="title function_">getAttributeNames</span><span class="params">()</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>其他方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使会话失效，同时删除属性对象</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">invalidate</span><span class="params">()</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//检测当前可会是否为新会话</span></span><br><span class="line"><span class="keyword">public</span> Boolean <span class="title function_">isNew</span><span class="params">()</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//返回会话创建时间</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">long</span> <span class="title function_">getCreationTime</span><span class="params">()</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//返回在会话时间内Web容器接收到客户最后发出的请求的时间</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">long</span> <span class="title function_">getLastAccessedTime</span><span class="params">()</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//返回在会话期间内客户请求的最长时间（秒）</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getMaxInactiveInterval</span><span class="params">()</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//允许客户请求的最长时间</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setMaxInactiveInterval</span><span class="params">()</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//返回当前会话的上下文环境，ServletContext对象可以使Servlet与Web容器进行通信</span></span><br><span class="line">ServletContext <span class="title function_">getServletContext</span><span class="params">()</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//返回会话期间的识别号，即sessionId</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">getId</span><span class="params">()</span></span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="URL重写"><a href="#URL重写" class="headerlink" title="URL重写"></a>URL重写</h2><h3 id="URL重写是什么？"><a href="#URL重写是什么？" class="headerlink" title="URL重写是什么？"></a>URL重写是什么？</h3><p>URL重写，是将URL重新写成Web应用可以处理的另一个URL的过程。</p>
+<p>它只对链接起作用，只支持文本</p>
+<p>它将一个或多个<code>键值对</code>添加到URL的查询字符串中，每个<code>键值对</code>为<code>key = value</code>形式，如:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?key_1=value_1&amp;key_2=value_2...&amp;key_n=value_n</span><br></pre></td></tr></table></figure>
+
+<p>URL和键值对之间用问好？分割，键值对之间用与符号&amp;分割。</p>
+<p><code>URL</code>的内容会显示在浏览器的地址栏上,所以<code>URL</code>重写不适合用来传递敏感信息。</p>
+<h3 id="URL重写有什么用？"><a href="#URL重写有什么用？" class="headerlink" title="URL重写有什么用？"></a>URL重写有什么用？</h3><p>服务器在传递Session的ID属性时，是以Cookie的形式传递的。</p>
+<p>在实际应用中，如果客户端不支持Cookie或禁用Cookie功能，那么服务器就无法获取Session的ID属性，也无法获取与该客户端对应的Session对象。</p>
+<p>因此，URL重写技术被引入到Session机制中，在无法得知客户端是否支持Cookie时，<strong>将Session的ID属性追加到URL地址后面，从而实现会话跟踪功能。</strong></p>
+<p>例如：</p>
+<p><code>http:localhost:8081/javaee/URLTest</code></p>
+<p>经过URL重写后变为：</p>
+<p><code>http:localhost:8081/javaee/URLTest;jsessionid=234A39C023E82EF</code></p>
+<p>jessionid就是追加的Session ID属性</p>
+<h3 id="URL重写怎么用？"><a href="#URL重写怎么用？" class="headerlink" title="URL重写怎么用？"></a>URL重写怎么用？</h3><p>HttpServletResponse类提供了URL重写的方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">encodeURL</span><span class="params">()</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">encodeRedirectURL</span><span class="params">()</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+
+                </div>
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                JavaEE学习笔记
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                2024/06/21/JavaEE学习笔记/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    Author
+                </div>
+                <div class="content">LZC</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    Published
+                </div>
+                <div class="content">2024-06-21 21:56</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    License
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="Copy copyright info" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/javaWeb/">javaWeb</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="Share to QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="Share to WeChat"
+            data-tooltip-img-tip="Scan by WeChat"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="Share to WeiBo"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+                    <div class="reward-author-container border-box flex-center">
+    <div class="reward-btn keep-button border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="1分，不能再多了！"
+            data-tooltip-img-url="/images/reward.jpg"
+            data-tooltip-img-trigger="click"
+            data-tooltip-img-style="top: -8px;"
+    >
+        <i class="fa-solid fa-hand-holding-heart"></i>
+    </div>
+</div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/06/21/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                                   title="Java基础学习笔记"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Java基础学习笔记</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/06/21/Eclipse%E8%BF%9E%E6%8E%A5MySQL/"
+                                   title="浅谈Eclipse连接MySQL"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">浅谈Eclipse连接MySQL</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <!-- use hexo-blog-encrypt -->
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaEE"><span class="nav-text">JavaEE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#doGet-%E5%92%8C-doPost"><span class="nav-text">doGet() 和 doPost()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#doGet"><span class="nav-text">doGet()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#doPost"><span class="nav-text">doPost()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB"><span class="nav-text">区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%90%E8%97%8F%E5%9F%9F"><span class="nav-text">隐藏域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML%E8%A1%A8%E5%8D%95%E9%9A%90%E8%97%8F%E5%9F%9F"><span class="nav-text">HTML表单隐藏域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%B3%95"><span class="nav-text">用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Referer%E2%80%94%E2%80%94%E9%98%B2%E7%9B%97%E9%93%BE"><span class="nav-text">Referer——防盗链</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Referer"><span class="nav-text">为什么使用Referer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Referer%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-text">Referer的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ServletContext"><span class="nav-text">ServletContext</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#servletContext%E6%98%AF%E4%B8%80%E4%B8%AA%E5%9F%9F%E5%AF%B9%E8%B1%A1"><span class="nav-text">servletContext是一个域对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0"><span class="nav-text">读取全局配置参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E5%BD%93%E5%89%8D%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95%E4%B8%8B%E9%9D%A2%E7%9A%84%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6"><span class="nav-text">搜索当前工程目录下面的资源文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%EF%BC%88session-tracking%EF%BC%89"><span class="nav-text">会话跟踪（session tracking）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF%EF%BC%9A"><span class="nav-text">会话跟踪技术：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie"><span class="nav-text">Cookie</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-text">Cookie是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-text">Cookie有什么用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-text">Cookie怎么用？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BACookie%EF%BC%9A"><span class="nav-text">创建Cookie：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96Cookie%EF%BC%9A"><span class="nav-text">获取Cookie：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0Cookie%EF%BC%9A"><span class="nav-text">更新Cookie：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4Cookie%EF%BC%9A"><span class="nav-text">删除Cookie：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cookie%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3"><span class="nav-text">Cookie相关接口</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session"><span class="nav-text">Session</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#session%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">session是什么?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-text">session有什么用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-text">session怎么用？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96HttpSession%E5%AF%B9%E8%B1%A1"><span class="nav-text">获取HttpSession对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HttpSession%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">HttpSession的方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#URL%E9%87%8D%E5%86%99"><span class="nav-text">URL重写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#URL%E9%87%8D%E5%86%99%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-text">URL重写是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL%E9%87%8D%E5%86%99%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-text">URL重写有什么用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL%E9%87%8D%E5%86%99%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-text">URL重写怎么用？</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+        &copy;&nbsp;<span>2022</span>&nbsp;-&nbsp;2024
+        
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">LZC</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+            This site is deployed on <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span>
+            
+        </div>
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <!-- use hexo-blog-encrypt -->
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaEE"><span class="nav-text">JavaEE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#doGet-%E5%92%8C-doPost"><span class="nav-text">doGet() 和 doPost()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#doGet"><span class="nav-text">doGet()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#doPost"><span class="nav-text">doPost()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB"><span class="nav-text">区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%90%E8%97%8F%E5%9F%9F"><span class="nav-text">隐藏域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML%E8%A1%A8%E5%8D%95%E9%9A%90%E8%97%8F%E5%9F%9F"><span class="nav-text">HTML表单隐藏域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%B3%95"><span class="nav-text">用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Referer%E2%80%94%E2%80%94%E9%98%B2%E7%9B%97%E9%93%BE"><span class="nav-text">Referer——防盗链</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Referer"><span class="nav-text">为什么使用Referer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Referer%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-text">Referer的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ServletContext"><span class="nav-text">ServletContext</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#servletContext%E6%98%AF%E4%B8%80%E4%B8%AA%E5%9F%9F%E5%AF%B9%E8%B1%A1"><span class="nav-text">servletContext是一个域对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0"><span class="nav-text">读取全局配置参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E5%BD%93%E5%89%8D%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95%E4%B8%8B%E9%9D%A2%E7%9A%84%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6"><span class="nav-text">搜索当前工程目录下面的资源文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%EF%BC%88session-tracking%EF%BC%89"><span class="nav-text">会话跟踪（session tracking）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF%EF%BC%9A"><span class="nav-text">会话跟踪技术：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie"><span class="nav-text">Cookie</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-text">Cookie是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-text">Cookie有什么用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-text">Cookie怎么用？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BACookie%EF%BC%9A"><span class="nav-text">创建Cookie：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96Cookie%EF%BC%9A"><span class="nav-text">获取Cookie：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0Cookie%EF%BC%9A"><span class="nav-text">更新Cookie：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4Cookie%EF%BC%9A"><span class="nav-text">删除Cookie：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cookie%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3"><span class="nav-text">Cookie相关接口</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session"><span class="nav-text">Session</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#session%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">session是什么?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-text">session有什么用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#session%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-text">session怎么用？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96HttpSession%E5%AF%B9%E8%B1%A1"><span class="nav-text">获取HttpSession对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HttpSession%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">HttpSession的方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#URL%E9%87%8D%E5%86%99"><span class="nav-text">URL重写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#URL%E9%87%8D%E5%86%99%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-text">URL重写是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL%E9%87%8D%E5%86%99%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-text">URL重写有什么用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL%E9%87%8D%E5%86%99%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-text">URL重写怎么用？</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+            
+<script src="/js/post/copyright-info.js"></script>
+
+        
+
+        <!-- share -->
+        
+            
+<script src="/js/post/share.js"></script>
+
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
