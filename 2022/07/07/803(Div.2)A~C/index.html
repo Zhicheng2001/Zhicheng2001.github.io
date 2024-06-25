@@ -392,28 +392,20 @@ mjx-container[display="true"] + br {
                 <div class="post-content keep-markdown-body ">
                     
 
-                    <h1 id="codeforces-round-803-div.-2"><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698">Codeforces Round #803 (Div.
-2)<i class="fas fa-external-link-alt"></i></a></h1>
-<h2 id="a.-xor-mixup"><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/A">A. XOR
-Mixup<i class="fas fa-external-link-alt"></i></a></h2>
+                    <h1 id="codeforces-round-803-div-2"><a class="markdownIt-Anchor" href="#codeforces-round-803-div-2"></a> <a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698">Codeforces Round #803 (Div. 2)<i class="fas fa-external-link-alt"></i></a></h1>
+<h2 id="a-xor-mixup"><a class="markdownIt-Anchor" href="#a-xor-mixup"></a> <a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/A">A. XOR Mixup<i class="fas fa-external-link-alt"></i></a></h2>
 <p><strong>题目大意</strong>：有一个长度为n的数组包含x和n-1个元素，其中x是其他n-1个元素的按位异或，从这个数组中找出x.<br>
 <strong>思路</strong>：因为n最大为100，所以这题直接暴力枚举就行了.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">{</span><br><span class="line">	int n;</span><br><span class="line">	int res;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)	cin &gt;&gt; a[i];</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)</span><br><span class="line">	{</span><br><span class="line">		res = a[1];</span><br><span class="line">		for (int j = 2;j &lt;= n;j ++)</span><br><span class="line">		{</span><br><span class="line">			if (j == i)	continue;</span><br><span class="line">			else	res = res ^ a[j];</span><br><span class="line">		}</span><br><span class="line">		if (res == a[i])</span><br><span class="line">		{</span><br><span class="line">			cout &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">			return;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-<h2 id="b.-rising-sand"><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/B">B. Rising
-Sand<i class="fas fa-external-link-alt"></i></a></h2>
-<p><strong>题目大意</strong>：给一组数，定义ans为<strong>a[2]<sub>a</sub>[n-1]</strong>中值大于相邻两个数之和的元素个数。使用一种不限次数的操作选择连续长度为<strong>m</strong>的序列均加上1。求ans的最大可能值。<br>
+<h2 id="b-rising-sand"><a class="markdownIt-Anchor" href="#b-rising-sand"></a> <a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/B">B. Rising Sand<i class="fas fa-external-link-alt"></i></a></h2>
+<p><strong>题目大意</strong>：给一组数，定义ans为<strong>a[2]~a[n-1]<strong>中值大于相邻两个数之和的元素个数。使用一种不限次数的操作选择连续长度为</strong>m</strong>的序列均加上1。求ans的最大可能值。<br>
 <strong>思路</strong>：<br>
 分类讨论<br>
-当m ==
-1时，数组中的每一个数都可以随便加，所以最大值为数组中不相邻的个数，即(n
-- 1) / 2.<br>
+当m == 1时，数组中的每一个数都可以随便加，所以最大值为数组中不相邻的个数，即(n - 1) / 2.<br>
 当m &gt;= 2时，直接暴力模拟即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">void solve()</span><br><span class="line">{</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">	int ans = 0;</span><br><span class="line">	</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)	cin &gt;&gt; a[i];</span><br><span class="line">	</span><br><span class="line">	if (k == 1)</span><br><span class="line">	{</span><br><span class="line">		cout &lt;&lt; (n - 1) / 2 &lt;&lt; endl;</span><br><span class="line">		return;</span><br><span class="line">	}</span><br><span class="line">	else</span><br><span class="line">	{</span><br><span class="line">		for (int i = 2;i &lt; n;i ++)</span><br><span class="line">			if (a[i] &gt; a[i - 1] + a[i + 1])</span><br><span class="line">				ans ++;</span><br><span class="line">	}</span><br><span class="line">	cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-<h2 id="c.-3sum-closure"><a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/c">C. 3SUM
-Closure<i class="fas fa-external-link-alt"></i></a></h2>
-<p><strong>题目大意</strong>：一个长度为n的数组，如果对任意的 1 &lt;= i
-&lt; j &lt; k &lt;= n,存在1 &lt;= l &lt;= n，使a[i] + a[j] + a[k] = a[l]
-满足，则这个数组是3SUM-closed的。<br>
+<h2 id="c-3sum-closure"><a class="markdownIt-Anchor" href="#c-3sum-closure"></a> <a class="link" target="_blank" rel="noopener" href="https://codeforces.com/contest/1698/problem/c">C. 3SUM Closure<i class="fas fa-external-link-alt"></i></a></h2>
+<p><strong>题目大意</strong>：一个长度为n的数组，如果对任意的 1 &lt;= i &lt; j  &lt; k &lt;= n,存在1 &lt;= l &lt;= n，使a[i] + a[j] + a[k] = a[l] 满足，则这个数组是3SUM-closed的。<br>
 判断数组是不是3SUM-closed。<br>
 <strong>思路</strong>：如果数组有三个正数，选择三个最大的，它们之和必然大于其中任何一个，所以必然不成立。因此，数组最多只能有2个正数。负数同理，最多只能有两个负数。<br>
 0对答案的贡献<br>
@@ -580,11 +572,7 @@ Closure<i class="fas fa-external-link-alt"></i></a></h2>
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
         <!-- use hexo-blog-encrypt -->
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#codeforces-round-803-div.-2"><span class="nav-text">Codeforces Round #803 (Div.
-2)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a.-xor-mixup"><span class="nav-text">A. XOR
-Mixup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b.-rising-sand"><span class="nav-text">B. Rising
-Sand</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c.-3sum-closure"><span class="nav-text">C. 3SUM
-Closure</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#codeforces-round-803-div-2"><span class="nav-text"> Codeforces Round #803 (Div. 2)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-xor-mixup"><span class="nav-text"> A. XOR Mixup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-rising-sand"><span class="nav-text"> B. Rising Sand</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-3sum-closure"><span class="nav-text"> C. 3SUM Closure</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -745,11 +733,7 @@ Closure</span></a></li></ol></li></ol>
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
         <!-- use hexo-blog-encrypt -->
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#codeforces-round-803-div.-2"><span class="nav-text">Codeforces Round #803 (Div.
-2)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a.-xor-mixup"><span class="nav-text">A. XOR
-Mixup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b.-rising-sand"><span class="nav-text">B. Rising
-Sand</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c.-3sum-closure"><span class="nav-text">C. 3SUM
-Closure</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#codeforces-round-803-div-2"><span class="nav-text"> Codeforces Round #803 (Div. 2)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-xor-mixup"><span class="nav-text"> A. XOR Mixup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-rising-sand"><span class="nav-text"> B. Rising Sand</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-3sum-closure"><span class="nav-text"> C. 3SUM Closure</span></a></li></ol></li></ol>
     </div>
 </div>
 

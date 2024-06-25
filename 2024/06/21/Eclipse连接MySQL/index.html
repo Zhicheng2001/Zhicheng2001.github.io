@@ -401,31 +401,28 @@ mjx-container[display="true"] + br {
                 <div class="post-content keep-markdown-body ">
                     
 
-                    <h1 id="浅谈eclipse连接mysql">浅谈Eclipse连接MySQL</h1>
-<h2 id="一需要的工具">一、需要的工具</h2>
+                    <h1 id="浅谈eclipse连接mysql"><a class="markdownIt-Anchor" href="#浅谈eclipse连接mysql"></a> 浅谈Eclipse连接MySQL</h1>
+<h2 id="一-需要的工具"><a class="markdownIt-Anchor" href="#一-需要的工具"></a> 一、需要的工具</h2>
 <ul>
 <li>Eclipse</li>
 <li>MySQL</li>
 <li>mysql-connector-jave-<em>版本号</em>-bin.jar</li>
 <li>Navicat for MySQL</li>
 </ul>
-<h2 id="二通过navicat创建连接">二、通过Navicat创建连接</h2>
-<p><img src="https://img1.imgtp.com/2023/05/16/BKPwzeIV.png" alt="新建连接.png" style="zoom:80%;"></p>
+<h2 id="二-通过navicat创建连接"><a class="markdownIt-Anchor" href="#二-通过navicat创建连接"></a> 二、通过Navicat创建连接</h2>
+<img src="https://img1.imgtp.com/2023/05/16/BKPwzeIV.png" alt="新建连接.png" style="zoom:80%;">
 <p>启动MySQL服务以后，打开Navicat，点击“连接”，输入连接名和密码。</p>
 <p>连接名在后面代码中会用到。</p>
 <p><img src="https://img1.imgtp.com/2023/05/16/g2BUlGzr.png" alt="打开连接.png"></p>
 <p>创建好了以后，右击-打开连接，之后可以选择创建或打开数据库。</p>
-<h2 id="三在eclipse项目中导入jar包">三、在Eclipse项目中导入jar包</h2>
-<p>创建Java Project以后，右击这个项目，选择"Build Path"—"Configure Build
-Path..."。</p>
-<p><img src="https://img1.imgtp.com/2023/05/16/jAUsUqg9.png" alt="导入jar1.png" style="zoom:80%;"></p>
-<p>在打开的界面中，选择"Librari"—"Add External
-JARs"。之后选择"mysql-connector-jave-<em>版本号</em>-bin.jar"这个jar包<strong>打开</strong>，最后点击"Apply
-and Close"。</p>
-<p><img src="https://img1.imgtp.com/2023/05/16/e3DyG0HB.png" alt="导入jar2.png" style="zoom:80%;"></p>
+<h2 id="三-在eclipse项目中导入jar包"><a class="markdownIt-Anchor" href="#三-在eclipse项目中导入jar包"></a> 三、在Eclipse项目中导入jar包</h2>
+<p>创建Java Project以后，右击这个项目，选择"Build Path"—“Configure Build Path…”。</p>
+<img src="https://img1.imgtp.com/2023/05/16/jAUsUqg9.png" alt="导入jar1.png" style="zoom:80%;">
+<p>在打开的界面中，选择"Librari"—“Add External JARs”。之后选择"mysql-connector-jave-<em>版本号</em>-bin.jar"这个jar包<strong>打开</strong>，最后点击"Apply and Close"。</p>
+<img src="https://img1.imgtp.com/2023/05/16/e3DyG0HB.png" alt="导入jar2.png" style="zoom:80%;">
 <p>至此，jar的导入就完成了。</p>
 <p><img src="https://img1.imgtp.com/2023/05/16/vx9zlYp0.png" alt="导入jar3.png"></p>
-<h2 id="四写代码验证">四、写代码验证</h2>
+<h2 id="四-写代码验证"><a class="markdownIt-Anchor" href="#四-写代码验证"></a> 四、写代码验证</h2>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Jdbc</span> {</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> {</span><br><span class="line">		<span class="keyword">try</span> {</span><br><span class="line">			Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line">			System.out.println(<span class="string">"成功加载MySQL驱动"</span>);</span><br><span class="line">		} <span class="keyword">catch</span>(Exception e) {</span><br><span class="line">			System.out.println(<span class="string">"加载MySQL驱动失败"</span>);</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">try</span> {</span><br><span class="line">			<span class="type">Connection</span> <span class="variable">connect</span> <span class="operator">=</span> DriverManager.getConnection(<span class="string">"jdbc:mysql://localhost:3306/test"</span>,<span class="string">"root"</span>,<span class="string">"123"</span>);</span><br><span class="line">			System.out.println(<span class="string">"成功连接MySQL服务器"</span>);</span><br><span class="line">			<span class="type">Statement</span> <span class="variable">stmt</span> <span class="operator">=</span> connect.createStatement();</span><br><span class="line">			<span class="type">ResultSet</span> <span class="variable">rs</span> <span class="operator">=</span> stmt.executeQuery(<span class="string">"select * from goods"</span>);</span><br><span class="line">			<span class="keyword">while</span>(rs.next()) {</span><br><span class="line">				<span class="type">String</span> <span class="variable">number</span> <span class="operator">=</span> rs.getString(<span class="string">"number"</span>).trim();</span><br><span class="line">				<span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> rs.getString(<span class="string">"name"</span>).trim();</span><br><span class="line">				<span class="type">Date</span> <span class="variable">date</span> <span class="operator">=</span> rs.getDate(<span class="string">"madeTime"</span>);</span><br><span class="line">				<span class="type">double</span> <span class="variable">price</span> <span class="operator">=</span> rs.getDouble(<span class="string">"price"</span>);</span><br><span class="line">				System.out.printf(<span class="string">"%-5s"</span>, number);</span><br><span class="line">				System.out.printf(<span class="string">"%-15s"</span>, name);</span><br><span class="line">				System.out.printf(<span class="string">"%-15s"</span>, date.toString().trim());</span><br><span class="line">				System.out.printf(<span class="string">"%-6s\n"</span>, price);	  </span><br><span class="line">			}</span><br><span class="line">			connect.close();	</span><br><span class="line">		} <span class="keyword">catch</span>(Exception e) {</span><br><span class="line">			System.out.println(<span class="string">"获取错误"</span>);</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>课上给的goods表内容</p>
 <table>
@@ -638,7 +635,7 @@ and Close"。</p>
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
         <!-- use hexo-blog-encrypt -->
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E8%B0%88eclipse%E8%BF%9E%E6%8E%A5mysql"><span class="nav-text">浅谈Eclipse连接MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E9%9C%80%E8%A6%81%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="nav-text">一、需要的工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E9%80%9A%E8%BF%87navicat%E5%88%9B%E5%BB%BA%E8%BF%9E%E6%8E%A5"><span class="nav-text">二、通过Navicat创建连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%9C%A8eclipse%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%AF%BC%E5%85%A5jar%E5%8C%85"><span class="nav-text">三、在Eclipse项目中导入jar包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E5%86%99%E4%BB%A3%E7%A0%81%E9%AA%8C%E8%AF%81"><span class="nav-text">四、写代码验证</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E8%B0%88eclipse%E8%BF%9E%E6%8E%A5mysql"><span class="nav-text"> 浅谈Eclipse连接MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E9%9C%80%E8%A6%81%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="nav-text"> 一、需要的工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E9%80%9A%E8%BF%87navicat%E5%88%9B%E5%BB%BA%E8%BF%9E%E6%8E%A5"><span class="nav-text"> 二、通过Navicat创建连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-%E5%9C%A8eclipse%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%AF%BC%E5%85%A5jar%E5%8C%85"><span class="nav-text"> 三、在Eclipse项目中导入jar包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-%E5%86%99%E4%BB%A3%E7%A0%81%E9%AA%8C%E8%AF%81"><span class="nav-text"> 四、写代码验证</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -799,7 +796,7 @@ and Close"。</p>
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
         <!-- use hexo-blog-encrypt -->
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E8%B0%88eclipse%E8%BF%9E%E6%8E%A5mysql"><span class="nav-text">浅谈Eclipse连接MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E9%9C%80%E8%A6%81%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="nav-text">一、需要的工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E9%80%9A%E8%BF%87navicat%E5%88%9B%E5%BB%BA%E8%BF%9E%E6%8E%A5"><span class="nav-text">二、通过Navicat创建连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%9C%A8eclipse%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%AF%BC%E5%85%A5jar%E5%8C%85"><span class="nav-text">三、在Eclipse项目中导入jar包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E5%86%99%E4%BB%A3%E7%A0%81%E9%AA%8C%E8%AF%81"><span class="nav-text">四、写代码验证</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E8%B0%88eclipse%E8%BF%9E%E6%8E%A5mysql"><span class="nav-text"> 浅谈Eclipse连接MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E9%9C%80%E8%A6%81%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="nav-text"> 一、需要的工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E9%80%9A%E8%BF%87navicat%E5%88%9B%E5%BB%BA%E8%BF%9E%E6%8E%A5"><span class="nav-text"> 二、通过Navicat创建连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-%E5%9C%A8eclipse%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%AF%BC%E5%85%A5jar%E5%8C%85"><span class="nav-text"> 三、在Eclipse项目中导入jar包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-%E5%86%99%E4%BB%A3%E7%A0%81%E9%AA%8C%E8%AF%81"><span class="nav-text"> 四、写代码验证</span></a></li></ol></li></ol>
     </div>
 </div>
 

@@ -401,74 +401,64 @@ mjx-container[display="true"] + br {
                 <div class="post-content keep-markdown-body ">
                     
 
-                    <h1 id="浅学oracle">浅学Oracle</h1>
+                    <h1 id="浅学oracle"><a class="markdownIt-Anchor" href="#浅学oracle"></a> 浅学Oracle</h1>
 <hr>
-<h2 id="数据库工具">数据库工具</h2>
-<h3 id="sql-plus-是什么">SQL *Plus 是什么？</h3>
-<p>SQL *Plus 是Oracle的一个命令行工具，是在Oracle的instant
-client基础上运行。</p>
-<h3 id="sql-developer-是什么">SQL Developer 是什么？</h3>
+<h2 id="数据库工具"><a class="markdownIt-Anchor" href="#数据库工具"></a> 数据库工具</h2>
+<h3 id="sql-plus-是什么"><a class="markdownIt-Anchor" href="#sql-plus-是什么"></a> SQL *Plus 是什么？</h3>
+<p>SQL *Plus 是Oracle的一个命令行工具，是在Oracle的instant client基础上运行。</p>
+<h3 id="sql-developer-是什么"><a class="markdownIt-Anchor" href="#sql-developer-是什么"></a> SQL Developer 是什么？</h3>
 <p>是Oracle的集成开发环境，例如Java的eclipse，一种数据操作工具。</p>
-<h3 id="dbca是什么">DBCA是什么？</h3>
-<p>DBCA（Database Configuration Assistant）是Oracle
-11g提供的一个具有<strong>图形化</strong>用户界面的工具，用来帮助数据库管理员快速、直观地创建数据库。</p>
-<h3 id="oem是什么">OEM是什么？</h3>
-<p>Oracle企业管理器（Oracle Enterprise
-Manager）简称OEM，是一个基于Java的框架系统，该系统集成了多个组件，为用户提供了一个功能强大的图形用户界面。OEM提供可以用于管理单个Oracle数据库的工具，由于采用了基于Web的界面，它对数据库的访问也是通过HTTP/HTTPS协议，即使用B/S模式访问Oracle数据库管理系统。</p>
+<h3 id="dbca是什么"><a class="markdownIt-Anchor" href="#dbca是什么"></a> DBCA是什么？</h3>
+<p>DBCA（Database Configuration Assistant）是Oracle 11g提供的一个具有<strong>图形化</strong>用户界面的工具，用来帮助数据库管理员快速、直观地创建数据库。</p>
+<h3 id="oem是什么"><a class="markdownIt-Anchor" href="#oem是什么"></a> OEM是什么？</h3>
+<p>Oracle企业管理器（Oracle Enterprise Manager）简称OEM，是一个基于Java的框架系统，该系统集成了多个组件，为用户提供了一个功能强大的图形用户界面。OEM提供可以用于管理单个Oracle数据库的工具，由于采用了基于Web的界面，它对数据库的访问也是通过HTTP/HTTPS协议，即使用B/S模式访问Oracle数据库管理系统。</p>
 <hr>
-<h2 id="内部结构">内部结构</h2>
-<h3 id="表空间-tablespace">表空间 tablespace</h3>
+<h2 id="内部结构"><a class="markdownIt-Anchor" href="#内部结构"></a> 内部结构</h2>
+<h3 id="表空间-tablespace"><a class="markdownIt-Anchor" href="#表空间-tablespace"></a> 表空间 tablespace</h3>
 <p>表空间是数据库的逻辑划分，一个表空间只属于一个数据库。</p>
 <p>每个表空间由一个或多个数据文件组成，表空间中其他逻辑结构的数据存储在这些数据文件中。</p>
-<p><strong>EXAMPLE表空间：</strong>EXAMPLE表空间是示例表空间，用于存放示例数据库的方案对象信息及其培训资料。</p>
-<p><strong>SYSTEM表空间：</strong>SYSTEM表空间是系统表空间，用于存放Oracle系统内部表和数据字典的数据，如表名、列名和用户名等。</p>
-<p><strong>SYSAUX表空间：</strong>SYSAUX表空间是辅助系统表空间，主要存放Oracle系统内部的常用样例用户的对象，如存放CMR用户的表和索引等，从而减少系统表空间的负荷。SYSAUX表空间一般不存储用户的数据，由Oracle系统内部自动维护。</p>
-<p><strong>TEMP表空间：</strong>TEMP表空间是临时表空间，存放临时表和临时数据，用于排序和汇总等。</p>
-<p><strong>UNDOTBS1表空间：</strong>UNDOTBSI表空间是重做表空间，存放数据库中有关重做的相关信息和数据。当用户对数据库表进行修改（包括INSERT、UPDATE和DELETE操作）时，Oracle系统自动使用重做表空间来临时存放修改前的数据。</p>
-<p><strong>USERS表空间：</strong>USERS表空间是用户表空间，存放永久性用户对象的数据和私有信息，因此也被称为数据表空间。每个数据库都应该有一个用户表空间，以便在创建用户时将其分配给用户。</p>
-<h3 id="表-table">表 table</h3>
+<p>**EXAMPLE表空间：**EXAMPLE表空间是示例表空间，用于存放示例数据库的方案对象信息及其培训资料。</p>
+<p>**SYSTEM表空间：**SYSTEM表空间是系统表空间，用于存放Oracle系统内部表和数据字典的数据，如表名、列名和用户名等。</p>
+<p>**SYSAUX表空间：**SYSAUX表空间是辅助系统表空间，主要存放Oracle系统内部的常用样例用户的对象，如存放CMR用户的表和索引等，从而减少系统表空间的负荷。SYSAUX表空间一般不存储用户的数据，由Oracle系统内部自动维护。</p>
+<p>**TEMP表空间：**TEMP表空间是临时表空间，存放临时表和临时数据，用于排序和汇总等。</p>
+<p>**UNDOTBS1表空间：**UNDOTBSI表空间是重做表空间，存放数据库中有关重做的相关信息和数据。当用户对数据库表进行修改（包括INSERT、UPDATE和DELETE操作）时，Oracle系统自动使用重做表空间来临时存放修改前的数据。</p>
+<p>**USERS表空间：**USERS表空间是用户表空间，存放永久性用户对象的数据和私有信息，因此也被称为数据表空间。每个数据库都应该有一个用户表空间，以便在创建用户时将其分配给用户。</p>
+<h3 id="表-table"><a class="markdownIt-Anchor" href="#表-table"></a> 表 table</h3>
 <p>表是数据库中存放用户数据的对象。</p>
-<h3 id="约束条件-constraint">约束条件 constraint</h3>
+<h3 id="约束条件-constraint"><a class="markdownIt-Anchor" href="#约束条件-constraint"></a> 约束条件 constraint</h3>
 <p>可以为一个<strong>表列</strong>创建约束条件。此时，表中的每一行都必须满足约束条件定义所规定的条件。</p>
-<p><strong>主键（PRIMARY
-KEY）：</strong>主键是表中的一列或多个列。为表定义主键有如下几个作用：主键包含的列不能输入重复的值，以此来保证一个表的所有行的唯一性；主键也不允许定义此约束的列为NULL值；主键在定义此约束的列中创建了唯一性的索引，利用这个索引可更快地检索表中的行。</p>
-<p><strong>默认（DEFAULT）：</strong>在表中插入一行数据但没有为列指定值时生成一个在定义表时预先指定的值。</p>
-<p><strong>检查（CHECK）：</strong>检查约束条件确保指定列中的值符合一定的条件。CHECK列约束条件不能引用一个独立表。非空值约束条件被数据库看成一个CHECK约束条件。</p>
-<p><strong>唯一性（UNIQUE）：</strong>唯一性约束条件用于保证应具有唯一性而又不是主键的一部分的那些列的唯一性。</p>
-<p><strong>外键（FOREIGN
-KEY）：</strong>外键约束条件规定表间的关系性质。一个外键使一个表的一列或多列与已定义为主键的表中的一批相同的列相关联。当在已定义主键约束的表中更新列值时，其他表中定义有外键约束的列会被自动更新。</p>
-<h3 id="分区-partition">分区 partition</h3>
+<p>**主键（PRIMARY KEY）：**主键是表中的一列或多个列。为表定义主键有如下几个作用：主键包含的列不能输入重复的值，以此来保证一个表的所有行的唯一性；主键也不允许定义此约束的列为NULL值；主键在定义此约束的列中创建了唯一性的索引，利用这个索引可更快地检索表中的行。</p>
+<p>**默认（DEFAULT）：**在表中插入一行数据但没有为列指定值时生成一个在定义表时预先指定的值。</p>
+<p>**检查（CHECK）：**检查约束条件确保指定列中的值符合一定的条件。CHECK列约束条件不能引用一个独立表。非空值约束条件被数据库看成一个CHECK约束条件。</p>
+<p>**唯一性（UNIQUE）：**唯一性约束条件用于保证应具有唯一性而又不是主键的一部分的那些列的唯一性。</p>
+<p>**外键（FOREIGN KEY）：**外键约束条件规定表间的关系性质。一个外键使一个表的一列或多列与已定义为主键的表中的一批相同的列相关联。当在已定义主键约束的表中更新列值时，其他表中定义有外键约束的列会被自动更新。</p>
+<h3 id="分区-partition"><a class="markdownIt-Anchor" href="#分区-partition"></a> 分区 partition</h3>
 <p>在非常大的数据库中，可以通过把一个大表的数据分成多个小表来简化数据库的管理，这些小表称为分区。除了对表分区外，还可以对索引进行分区。分区不仅简化了数据库的管理还改善了其应用性能。在Oracle中，能够细分分区，创建子分区。例如，可以根据一组值分割一个表，然后再根据另一种分割方法分割分区。</p>
-<h3 id="索引-index">索引 index</h3>
-<p>在关系数据库表中，一个行数据的物理位置无关紧要。为了能够找到数据，表中的每一行都用一个RowID来标识。RowID告诉数据库这一行的准确位置，包括所在的文件、该文件中的块和该块中行地址。索引是帮助用户在表中快速地找到记录的数据库结构。它既可以提高数据库性能，又能够保证列值的唯一性。当CREATE
-TABLE命令中规定有UNIQUE或PRIMARY
-KEY约束条件子句时，Oracle就会自动创建一个索引。也可以通过CREATE
-INDEX命令来手工创建自己的索引。</p>
-<h3 id="用户-user">用户 user</h3>
+<h3 id="索引-index"><a class="markdownIt-Anchor" href="#索引-index"></a> 索引 index</h3>
+<p>在关系数据库表中，一个行数据的物理位置无关紧要。为了能够找到数据，表中的每一行都用一个RowID来标识。RowID告诉数据库这一行的准确位置，包括所在的文件、该文件中的块和该块中行地址。索引是帮助用户在表中快速地找到记录的数据库结构。它既可以提高数据库性能，又能够保证列值的唯一性。当CREATE TABLE命令中规定有UNIQUE或PRIMARY KEY约束条件子句时，Oracle就会自动创建一个索引。也可以通过CREATE INDEX命令来手工创建自己的索引。</p>
+<h3 id="用户-user"><a class="markdownIt-Anchor" href="#用户-user"></a> 用户 user</h3>
 <p>用户账号虽然不是数据库中的一个物理结构，但它与数据库中的对象有着重要的关系，这是因为用户拥有数据库的对象。例如，用户SYS拥有数据字典表，这些表中存储了数据库中其他对象的所有信息；用户SYSTEM拥有访问数据字典表的视图，这些视图供数据库其他用户使用。为数据库创建对象（例如表）必须在用户账户下进行。可以对每一个用户账户进行自定义，以便将一个特定的表空间作为它的默认表空间。</p>
-<h3 id="方案-schema">方案 schema</h3>
+<h3 id="方案-schema"><a class="markdownIt-Anchor" href="#方案-schema"></a> 方案 schema</h3>
 <p>用户账户拥有的对象集称为用户的方案（SCHEMA）。可以创建不能注册到数据库的用户账户。这样的用户账户提供一种方案，这种方案可以用来保存一组其他用户方案分开的数据库对象。</p>
-<h3 id="同义词">同义词</h3>
+<h3 id="同义词"><a class="markdownIt-Anchor" href="#同义词"></a> 同义词</h3>
 <p>为了给不同的用户使用数据库对象时提供一个简单的、唯一标识数据库对象的名称，可以为数据库对象创建同义词。同义词有公用同义词和私有同义词两种。</p>
-<h3 id="权限及角色-role">权限及角色 role</h3>
+<h3 id="权限及角色-role"><a class="markdownIt-Anchor" href="#权限及角色-role"></a> 权限及角色 role</h3>
 <p>为了访问其他账户所有的对象，必须首先被授予访问这个对象的权限。权限可以授予给某个用户或PUBLIC，PUBLIC把权限授予数据库中的全体用户。可以创建角色即权限组来简化权限的管理。可以把一些权限授予一个角色，而这个角色又可以被授予多个用户。在应用程序中，角色可以被动态地启用或禁用。</p>
-<h3 id="段-segment盘区-extent-和数据块-data-block">段 segment、盘区
-extent 和数据块 data block</h3>
+<h3 id="段-segment-盘区-extent-和数据块-data-block"><a class="markdownIt-Anchor" href="#段-segment-盘区-extent-和数据块-data-block"></a> 段 segment、盘区 extent 和数据块 data block</h3>
 <p>依照不同的数据处理性质，可能需要在数据表空间内划分出不同区域，以存放不同数据，将这些区域称为“段”（SEGMENT）。</p>
 <p>例如，存放数据的区域称为“数据区段”、存放索引的区域称为“索引区段”。</p>
 <p>由于段是一个物理实体，所以必须把它分配到数据库中的一个表空间中（放在表空间的一个数据文件中）。而段其实就是由许多盘区组合而成的。当段中的空间用完时，该段就获取另外的盘区。</p>
 <p><strong>数据块是最小的储存单元</strong>，Oracle数据库是操作系统块的倍数。</p>
 <hr>
-<h2 id="外部结构">外部结构</h2>
-<h3 id="数据文件-datafile">数据文件 datafile</h3>
+<h2 id="外部结构"><a class="markdownIt-Anchor" href="#外部结构"></a> 外部结构</h2>
+<h3 id="数据文件-datafile"><a class="markdownIt-Anchor" href="#数据文件-datafile"></a> 数据文件 datafile</h3>
 <p>每一个Oracle数据库都有一个或多个数据文件，而一个数据文件只能属于一个表空间。</p>
 <p>数据文件创建后可改变大小，创建新的表空间需要创建新的数据文件。数据文件一旦加入到表空间，就不能从这个表空间中移走，也不能和其他表空间发生联系。</p>
-<h3 id="重做日志文件-redo-log-files">重做日志文件 redo log files</h3>
+<h3 id="重做日志文件-redo-log-files"><a class="markdownIt-Anchor" href="#重做日志文件-redo-log-files"></a> 重做日志文件 redo log files</h3>
 <p>Oracle保存所有数据库事务的日志。</p>
-<p>这些事务被记录在联机重做日志文件（Online Redo Log
-File）中。当数据库中的数据遭到破坏时，可以用这些日志来<strong>恢复数据库</strong>。</p>
+<p>这些事务被记录在联机重做日志文件（Online Redo Log File）中。当数据库中的数据遭到破坏时，可以用这些日志来<strong>恢复数据库</strong>。</p>
 <p>一个数据库至少需要<strong>两个</strong>重做日志文件。Oracle以<strong>循环</strong>方式向重做日志文件<strong>写入</strong>。第一个日志被填满后，就向第二个日志文件写入，然后依此类推。当所有日志文件都被写满时，就又回到第一个日志文件，用新事务的数据对其进行重写。</p>
-<h3 id="控制文件-control-files">控制文件 control files</h3>
+<h3 id="控制文件-control-files"><a class="markdownIt-Anchor" href="#控制文件-control-files"></a> 控制文件 control files</h3>
 <p>每个Oracle数据库都有一个控制文件，用以记录与描述数据库的外部结构。</p>
 <p>控制文件内包含：</p>
 <ul>
@@ -478,11 +468,10 @@ File）中。当数据库中的数据遭到破坏时，可以用这些日志来<
 </ul>
 <p>每当数据库被激活时，Oracle会在实例激活后立刻读取控制文件内容，待所有数据库外部结构文件所在信息都收集完毕，数据库才会启动。</p>
 <hr>
-<h2 id="数据库实例">数据库实例</h2>
-<p><strong>数据库实例（Instance）也称为服务器（Server）</strong>，是指用来访问数据库文件集的存储结构系统全局区（System
-Global Area，SGA）及后台进程的集合。</p>
+<h2 id="数据库实例"><a class="markdownIt-Anchor" href="#数据库实例"></a> 数据库实例</h2>
+<p><strong>数据库实例（Instance）也称为服务器（Server）</strong>，是指用来访问数据库文件集的存储结构系统全局区（System Global Area，SGA）及后台进程的集合。</p>
 <p>一个数据库可以被多个实例访问，这是Oracle的并行服务器选项。</p>
-<h3 id="系统全局区">系统全局区</h3>
+<h3 id="系统全局区"><a class="markdownIt-Anchor" href="#系统全局区"></a> 系统全局区</h3>
 <p>当激活Oracle数据库时，系统会先在内存内规划一个固定区域，用来存储每位使用者所需存取的数据以及Oracle运作时必备的系统信息。</p>
 <p>这个区域就称为系统全局区（SGA）。</p>
 <p>SGA包含：</p>
@@ -492,23 +481,20 @@ Global Area，SGA）及后台进程的集合。</p>
 <li>重做日志缓冲区（Redo Log Buffer）</li>
 <li>SQL共享池（Shared SQL Pool）</li>
 </ul>
-<h4 id="数据块缓存区data-block-buffer-cache">数据块缓存区（Data Block
-Buffer Cache）</h4>
+<h4 id="数据块缓存区data-block-buffer-cache"><a class="markdownIt-Anchor" href="#数据块缓存区data-block-buffer-cache"></a> 数据块缓存区（Data Block Buffer Cache）</h4>
 <p>数据块缓存区为SGA的主要成员，用来存放读取数据文件的数据块副本，或是使用者曾经处理过的数据。其用途在于有效减少存取数据时造成的磁盘读/写动作，进而提升数据存取的效率。数据块缓存区的大小由初始化参数DB_BLOCK_BUFFERS决定。数据块缓存区的大小是固定的，它不可能一次装载所有的数据库的内容。通常，数据块缓存区大小只有数据库大小的1%～2%，Oracle使用最近最少使用算法（LRU）来管理可用空间。当存储区需要自由空间时，最近最少使用的块将被移出，释放的存储区空间被新调入的数据块占用。这种算法能够让最频繁使用的数据保留在存储区中。</p>
-<h4 id="字典缓存区dictionary-cache">字典缓存区（Dictionary Cache）</h4>
+<h4 id="字典缓存区dictionary-cache"><a class="markdownIt-Anchor" href="#字典缓存区dictionary-cache"></a> 字典缓存区（Dictionary Cache）</h4>
 <p>数据库对象的信息存储在数据字典中，这些信息包括用户账户、数据文件名、盘区位置、表说明和权限等。当数据库需要这些信息（如要验证用户账户）时，就要读取数据字典，从中获得需要的信息数据，并且将这些数据存储在SGA的字典缓存区中。</p>
 <p>字典缓存区也是通过LRU算法来管理的。字典缓存区的大小由数据库内部管理。字典缓存区是SQL共享池的一部分，SQL共享池的大小由SHARED_POOL_SIZE参数设置。</p>
-<h4 id="重做日志缓冲区redo-log-buffer">重做日志缓冲区（Redo Log
-Buffer）</h4>
+<h4 id="重做日志缓冲区redo-log-buffer"><a class="markdownIt-Anchor" href="#重做日志缓冲区redo-log-buffer"></a> 重做日志缓冲区（Redo Log Buffer）</h4>
 <p>在被写入联机重做日志文件之前，事务首先被记录在称为重做日志缓冲区的SGA中。数据库可以周期性地分批向联机重做日志文件中写入修改的内容，从而优化这个操作。</p>
-<h4 id="sql共享池shared-sql-pool">SQL共享池（Shared SQL Pool）</h4>
-<p>SQL共享池存储数据字典缓存区及库缓存区（Library
-Cache），即对数据库进行操作的语句信息。当使用者将SQL指令送至Oracle数据库后，系统将会先解析语法是否正确。解析时所需要的系统信息，以及解析后的结果将放置在共享区内。如果不同的使用者执行了相同的SQL指令，就可以共享已解析的结果，加速SQL指令的执行速度。SQL共享池的大小由参数SHARED_POOL_SIZE决定。</p>
-<h3 id="后台进程">后台进程</h3>
+<h4 id="sql共享池shared-sql-pool"><a class="markdownIt-Anchor" href="#sql共享池shared-sql-pool"></a> SQL共享池（Shared SQL Pool）</h4>
+<p>SQL共享池存储数据字典缓存区及库缓存区（Library Cache），即对数据库进行操作的语句信息。当使用者将SQL指令送至Oracle数据库后，系统将会先解析语法是否正确。解析时所需要的系统信息，以及解析后的结果将放置在共享区内。如果不同的使用者执行了相同的SQL指令，就可以共享已解析的结果，加速SQL指令的执行速度。SQL共享池的大小由参数SHARED_POOL_SIZE决定。</p>
+<h3 id="后台进程"><a class="markdownIt-Anchor" href="#后台进程"></a> 后台进程</h3>
 <p>数据库的物理结构和存储结构之间的关系是由后台进程来维持的。数据库拥有多个后台进程，其数量取决于数据库的配置。这些进程由数据库管理，它们只需要进行很少的管理。每个进程在数据库中执行不同的任务。图2.14显示了后台进程在数据库外部结构、SGA中的作用和地位。</p>
 <hr>
-<h2 id="创建数据库">创建数据库</h2>
-<h2 id="表操作">表操作</h2>
+<h2 id="创建数据库"><a class="markdownIt-Anchor" href="#创建数据库"></a> 创建数据库</h2>
+<h2 id="表操作"><a class="markdownIt-Anchor" href="#表操作"></a> 表操作</h2>
 
                 </div>
                 
@@ -677,10 +663,7 @@ Cache），即对数据库进行操作的语句信息。当使用者将SQL指令
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
         <!-- use hexo-blog-encrypt -->
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E5%AD%A6oracle"><span class="nav-text">浅学Oracle</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7"><span class="nav-text">数据库工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sql-plus-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">SQL *Plus 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sql-developer-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">SQL Developer 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dbca%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">DBCA是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#oem%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">OEM是什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84"><span class="nav-text">内部结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E7%A9%BA%E9%97%B4-tablespace"><span class="nav-text">表空间 tablespace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8-table"><span class="nav-text">表 table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%A6%E6%9D%9F%E6%9D%A1%E4%BB%B6-constraint"><span class="nav-text">约束条件 constraint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%8C%BA-partition"><span class="nav-text">分区 partition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B4%A2%E5%BC%95-index"><span class="nav-text">索引 index</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7-user"><span class="nav-text">用户 user</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88-schema"><span class="nav-text">方案 schema</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E4%B9%89%E8%AF%8D"><span class="nav-text">同义词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%83%E9%99%90%E5%8F%8A%E8%A7%92%E8%89%B2-role"><span class="nav-text">权限及角色 role</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AE%B5-segment%E7%9B%98%E5%8C%BA-extent-%E5%92%8C%E6%95%B0%E6%8D%AE%E5%9D%97-data-block"><span class="nav-text">段 segment、盘区
-extent 和数据块 data block</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E7%BB%93%E6%9E%84"><span class="nav-text">外部结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6-datafile"><span class="nav-text">数据文件 datafile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%81%9A%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6-redo-log-files"><span class="nav-text">重做日志文件 redo log files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E6%96%87%E4%BB%B6-control-files"><span class="nav-text">控制文件 control files</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E4%BE%8B"><span class="nav-text">数据库实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%85%A8%E5%B1%80%E5%8C%BA"><span class="nav-text">系统全局区</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%9D%97%E7%BC%93%E5%AD%98%E5%8C%BAdata-block-buffer-cache"><span class="nav-text">数据块缓存区（Data Block
-Buffer Cache）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E5%85%B8%E7%BC%93%E5%AD%98%E5%8C%BAdictionary-cache"><span class="nav-text">字典缓存区（Dictionary Cache）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E5%81%9A%E6%97%A5%E5%BF%97%E7%BC%93%E5%86%B2%E5%8C%BAredo-log-buffer"><span class="nav-text">重做日志缓冲区（Redo Log
-Buffer）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sql%E5%85%B1%E4%BA%AB%E6%B1%A0shared-sql-pool"><span class="nav-text">SQL共享池（Shared SQL Pool）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B"><span class="nav-text">后台进程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%93%8D%E4%BD%9C"><span class="nav-text">表操作</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E5%AD%A6oracle"><span class="nav-text"> 浅学Oracle</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7"><span class="nav-text"> 数据库工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sql-plus-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> SQL *Plus 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sql-developer-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> SQL Developer 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dbca%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> DBCA是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#oem%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> OEM是什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84"><span class="nav-text"> 内部结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E7%A9%BA%E9%97%B4-tablespace"><span class="nav-text"> 表空间 tablespace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8-table"><span class="nav-text"> 表 table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%A6%E6%9D%9F%E6%9D%A1%E4%BB%B6-constraint"><span class="nav-text"> 约束条件 constraint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%8C%BA-partition"><span class="nav-text"> 分区 partition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B4%A2%E5%BC%95-index"><span class="nav-text"> 索引 index</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7-user"><span class="nav-text"> 用户 user</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88-schema"><span class="nav-text"> 方案 schema</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E4%B9%89%E8%AF%8D"><span class="nav-text"> 同义词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%83%E9%99%90%E5%8F%8A%E8%A7%92%E8%89%B2-role"><span class="nav-text"> 权限及角色 role</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AE%B5-segment-%E7%9B%98%E5%8C%BA-extent-%E5%92%8C%E6%95%B0%E6%8D%AE%E5%9D%97-data-block"><span class="nav-text"> 段 segment、盘区 extent 和数据块 data block</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E7%BB%93%E6%9E%84"><span class="nav-text"> 外部结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6-datafile"><span class="nav-text"> 数据文件 datafile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%81%9A%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6-redo-log-files"><span class="nav-text"> 重做日志文件 redo log files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E6%96%87%E4%BB%B6-control-files"><span class="nav-text"> 控制文件 control files</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E4%BE%8B"><span class="nav-text"> 数据库实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%85%A8%E5%B1%80%E5%8C%BA"><span class="nav-text"> 系统全局区</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%9D%97%E7%BC%93%E5%AD%98%E5%8C%BAdata-block-buffer-cache"><span class="nav-text"> 数据块缓存区（Data Block Buffer Cache）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E5%85%B8%E7%BC%93%E5%AD%98%E5%8C%BAdictionary-cache"><span class="nav-text"> 字典缓存区（Dictionary Cache）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E5%81%9A%E6%97%A5%E5%BF%97%E7%BC%93%E5%86%B2%E5%8C%BAredo-log-buffer"><span class="nav-text"> 重做日志缓冲区（Redo Log Buffer）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sql%E5%85%B1%E4%BA%AB%E6%B1%A0shared-sql-pool"><span class="nav-text"> SQL共享池（Shared SQL Pool）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B"><span class="nav-text"> 后台进程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text"> 创建数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%93%8D%E4%BD%9C"><span class="nav-text"> 表操作</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -841,10 +824,7 @@ Buffer）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" hr
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
         <!-- use hexo-blog-encrypt -->
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E5%AD%A6oracle"><span class="nav-text">浅学Oracle</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7"><span class="nav-text">数据库工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sql-plus-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">SQL *Plus 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sql-developer-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">SQL Developer 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dbca%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">DBCA是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#oem%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">OEM是什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84"><span class="nav-text">内部结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E7%A9%BA%E9%97%B4-tablespace"><span class="nav-text">表空间 tablespace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8-table"><span class="nav-text">表 table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%A6%E6%9D%9F%E6%9D%A1%E4%BB%B6-constraint"><span class="nav-text">约束条件 constraint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%8C%BA-partition"><span class="nav-text">分区 partition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B4%A2%E5%BC%95-index"><span class="nav-text">索引 index</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7-user"><span class="nav-text">用户 user</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88-schema"><span class="nav-text">方案 schema</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E4%B9%89%E8%AF%8D"><span class="nav-text">同义词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%83%E9%99%90%E5%8F%8A%E8%A7%92%E8%89%B2-role"><span class="nav-text">权限及角色 role</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AE%B5-segment%E7%9B%98%E5%8C%BA-extent-%E5%92%8C%E6%95%B0%E6%8D%AE%E5%9D%97-data-block"><span class="nav-text">段 segment、盘区
-extent 和数据块 data block</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E7%BB%93%E6%9E%84"><span class="nav-text">外部结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6-datafile"><span class="nav-text">数据文件 datafile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%81%9A%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6-redo-log-files"><span class="nav-text">重做日志文件 redo log files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E6%96%87%E4%BB%B6-control-files"><span class="nav-text">控制文件 control files</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E4%BE%8B"><span class="nav-text">数据库实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%85%A8%E5%B1%80%E5%8C%BA"><span class="nav-text">系统全局区</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%9D%97%E7%BC%93%E5%AD%98%E5%8C%BAdata-block-buffer-cache"><span class="nav-text">数据块缓存区（Data Block
-Buffer Cache）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E5%85%B8%E7%BC%93%E5%AD%98%E5%8C%BAdictionary-cache"><span class="nav-text">字典缓存区（Dictionary Cache）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E5%81%9A%E6%97%A5%E5%BF%97%E7%BC%93%E5%86%B2%E5%8C%BAredo-log-buffer"><span class="nav-text">重做日志缓冲区（Redo Log
-Buffer）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sql%E5%85%B1%E4%BA%AB%E6%B1%A0shared-sql-pool"><span class="nav-text">SQL共享池（Shared SQL Pool）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B"><span class="nav-text">后台进程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%93%8D%E4%BD%9C"><span class="nav-text">表操作</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E5%AD%A6oracle"><span class="nav-text"> 浅学Oracle</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7"><span class="nav-text"> 数据库工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sql-plus-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> SQL *Plus 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sql-developer-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> SQL Developer 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dbca%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> DBCA是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#oem%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> OEM是什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84"><span class="nav-text"> 内部结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E7%A9%BA%E9%97%B4-tablespace"><span class="nav-text"> 表空间 tablespace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8-table"><span class="nav-text"> 表 table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%A6%E6%9D%9F%E6%9D%A1%E4%BB%B6-constraint"><span class="nav-text"> 约束条件 constraint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%8C%BA-partition"><span class="nav-text"> 分区 partition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B4%A2%E5%BC%95-index"><span class="nav-text"> 索引 index</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7-user"><span class="nav-text"> 用户 user</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88-schema"><span class="nav-text"> 方案 schema</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E4%B9%89%E8%AF%8D"><span class="nav-text"> 同义词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%83%E9%99%90%E5%8F%8A%E8%A7%92%E8%89%B2-role"><span class="nav-text"> 权限及角色 role</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AE%B5-segment-%E7%9B%98%E5%8C%BA-extent-%E5%92%8C%E6%95%B0%E6%8D%AE%E5%9D%97-data-block"><span class="nav-text"> 段 segment、盘区 extent 和数据块 data block</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E7%BB%93%E6%9E%84"><span class="nav-text"> 外部结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6-datafile"><span class="nav-text"> 数据文件 datafile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%81%9A%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6-redo-log-files"><span class="nav-text"> 重做日志文件 redo log files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E6%96%87%E4%BB%B6-control-files"><span class="nav-text"> 控制文件 control files</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E4%BE%8B"><span class="nav-text"> 数据库实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%85%A8%E5%B1%80%E5%8C%BA"><span class="nav-text"> 系统全局区</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%9D%97%E7%BC%93%E5%AD%98%E5%8C%BAdata-block-buffer-cache"><span class="nav-text"> 数据块缓存区（Data Block Buffer Cache）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E5%85%B8%E7%BC%93%E5%AD%98%E5%8C%BAdictionary-cache"><span class="nav-text"> 字典缓存区（Dictionary Cache）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E5%81%9A%E6%97%A5%E5%BF%97%E7%BC%93%E5%86%B2%E5%8C%BAredo-log-buffer"><span class="nav-text"> 重做日志缓冲区（Redo Log Buffer）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sql%E5%85%B1%E4%BA%AB%E6%B1%A0shared-sql-pool"><span class="nav-text"> SQL共享池（Shared SQL Pool）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B"><span class="nav-text"> 后台进程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text"> 创建数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%93%8D%E4%BD%9C"><span class="nav-text"> 表操作</span></a></li></ol></li></ol>
     </div>
 </div>
 
