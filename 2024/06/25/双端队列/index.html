@@ -239,7 +239,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Jun 25 2024 19:02:27 GMT+0800">2024-06-25 19:02:27</span>
+                <span class="datetime" data-updated="Tue Jun 25 2024 19:37:08 GMT+0800">2024-06-25 19:37:08</span>
             </span>
         
 
@@ -288,7 +288,20 @@
                 <div class="post-content keep-markdown-body ">
                     
 
-                    <h1 id="双端队列"><a href="#双端队列" class="headerlink" title="双端队列"></a>双端队列</h1>
+                    <h1 id="双端队列"><a href="#双端队列" class="headerlink" title="双端队列"></a>双端队列</h1><blockquote>
+<p>915考纲中并没有双端队列，同样没有共享栈，但后者却考了。</p>
+<p>因此双端队列虽然目前没有考过，但今年也许就会考呢hhh</p>
+</blockquote>
+<p><strong>双端队列</strong>是限定插入和删除操作在表两端进行的线性表。</p>
+<p>双端队列可以在任何一端进行插入和删除操作，而一般队列要求在一端插入元素，在另一端删除元素。</p>
+<p>在双端队列进队时，左端进的元素排列在队列中右端进的元素的前面，右端进的元素排列在队列中左端进的元素的后面；在双端队列出队时，无论是左端还是右端出队，先出的元素排列在后出的元素的前面。</p>
+<p>本质上还是一个线性表，只不过修改了输入输出规则。可以从左端输出由右端插入的元素，同理，可以从右端输出由左端插入的元素。</p>
+<p>这种数据结构结合了队列和栈的特点，<strong>既遵循先进先出（FIFO）的原则，又实现了后进先出（LIFO）的原则</strong>。</p>
+<p><strong>输出受限的双端队列</strong>：允许在一端进行插入和删除，但在另一端只允许插入的双端队列。</p>
+<p><strong>输入受限的双端队列</strong>：允许在一端进行插入和删除，但在另一端只允许删除的双端队列。</p>
+<hr>
+<p><strong>注意</strong>：双端队列虽然是两个队列共享一个存储空间，但是每个队列只有一个指针。</p>
+
                 </div>
                 
                         
