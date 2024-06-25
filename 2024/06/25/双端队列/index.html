@@ -239,7 +239,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Jun 25 2024 19:46:54 GMT+0800">2024-06-25 19:46:54</span>
+                <span class="datetime" data-updated="Tue Jun 25 2024 20:24:30 GMT+0800">2024-06-25 20:24:30</span>
             </span>
         
 
@@ -295,10 +295,54 @@
 <p><strong>双端队列</strong>是限定插入和删除操作在表两端进行的线性表。</p>
 <p>双端队列可以在任何一端进行插入和删除操作，而一般队列要求在一端插入元素，在另一端删除元素。</p>
 <p>在双端队列进队时，左端进的元素排列在队列中右端进的元素的前面，右端进的元素排列在队列中左端进的元素的后面；在双端队列出队时，无论是左端还是右端出队，先出的元素排列在后出的元素的前面。</p>
-<p>本质上还是一个线性表，只不过修改了输入输出规则。可以从左端输出由右端插入的元素，同理，可以从右端输出由左端插入的元素。</p>
+<p>设有一个双端队列，输入序列1,2,3,4，那么从左端输入，在表中是[4,3,2,1]；从右端输入，在表中是[1,2,3,4]。</p>
+<p>因此，若限定双端队列从某个端点插入的元素只能从该端点删除，则该双端队列就蜕变为两个栈底相邻接的栈。</p>
+<p>双端队列本质上还是一个线性表，只不过修改了输入输出规则。可以从左端输出由右端插入的元素，同理，可以从右端输出由左端插入的元素。</p>
 <p>这种数据结构结合了队列和栈的特点，<strong>既遵循先进先出（FIFO）的原则，又实现了后进先出（LIFO）的原则</strong>。</p>
-<p><strong>输出受限的双端队列</strong>：允许在一端进行插入和删除，但在另一端只允许插入的双端队列。</p>
-<p><strong>输入受限的双端队列</strong>：允许在一端进行插入和删除，但在另一端只允许删除的双端队列。</p>
+<h2 id="输出受限的双端队列"><a href="#输出受限的双端队列" class="headerlink" title="输出受限的双端队列"></a>输出受限的双端队列</h2><p>允许在一端进行插入和删除，但在另一端只允许插入的双端队列。</p>
+<h2 id="输入受限的双端队列"><a href="#输入受限的双端队列" class="headerlink" title="输入受限的双端队列"></a>输入受限的双端队列</h2><p>允许在一端进行插入和删除，但在另一端只允许删除的双端队列。</p>
+<h2 id="例题1"><a href="#例题1" class="headerlink" title="例题1"></a>例题1</h2><p>设有一个双端队列，输入序列为1,2,3,4，试分别求出以下条件的输出序列。</p>
+<p>(1) 能由输入受限的双端队列得到，但不能由输出受限的双端队列得到的输出序列。</p>
+<p>(2) 能由输出受限的双端队列得到，但不能由输入受限的双端队列得到的输出序列。</p>
+<p>(3) 既不能由输入受限的双端队列得到，又不能由输出受限的双端队列得到的输出序列。</p>
+<h3 id="1"><a href="#1" class="headerlink" title="(1)"></a>(1)</h3><p>令左端为end1，右端为end2。假设end1端输入1,2,3,4，则end2端的输出相当于队列的输出，即1,2,3,4；而end1端的输出相当于栈的输出，$n&#x3D;4$时仅通过end1端有14中输出序列（由Catalan公式得出)，仅通过end1端得到的输出序列由$4!-14&#x3D;10$种；</p>
+<p>$$1,4,2,3 \quad 2,4,1,3 \quad 3,4,1,2 \quad 3,1,4,2\quad 3,1,2,4 \ 4,3,1,2\quad 4,1,3,2\quad 4,2,3,1\quad 4,2,1,3\quad 4,1,2,3$$</p>
+<p>通过end1和end2端混合输出，可以输出这10种中的8种，参看下表。其中，$S_L,X_L$分别代表end1端的进队和出队，$X_R$代表end2端的出队。</p>
+<table>
+<thead>
+<tr>
+<th align="center">输出序列</th>
+<th align="center">进队出队顺序</th>
+<th align="center">输出序列</th>
+<th align="center">进队出队顺序</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1,4,2,3</td>
+<td align="center">$S_LX_RS_LS_LS_LX_LX_RX_R$</td>
+<td align="center">3,1,2,4</td>
+<td align="center">$S_LS_LS_LX_LS_LX_RX_RX_R$</td>
+</tr>
+<tr>
+<td align="center">2,4,1,3</td>
+<td align="center">$S_LS_LX_LS_LS_LX_LX_RX_R$</td>
+<td align="center">4,1,2,3</td>
+<td align="center">$S_LS_LS_LS_LX_LX_RX_RX_R$</td>
+</tr>
+<tr>
+<td align="center">3,4,1,2</td>
+<td align="center">$S_LS_LS_LX_LS_LX_LX_RX_R$</td>
+<td align="center">4,1,3,2</td>
+<td align="center">$S_LS_LS_LS_LX_LX_RX_LX_R$</td>
+</tr>
+<tr>
+<td align="center">3,1,4,2</td>
+<td align="center">$S_LS_LS_LX_LX_RS_LX_LX_R$</td>
+<td align="center">4,3,1,2</td>
+<td align="center">$S_LS_LS_LS_LX_LX_LX_RX_R$</td>
+</tr>
+</tbody></table>
+<p>剩下两种是不能通过输入受限的双端队列输出的，即<code>4,2,3,1</code>和<code>4,2,1,3</code>。</p>
 <hr>
 <p><strong>注意</strong>：双端队列虽然是两个队列共享一个存储空间，但是每个队列只有一个指针。</p>
 
@@ -461,7 +505,7 @@
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
         <!-- use hexo-blog-encrypt -->
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97"><span class="nav-text">双端队列</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97"><span class="nav-text">双端队列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E5%8F%97%E9%99%90%E7%9A%84%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97"><span class="nav-text">输出受限的双端队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E5%8F%97%E9%99%90%E7%9A%84%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97"><span class="nav-text">输入受限的双端队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%981"><span class="nav-text">例题1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1"><span class="nav-text">(1)</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
@@ -622,7 +666,7 @@
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
         <!-- use hexo-blog-encrypt -->
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97"><span class="nav-text">双端队列</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97"><span class="nav-text">双端队列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E5%8F%97%E9%99%90%E7%9A%84%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97"><span class="nav-text">输出受限的双端队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E5%8F%97%E9%99%90%E7%9A%84%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97"><span class="nav-text">输入受限的双端队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%981"><span class="nav-text">例题1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1"><span class="nav-text">(1)</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
