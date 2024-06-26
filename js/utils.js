@@ -194,12 +194,6 @@ KEEP.initUtils = () => {
       }
     },
 
-    // get dom zoom value
-    getZoomValueOfDom(dom) {
-      const tmp = Number((dom.style?.zoom || '1').replace('%', ''))
-      return tmp > 1 ? tmp / 100 : tmp
-    },
-
     // zoom in image
     zoomInImage() {
       let SIDE_GAP = 40
@@ -250,27 +244,16 @@ KEEP.initUtils = () => {
       }
 
       if (imgDomList.length) {
-        // Register zoom out events
         zoomOutHandle()
-
         imgDomList.forEach((img) => {
-          // Zoom in handle
           img.addEventListener('click', () => {
             curWinScrollY = window.scrollY
             isZoomIn = !isZoomIn
             setSideGap()
             zoomInImg.setAttribute('src', img.getAttribute('src'))
             selectedImgDom = img
-
             if (isZoomIn) {
               const imgRect = selectedImgDom.getBoundingClientRect()
-
-              const zoom = this.getZoomValueOfDom(selectedImgDom)
-
-              for (let key in imgRect) {
-                imgRect[key] = imgRect[key] * zoom
-              }
-
               const imgW = imgRect.width
               const imgH = imgRect.height
               const imgL = imgRect.left
@@ -285,7 +268,6 @@ KEEP.initUtils = () => {
 
               selectedImgDom.classList.add('hide')
               zoomInImgMask.classList.add('show')
-
               zoomInImg.style.top = imgT + 'px'
               zoomInImg.style.left = imgL + 'px'
               zoomInImg.style.width = imgW + 'px'
@@ -330,15 +312,9 @@ KEEP.initUtils = () => {
       }
     },
 
-    // set how long age in home post block
+    // set how long age in home article block
     setHowLongAgoInHome() {
-      const { post_datetime_format } = KEEP.theme_config?.home || {}
-
-      if (post_datetime_format && post_datetime_format !== 'ago') {
-        return
-      }
-
-      const post = document.querySelectorAll('.post-meta-info .home-post-history')
+      const post = document.querySelectorAll('.article-meta-info .home-article-history')
       post &&
         post.forEach((v) => {
           const nowTimestamp = Date.now()
@@ -545,9 +521,9 @@ KEEP.initUtils = () => {
               getText('#busuanzi_value_site_pv') ||
               getText('#busuanzi_value_page_pv')
             ) {
-              const tmpDom1 = document.querySelector('.footer .count-info .uv')
-              const tmpDom2 = document.querySelector('.footer .count-info .pv')
-              const tmpDom3 = document.querySelector('.post-meta-info .post-pv')
+              const tmpDom1 = document.querySelector('.footer .count-item .uv')
+              const tmpDom2 = document.querySelector('.footer .count-item .pv')
+              const tmpDom3 = document.querySelector('.article-meta-info .article-pv')
               tmpDom1 && (tmpDom1.style.display = 'flex')
               tmpDom2 && (tmpDom2.style.display = 'flex')
               tmpDom3 && (tmpDom3.style.display = 'inline-block')
@@ -689,8 +665,10 @@ KEEP.initUtils = () => {
       }
     },
     trimPostMetaInfoBar() {
-      this.removeWhitespace(document.querySelector('.post-meta-info-container .post-category-ul'))
-      this.removeWhitespace(document.querySelector('.post-meta-info-container .post-tag-ul'))
+      this.removeWhitespace(
+        document.querySelector('.article-meta-info-container .article-category-ul')
+      )
+      this.removeWhitespace(document.querySelector('.article-meta-info-container .article-tag-ul'))
     },
 
     // close website announcement
@@ -716,19 +694,16 @@ KEEP.initUtils = () => {
     },
 
     // H tag title to top
-    title2Top4HTag(a, h, duration, cb) {
+    title2Top4HTag(a, h, isHideHeader, duration = 200) {
       if (a && h) {
         a.addEventListener('click', (e) => {
           e.preventDefault()
-
-          cb && cb()
-
           let winScrollY = window.scrollY
           winScrollY = winScrollY <= 1 ? -19 : winScrollY
           let offset = h.getBoundingClientRect().top + winScrollY
 
-          if (!this.isHideHeader) {
-            offset = offset - this.headerWrapperDom.getBoundingClientRect().height
+          if (!isHideHeader) {
+            offset = offset - 60
           }
 
           window.anime({
@@ -738,9 +713,9 @@ KEEP.initUtils = () => {
             scrollTop: offset,
             complete: () => {
               history.pushState(null, document.title, a.href)
-              if (this.isHideHeader) {
+              if (isHideHeader) {
                 setTimeout(() => {
-                  this.pageTopDom.classList.add('hide')
+                  KEEP.utils.pageTopDom.classList.add('hide')
                 }, 160)
               }
             }
@@ -752,7 +727,7 @@ KEEP.initUtils = () => {
     // A tag anchor jump handle
     aAnchorJump() {
       document.querySelectorAll('a.headerlink').forEach((a) => {
-        this.title2Top4HTag(a, a.parentNode, 10)
+        this.title2Top4HTag(a, a.parentNode, this.isHideHeader, 10)
       })
     }
   }

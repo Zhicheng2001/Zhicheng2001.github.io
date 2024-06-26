@@ -6,16 +6,16 @@ KEEP.initModeToggle = () => {
     iconDom: document.querySelector('.tool-toggle-theme-mode i'),
 
     enableLightMode() {
-      document.documentElement.classList.remove('dark-mode')
-      document.documentElement.classList.add('light-mode')
+      document.body.classList.remove('dark-mode')
+      document.body.classList.add('light-mode')
       this.iconDom.className = 'fas fa-moon'
       KEEP.themeInfo.styleStatus.isDark = false
       KEEP.setStyleStatus()
     },
 
     enableDarkMode() {
-      document.documentElement.classList.add('dark-mode')
-      document.documentElement.classList.remove('light-mode')
+      document.body.classList.add('dark-mode')
+      document.body.classList.remove('light-mode')
       this.iconDom.className = 'fas fa-sun'
       KEEP.themeInfo.styleStatus.isDark = true
       KEEP.setStyleStatus()
@@ -26,18 +26,6 @@ KEEP.initModeToggle = () => {
     },
 
     initModeStatus() {
-      const configMode = KEEP.theme_config?.base_info?.mode
-
-      if (configMode === 'dark') {
-        this.enableDarkMode()
-        return
-      }
-
-      if (configMode === 'light') {
-        this.enableLightMode()
-        return
-      }
-
       const styleStatus = KEEP.getStyleStatus()
 
       if (styleStatus) {
@@ -49,7 +37,7 @@ KEEP.initModeToggle = () => {
 
     initModeToggleButton() {
       this.themeModeToggleBtn.addEventListener('click', () => {
-        const isDark = document.documentElement.classList.contains('dark-mode')
+        const isDark = document.body.classList.contains('dark-mode')
         isDark ? this.enableLightMode() : this.enableDarkMode()
       })
     },

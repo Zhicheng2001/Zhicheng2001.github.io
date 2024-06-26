@@ -8,13 +8,11 @@ function resetCategoriesPage() {
       const childCategoryInfo = dom.querySelector('.site-all-category-list-child')
 
       let domTemplate = `
-            <div class="self-category-info border-box">
-              <div class="left border-box">${
-                childCategoryInfo
-                  ? '<i class="icon border-box fa-regular fa-square-plus"></i> '
-                  : ''
+            <div class="self-category-info">
+              <div class="left">${
+                childCategoryInfo ? '<i class="icon fa-solid fa-chevron-right"></i> ' : ''
               }${categoryNameDom.outerHTML}</div>
-              <div class="right border-box">${categoryCountDom.outerHTML}</div>
+              <div class="right">${categoryCountDom.outerHTML}</div>
             </div>
           `
 
@@ -41,13 +39,13 @@ function resetCategoriesPage() {
             if (isExpand) {
               childDom.style.height = 'auto'
               childDom.style.visibility = 'visible'
-              iconDom.classList.add('fa-square-minus')
-              iconDom.classList.remove('fa-square-plus')
+              iconDom.classList.add('fa-chevron-down')
+              iconDom.classList.remove('fa-chevron-right')
             } else {
               childDom.style.height = '0'
               childDom.style.visibility = 'hidden'
-              iconDom.classList.add('fa-square-plus')
-              iconDom.classList.remove('fa-square-minus')
+              iconDom.classList.add('fa-chevron-right')
+              iconDom.classList.remove('fa-chevron-down')
             }
           }
         })

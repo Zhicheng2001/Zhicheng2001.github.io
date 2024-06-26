@@ -43,7 +43,7 @@
 .keep-markdown-body a {
   position: relative;
   box-sizing: border-box;
-  padding-bottom: 0.1rem;
+  padding-bottom: 0.2rem;
   text-decoration: none;
   overflow-wrap: break-word;
   border-bottom: 0.1rem solid var(--text-color-4);
@@ -56,7 +56,7 @@
   position: relative;
   margin: 0 0.2rem 0 0.4rem;
   color: var(--text-color-4);
-  font-size: 0.8rem;
+  font-size: 0.88rem;
 }
 .keep-markdown-body a:hover {
   text-decoration: underline;
@@ -72,7 +72,7 @@
 }
 .keep-markdown-body ul li,
 .keep-markdown-body ol li {
-  margin: 0.3rem 0 0.3rem 1rem;
+  margin-left: 1rem;
   line-height: 2rem;
 }
 .keep-markdown-body ul li {
@@ -103,18 +103,16 @@
 .keep-markdown-body h5,
 .keep-markdown-body h6 {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  order: 0;
   box-sizing: border-box;
   padding-top: 0.4rem;
   padding-bottom: 0.2rem;
   overflow: hidden;
   color: var(--text-color-2);
-  line-height: 1.6;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   border-bottom: 1px solid var(--post-h-bottom-border-color);
 keep-tablet()
-keep-mobile()
 }
 .keep-markdown-body h1:hover a.headerlink,
 .keep-markdown-body h2:hover a.headerlink,
@@ -131,10 +129,10 @@ keep-mobile()
 .keep-markdown-body h5 a.headerlink,
 .keep-markdown-body h6 a.headerlink {
   position: relative;
-  order: 1;
+  float: right;
   box-sizing: border-box;
-  margin-left: 0.4rem;
-  padding-top: 0.2rem;
+  margin-left: 0.32rem;
+  padding-top: 0.25rem;
   color: var(--text-color-4);
   font-size: 1.2rem;
   text-decoration: none;
@@ -163,46 +161,32 @@ keep-mobile()
   font-weight: 600;
   font-size: 1.8rem;
 keep-tablet()
-keep-mobile()
 }
 .keep-markdown-body h2 {
   font-weight: 600;
   font-size: 1.7rem;
 keep-tablet()
-keep-mobile()
 }
 .keep-markdown-body h3 {
   font-weight: 550;
   font-size: 1.6rem;
 keep-tablet()
-keep-mobile()
 }
 .keep-markdown-body h4 {
   font-weight: 550;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 keep-tablet()
-keep-mobile()
-}
-.keep-markdown-body h4 a.headerlink {
-  font-size: 1.1rem;
 }
 .keep-markdown-body h5 {
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.28rem;
 keep-tablet()
-keep-mobile()
-}
-.keep-markdown-body h5 a.headerlink {
-  font-size: 1.1rem;
 }
 .keep-markdown-body h6 {
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.2;
 keep-tablet()
-}
-.keep-markdown-body h6 a.headerlink {
-  font-size: 1rem;
 }
 .keep-markdown-body img {
   position: relative;
@@ -218,10 +202,8 @@ keep-tablet()
 }
 .keep-markdown-body img[lazyload] {
   margin: 0.8rem auto 0.2rem;
-  zoom: 1 !important;
 }
-.keep-markdown-body > img,
-.keep-markdown-body p > img {
+.keep-markdown-body > img {
   margin: var(--post-img-align);
 }
 .keep-markdown-body > .table-container {
