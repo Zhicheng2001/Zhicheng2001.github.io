@@ -9,6 +9,8 @@
     
     <title>
         
+            栈在递归中的应用 |
+        
         Lzc&#39;s blog
     </title>
     
@@ -168,10 +170,10 @@ mjx-container[display="true"] + br {
     
 
     <!-- page content -->
-    <div class="page-main-content border-box is-home">
+    <div class="page-main-content border-box">
         <div class="page-main-content-top">
             
-<header class="header-wrapper transparent-1">
+<header class="header-wrapper">
 
     <div class="border-box header-content">
         <div class="left border-box">
@@ -306,60 +308,74 @@ mjx-container[display="true"] + br {
             <div class="main-content border-box">
                 
 
-                    <div class="home-content-container fade-in-down-animation">
-    
-    <ul class="home-post-list border-box">
-        
-            <li class="home-post-item">
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
 
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        栈在递归中的应用
+                    </div>
                 
 
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2022/05/02/%E6%B5%85%E8%B0%88%E4%BA%8C%E5%88%86%E5%9B%BE/">
-                            浅谈二分图
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
+                
+                    <div class="post-header border-box">
                         
-                             二分图
-
- 什么是二分图？
-
-二分图又称二部图，是图论的一种特殊模型。
-节点由两个集合组成，且两个集合内部没有边的图。
-
-
-设G=(U,V)G = (U,V)G=(U,V)是一个无向图，如果顶点UUU可以分割为两个互不相交的子集(A,B)(A,B)...
+                            <div class="avatar-box border-box">
+                                <img src="/images/touxiang.jpg">
+                            </div>
                         
-                    </div>
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">LZC</span>
+                                
+                                    <span class="author-badge">Lv4</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
 
-                    
-
-<div class="post-meta-info-container border-box home">
+<div class="post-meta-info-container border-box post">
     <div class="post-meta-info border-box">
         
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Sun Oct 30 2022 18:58:57 GMT+0800"
-                >2022-10-30 18:58:57</span>
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-06-29 13:21:17</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Sat Jun 29 2024 13:37:09 GMT+0800">2024-06-29 13:37:09</span>
             </span>
         
 
         
-
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></li>
+                        
+                    
+                </ul>
+            </span>
         
 
         
             <span class="post-tag meta-info-item border-box">
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/">二分图</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/915/">915</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%A0%88/">栈</a></li>
                         
                     
                 </ul>
@@ -373,170 +389,201 @@ mjx-container[display="true"] + br {
     </div>
 
     
-        <a class="home-read-more" href="/2022/05/02/%E6%B5%85%E8%B0%88%E4%BA%8C%E5%88%86%E5%9B%BE/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
 </div>
 
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="栈在递归中的应用"><a class="markdownIt-Anchor" href="#栈在递归中的应用"></a> 栈在递归中的应用</h1>
+<blockquote>
+<p>若在一个函数、过程或数据结构的定义中又应用了它自身，则这个函数、过程或数据结构称为递归定义的，简称递归。</p>
+</blockquote>
+<h2 id="递归目的"><a class="markdownIt-Anchor" href="#递归目的"></a> 递归目的</h2>
+<p>递归的目的通常是将一个大型的复杂问题层层转化为一个与原问题相似的且<strong>规模较小</strong>的问题来求解。</p>
+<h2 id="递归优点"><a class="markdownIt-Anchor" href="#递归优点"></a> 递归优点</h2>
+<p>代码简洁、便于理解</p>
+<h2 id="递归缺点"><a class="markdownIt-Anchor" href="#递归缺点"></a> 递归缺点</h2>
+<p>时间和空间消耗大、可能存在栈溢出、可能存在重复计算。</p>
+<p>通常情况下，它的效率并不是很高。</p>
+<h2 id="递归和栈的关系"><a class="markdownIt-Anchor" href="#递归和栈的关系"></a> 递归和栈的关系</h2>
+<blockquote>
+<p><code>递</code>即<code>进栈</code>，<code>归</code>即<code>出栈</code></p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Fib</span><span class="params">(<span class="type">int</span> n )</span> </span>{	<span class="comment">//斐波那契数列的实现</span></span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;	<span class="comment">//边界条件</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;	<span class="comment">//边界条件</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Fib</span>(n - <span class="number">1</span>) + <span class="built_in">Fib</span>(n - <span class="number">2</span>);	<span class="comment">//递归表达式</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>递归表达式即递归体，边界条件即递归出口。</p>
+<p>问题：咦，栈在递归中的应用，可是这个代码中也没有栈啊？</p>
+<p>回答：这是因为函数的每次调用，就是一个栈。递归调用时，函数调用栈可称为<code>递归工作栈</code>,每进入一层递归，就将递归调用所需信息压入栈顶，每退出一层递归，就从栈顶弹出相应信息。因此，递归的实现是离不开栈的。</p>
+
                 </div>
-            </li>
-        
-            <li class="home-post-item">
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                栈在递归中的应用
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                2024/06/29/栈在递归中的应用/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">LZC</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2024-06-29 13:21</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
 
                 
 
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2022/04/30/%E6%B5%85%E8%B0%88%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/">
-                            浅谈差分约束
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
                         
-                             差分约束
- 什么是差分约束？
-
-是一种特殊的nnn元一次不等式组，它包含nnn个变量x1,x2,...,xnx_1,x_2,...,x_nx1​,x2​,...,xn​以及mmm个约束条件，每个约束条件是由两个其中的变量做差构成的。
-
-形如xi−x...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Sun Oct 30 2022 18:58:37 GMT+0800"
-                >2022-10-30 18:58:37</span>
-            </span>
-        
-
-        
-
-        
-            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
-                <ul class="post-category-ul">
-                    
-                            <li class="category-item"><a href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2022/04/30/%E6%B5%85%E8%B0%88%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2022/04/30/%E6%B5%85%E8%B0%8801%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92/">
-                            浅谈01分数规划
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                             01分数规划
- 什么是01分数规划？
-分数规划用来求一个分式的极值。
-给出aia_iai​和bib_ibi​，求一组wiw_iwi​ ∈ {0，1}，最小化或最大化
-∑i=1nai×wi∑i=1nbi×wi\frac{\sum_{i=1}^n a_...
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/915/">915</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%A0%88/">栈</a>
+                                    </li>
+                                
+                            </ul>
                         
                     </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Sat Aug 13 2022 17:16:33 GMT+0800"
-                >2022-08-13 17:16:33</span>
-            </span>
-        
-
-        
-
-        
-            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
-                <ul class="post-category-ul">
-                    
-                            <li class="category-item"><a href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a></li>
+                    <div>
                         
-                    
-                </ul>
-            </span>
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2022/04/30/%E6%B5%85%E8%B0%8801%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
     </ul>
-    
-    <div class="paginator border-box flex-center">
-        <div class="btn-wrap allowed">
-            <a class="jump-btn"
-               href="/page/3/"
-            ><i class="fa-solid fa-chevron-left"></i></a>
-        </div>
+</div>
 
+                        
+                    </div>
+                </div>
 
-        <div class="page-number-box border-box flex-center">
-            <input class="page-number-input border-box base-color-size"
-                   type="number"
-                   value="4"
-                   min="1"
-                   max="4"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">4</span>
-        </div>
-
-
-        <div class="btn-wrap">
-            <a class="jump-btn"
-               href="/"
-            ><i class="fa-solid fa-chevron-right"></i></a>
-        </div>
+                
+                    <div class="reward-author-container border-box flex-center">
+    <div class="reward-btn keep-button border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="打赏作者"
+            data-tooltip-img-url="/images/reward.jpg"
+            data-tooltip-img-trigger="click"
+            data-tooltip-img-style="top: -8px;"
+    >
+        <i class="fa-solid fa-hand-holding-heart"></i>
     </div>
+</div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/06/28/%E6%A0%88%E5%9C%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/"
+                                   title="栈在表达式中的应用"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">栈在表达式中的应用</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
 
 
 
 
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%88%E5%9C%A8%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-text"> 栈在递归中的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E7%9B%AE%E7%9A%84"><span class="nav-text"> 递归目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E4%BC%98%E7%82%B9"><span class="nav-text"> 递归优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E7%BC%BA%E7%82%B9"><span class="nav-text"> 递归缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E5%92%8C%E6%A0%88%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text"> 递归和栈的关系</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
 </div>
 
 
@@ -596,10 +643,32 @@ mjx-container[display="true"] + br {
 
     <!-- post tools -->
     
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
 
     <!-- side tools -->
     <div class="side-tools">
-        <div class="side-tools-container border-box side-tools-show-handle">
+        <div class="side-tools-container border-box ">
     <ul class="side-tools-list side-tools-show-handle border-box">
         <li class="tools-item tool-font-adjust-plus flex-center">
             <i class="fas fa-search-plus"></i>
@@ -622,6 +691,10 @@ mjx-container[display="true"] + br {
     </ul>
 
     <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
         
 
         
@@ -679,8 +752,18 @@ mjx-container[display="true"] + br {
 
     <!-- tablet toc -->
     
-</main>
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%88%E5%9C%A8%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-text"> 栈在递归中的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E7%9B%AE%E7%9A%84"><span class="nav-text"> 递归目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E4%BC%98%E7%82%B9"><span class="nav-text"> 递归优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E7%BC%BA%E7%82%B9"><span class="nav-text"> 递归缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E5%92%8C%E6%A0%88%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text"> 递归和栈的关系</span></a></li></ol></li></ol>
+    </div>
+</div>
 
+            </div>
+        </div>
+    
+</main>
 
 
 
@@ -698,6 +781,24 @@ mjx-container[display="true"] + br {
 
 
 <div class="pjax">
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/post/copyright-info.min.js"></script>
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/post/share.min.js"></script>
+        
     
 
     <!-- categories page -->
