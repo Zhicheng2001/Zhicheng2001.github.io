@@ -9,7 +9,7 @@
     
     <title>
         
-            栈在递归中的应用 |
+            分类: 英语 |
         
         Lzc&#39;s blog
     </title>
@@ -209,7 +209,7 @@ mjx-container[display="true"] + br {
                     
                         
                         <li class="menu-item">
-                            <a class=""
+                            <a class="active"
                                href="/categories"
                             >
                                 
@@ -274,7 +274,7 @@ mjx-container[display="true"] + br {
             
                 
                 <li class="drawer-menu-item flex-center">
-                    <a class=""
+                    <a class="active"
                        href="/categories"
                     >分类</a>
                 </li>
@@ -308,316 +308,39 @@ mjx-container[display="true"] + br {
             <div class="main-content border-box">
                 
 
-                    
-<div class="fade-in-down-animation">
-    <div class="post-page-container border-box">
-        <div class="post-content-container border-box">
+                    <div class="fade-in-down-animation">
+    <div class="category-container border-box">
+        <div class="category-name">
+            <i class="fas fa-folder"></i>&nbsp;英语
+        </div>
+        <div class="category-post-list">
             
-
-            <div class="post-content-bottom border-box">
+<div class="archive-list-container border-box">
+    
+        <section class="archive-item border-box">
+            <div class="archive-item-header border-box">
+                <span class="archive-year">2024</span>
+            </div>
+            <ul class="archive-item-body border-box">
                 
-                    <div class="post-title">
-                        栈在递归中的应用
-                    </div>
+                    <li class="post-item border-box">
+                        <span class="post-date border-box">06-30</span>
+                        <a class="post-title border-box text-ellipsis"
+                           href="/2024/06/30/%E5%94%90%E8%BF%9Fnotes/"
+                        >唐迟《阅读的逻辑》notes</a>
+                    </li>
                 
-
-                
-                    <div class="post-header border-box">
-                        
-                            <div class="avatar-box border-box">
-                                <img src="/images/touxiang.jpg">
-                            </div>
-                        
-                        <div class="info-box">
-                            <div class="author border-box">
-                                <span class="name">LZC</span>
-                                
-                                    <span class="author-badge">Lv4</span>
-                                
-                            </div>
-                            <div class="meta-info border-box">
-                                
-
-<div class="post-meta-info-container border-box post">
-    <div class="post-meta-info border-box">
-        
-
-        
-            <span class="meta-info-item post-create-date">
-                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-07-05 15:04:37</span>
-            </span>
-
-            <span class="meta-info-item post-update-date">
-                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Sat Jul 06 2024 19:36:44 GMT+0800">2024-07-06 19:36:44</span>
-            </span>
-        
-
-        
-            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
-                <ul class="post-category-ul">
-                    
-                            <li class="category-item"><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-            <span class="post-tag meta-info-item border-box">
-                <ul class="post-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></li>
-                        
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%A0%88/">栈</a></li>
-                        
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/915/">915</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
+            </ul>
+        </section>
     
 </div>
 
-                            </div>
-                        </div>
-                    </div>
-                
-
-                <div class="post-content keep-markdown-body">
-                    
-
-                    <h2 id="串的模式匹配"><a class="markdownIt-Anchor" href="#串的模式匹配"></a> 串的模式匹配</h2>
-<blockquote>
-<p>子串的定位操作通常称为串的<strong>模式匹配</strong></p>
-</blockquote>
-<p>子串称为模式串，即在主串中找子串（模式串）。</p>
-<p>915考纲中要求掌握模式匹配的两个算法：Brute-Force和KMP。</p>
-<hr>
-<h2 id="brute-force暴力"><a class="markdownIt-Anchor" href="#brute-force暴力"></a> Brute-Force（暴力）</h2>
-<p>暴力模式匹配算法的最坏时间复杂度为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(nm)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span>，其中<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span>分别为主串和模式串长度。</p>
-<hr>
-<h2 id="kmp"><a class="markdownIt-Anchor" href="#kmp"></a> KMP</h2>
-<p><a href="https://lizc.cn/2022/10/03/%E6%B5%85%E8%B0%88KMP%E7%AE%97%E6%B3%95/">浅谈KMP算法 | Lzc’s blog (lizc.cn)</a></p>
-<h3 id="求next数组"><a class="markdownIt-Anchor" href="#求next数组"></a> 求next数组</h3>
-<p><strong>计算方法：</strong></p>
-<ol>
-<li>前两个是next数组值是<code>01</code></li>
-<li>max[n个前缀 = n个后缀] 写 n+1</li>
-<li>前后缀不相等，写 1</li>
-</ol>
-<p>求第i个值时，要看i之前的字符。</p>
-<p>求<code>ababaaababaa</code>：</p>
-<p>a：0</p>
-<p>ab：01</p>
-<p>aba：011	（ab的前后缀不相等，值1）</p>
-<p>abab：0112	（aba的最大相等前后缀为a，n=1，值为n+1）</p>
-<p>…</p>
-<p>ababaaababaa：011234223456</p>
-<h3 id="求nextval数组"><a class="markdownIt-Anchor" href="#求nextval数组"></a> 求nextval数组</h3>
-<blockquote>
-<p>求nextval值需要next值。</p>
-</blockquote>
-<p><strong>计算方法：</strong></p>
-<ol>
-<li>第1位：0</li>
-<li>第2位若与第1位相同为0，不同为1</li>
-<li>从第3位开始，根据next值
-<ul>
-<li>相同：</li>
-<li>不同：当前next值</li>
-</ul>
-</li>
-</ol>
-<p>求s = <code>abaabcac</code>：</p>
-<p>next值：<code>01122312</code></p>
-<p>a：0</p>
-<p>ab：01	（与第一位不同，为1）</p>
-<p>aba：010	（此时next[3] = 1，且s[1] = ‘a’，这与当前s[3]字符相同，则此处的nextval值就为nextval[1]，也就是0）</p>
-<p>abaa：0102	（此时next[4] = 2，且s[2] = ‘b’，这与当前s[4]字符不同，则此处的nextval值就为next[4]，也就是2）</p>
-<p>abaab：0102<strong>1</strong>	（此时next[5] = 2，且s[2] = ‘b’，这与当前s[5]字符相同，则此处的nextval值就为nextval[2]，也就是1）</p>
-<p>abaabc：01021<strong>3</strong>	（由next[6]可知两个字符不相同，因此此处值为next[6]）</p>
-<p>abaabca：<strong>0</strong>10213<strong>0</strong>	（相同，所以为nextval[1]，此处为0）</p>
-<p>abaabcac：0102130<strong>2</strong>	（不同）</p>
-<p>最终的nextval值为：<code>01021302</code></p>
-
-                </div>
-                
-                        
-<div class="post-copyright-info-container border-box">
-    <div class="copyright-info-content border-box">
-        <div class="copyright-info-top border-box">
-            <div class="copyright-post-title border-box text-ellipsis">
-                栈在递归中的应用
-            </div>
-
-            <div class="copyright-post-link border-box text-ellipsis">
-                2024/07/05/串的模式匹配/
-            </div>
         </div>
-
-        <div class="copyright-info-bottom border-box">
-            <div class="copyright-post-author bottom-item">
-                <div class="type">
-                    作者
-                </div>
-                <div class="content">LZC</div>
-            </div>
-
-            <div class="post-time bottom-item">
-                <div class="type">
-                    发布于
-                </div>
-                <div class="content">2024-07-05 15:04</div>
-            </div>
-
-
-            <div class="post-license bottom-item">
-                <div class="type">
-                    许可
-                </div>
-                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
-                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">
-                        
-                            <i class="fa-brands fa-creative-commons"></i>
-                            <i class="fa-brands fa-creative-commons-by"></i>
-                            <i class="fa-brands fa-creative-commons-nc"></i>
-                            <i class="fa-brands fa-creative-commons-sa"></i>
-                        
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <i class="copyright-bg fa-solid fa-copyright"></i>
     </div>
-    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
-        <i class="fa-solid fa-copy"></i>
-    </div>
-</div>
-
-                
-
-                <div class="post-bottom-tags-and-share border-box">
-                    <div>
-                        
-                            <ul class="post-tags-box border-box">
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%A0%88/">栈</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/915/">915</a>
-                                    </li>
-                                
-                            </ul>
-                        
-                    </div>
-                    <div>
-                        
-                            <div class="post-share-container border-box">
-    <ul class="share-list-wrap border-box">
-        <li class="qq share-item border-box flex-center tooltip"
-            data-tooltip-content="分享到 QQ"
-        >
-            <i class="fa-brands fa-qq"></i>
-        </li>
-        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
-            data-tooltip-content="分享到微信"
-            data-tooltip-img-tip="微信扫一扫"
-            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
-        >
-            <i class="fa-brands fa-weixin"></i>
-        </li>
-        <li class="weibo share-item border-box flex-center tooltip"
-            data-tooltip-content="分享到微博"
-        >
-            <i class="fa-brands fa-weibo"></i>
-        </li>
-    </ul>
-</div>
-
-                        
-                    </div>
-                </div>
-
-                
-                    <div class="reward-author-container border-box flex-center">
-    <div class="reward-btn keep-button border-box flex-center tooltip tooltip-img"
-            data-tooltip-content="打赏作者"
-            data-tooltip-img-url="/images/reward.jpg"
-            data-tooltip-img-trigger="click"
-            data-tooltip-img-style="top: -8px;"
-    >
-        <i class="fa-solid fa-hand-holding-heart"></i>
-    </div>
-</div>
-
-                
-
-                
-                    <div class="post-nav border-box">
-                        
-                        
-                            <div class="next-post">
-                                <a class="next"
-                                   rel="next"
-                                   href="/2024/07/02/%E7%89%B9%E6%AE%8A%E7%9F%A9%E9%98%B5%E4%B8%8E%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5/"
-                                   title="特殊矩阵与稀疏矩阵"
-                                >
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">特殊矩阵与稀疏矩阵</span>
-                                        <span class="post-nav-item">下一篇</span>
-                                    </span>
-                                    <span class="right arrow-icon flex-center">
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        
-                    </div>
-                
-
-                
-                    
+    
 
 
 
-
-
-
-                
-            </div>
-        </div>
-
-        
-            <div class="pc-post-toc right-toc">
-                <div class="post-toc-wrap border-box">
-    <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%B2%E7%9A%84%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D"><span class="nav-text"> 串的模式匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#brute-force%E6%9A%B4%E5%8A%9B"><span class="nav-text"> Brute-Force（暴力）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#kmp"><span class="nav-text"> KMP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%82next%E6%95%B0%E7%BB%84"><span class="nav-text"> 求next数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%82nextval%E6%95%B0%E7%BB%84"><span class="nav-text"> 求nextval数组</span></a></li></ol></li></ol>
-    </div>
-</div>
-
-            </div>
-        
-    </div>
 </div>
 
 
@@ -677,28 +400,6 @@ mjx-container[display="true"] + br {
 
     <!-- post tools -->
     
-        <div class="post-tools right-toc">
-            <div class="post-tools-container border-box">
-    <ul class="tools-list border-box">
-        <!-- PC TOC show toggle -->
-        
-            <li class="tools-item flex-center toggle-show-toc">
-                <i class="fas fa-list"></i>
-            </li>
-        
-
-        <!-- PC go comment -->
-        
-
-        <!-- PC full screen -->
-        <li class="tools-item flex-center full-screen">
-            <i class="fa-solid fa-expand"></i>
-        </li>
-    </ul>
-</div>
-
-        </div>
-    
 
     <!-- side tools -->
     <div class="side-tools">
@@ -725,10 +426,6 @@ mjx-container[display="true"] + br {
     </ul>
 
     <ul class="exposed-tools-list border-box">
-        
-            <li class="tools-item toggle-show-toc-tablet flex-center">
-                <i class="fas fa-list"></i>
-            </li>
         
 
         
@@ -786,17 +483,6 @@ mjx-container[display="true"] + br {
 
     <!-- tablet toc -->
     
-        <div class="tablet-post-toc-mask">
-            <div class="tablet-post-toc">
-                <div class="post-toc-wrap border-box">
-    <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%B2%E7%9A%84%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D"><span class="nav-text"> 串的模式匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#brute-force%E6%9A%B4%E5%8A%9B"><span class="nav-text"> Brute-Force（暴力）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#kmp"><span class="nav-text"> KMP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%82next%E6%95%B0%E7%BB%84"><span class="nav-text"> 求next数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%82nextval%E6%95%B0%E7%BB%84"><span class="nav-text"> 求nextval数组</span></a></li></ol></li></ol>
-    </div>
-</div>
-
-            </div>
-        </div>
-    
 </main>
 
 
@@ -816,26 +502,10 @@ mjx-container[display="true"] + br {
 
 <div class="pjax">
     
-        <!-- post-helper -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/post/post-helper.min.js"></script>
-
-        <!-- toc -->
-        
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/post/toc.min.js"></script>
-        
-
-        <!-- copyright-info -->
-        
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/post/copyright-info.min.js"></script>
-        
-
-        <!-- share -->
-        
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/post/share.min.js"></script>
-        
-    
 
     <!-- categories page -->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.0/js/page/category-page.min.js"></script>
     
 
     <!-- links page -->
