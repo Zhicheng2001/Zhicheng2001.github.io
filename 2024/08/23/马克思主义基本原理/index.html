@@ -9,7 +9,7 @@
     
     <title>
         
-            最长公共子序列(LCS) |
+            马克思主义基本原理 |
         
         Lzc&#39;s blog
     </title>
@@ -317,7 +317,7 @@ mjx-container[display="true"] + br {
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        最长公共子序列(LCS)
+                        马克思主义基本原理
                     </div>
                 
 
@@ -345,12 +345,12 @@ mjx-container[display="true"] + br {
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-06-21 21:56:20</span>
+                <span class="datetime">2024-08-23 18:54:09</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Wed Mar 15 2023 16:24:40 GMT+0800">2023-03-15 16:24:40</span>
+                <span class="datetime" data-updated="Sat Aug 24 2024 16:43:14 GMT+0800">2024-08-24 16:43:14</span>
             </span>
         
 
@@ -358,7 +358,7 @@ mjx-container[display="true"] + br {
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></li>
+                            <li class="category-item"><a href="/categories/%E6%94%BF%E6%B2%BB/">政治</a></li>
                         
                     
                 </ul>
@@ -369,13 +369,13 @@ mjx-container[display="true"] + br {
             <span class="post-tag meta-info-item border-box">
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E8%80%83%E7%A0%94/">考研</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/dp/">dp</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%94%BF%E6%B2%BB/">政治</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/LCS/">LCS</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E9%A9%AC%E5%8E%9F/">马原</a></li>
                         
                     
                 </ul>
@@ -399,18 +399,74 @@ mjx-container[display="true"] + br {
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="最长公共子序列模板"><a class="markdownIt-Anchor" href="#最长公共子序列模板"></a> 最长公共子序列+模板</h1>
-<h2 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h2>
-<p>最长公共子序列，英文缩写为LCS（Longest Common Subsequence）。一个序列S，如果分别是两个或多个已知的序列的子序列，并且是所有子序列中最长的，则称序列S为最长公共子序列。</p>
-<p>如序列<code>1 2 3 4 5 6 7 8</code>和序列<code>5 6 7 8 1 2 3 4</code>，他们的最长公共子序列为<code>1 2 3 4</code>和<code>5 6 7 8</code>，其长度为4，由此可知，<strong>最长公共子序列也唯一，但长度唯一</strong>。</p>
-<p>最长公共子序列，可以识别两段文字之间的“相似度”，即查重。</p>
-<h2 id="解法"><a class="markdownIt-Anchor" href="#解法"></a> 解法</h2>
-<h3 id="动态规划onm"><a class="markdownIt-Anchor" href="#动态规划onm"></a> 动态规划<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(nm)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span></h3>
-<p>最长公共子序列问题具有<strong>最优子结构</strong>和<strong>重复子问题</strong>，因此可以考虑动态规划。</p>
-<p>设<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false">[</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo stretchy="false">]</mo><mo>=</mo><mi>L</mi><mi>C</mi><mi>S</mi><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">[</mo><mn>1...</mn><mi>i</mi><mo stretchy="false">]</mo><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">[</mo><mn>1...</mn><mi>j</mi><mo stretchy="false">]</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">C[i,j] = LCS(a[1...i],b[1...j])</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mopen">[</span><span class="mord">1</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord mathnormal">i</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mopen">[</span><span class="mord">1</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mclose">)</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false">[</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">C[i,j]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mclose">]</span></span></span></span>表示序列a和b的长度分为i和j时的最长公共子序列的长度，则<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false">[</mo><mi>n</mi><mo separator="true">,</mo><mi>m</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">C[n,m]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">m</span><span class="mclose">]</span></span></span></span>就是序列a和b的最长公共子序列。</p>
-<p>**状态表示：**dp[i][j] 为序列a到i位置和序列b到j位置时的最长公共子序列。</p>
-<p><strong>状态转移：</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.3599999999999999em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>d</mi><mi>p</mi><mo stretchy="false">[</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>j</mi><mo>−</mo><mn>1</mn><mo stretchy="false">]</mo><mo>+</mo><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo separator="true">,</mo><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo>=</mo><mi>b</mi><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false">(</mo><mi>d</mi><mi>p</mi><mo stretchy="false">[</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo><mo separator="true">,</mo><mi>d</mi><mi>p</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>j</mi><mo>−</mo><mn>1</mn><mo stretchy="false">]</mo><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo separator="true">,</mo><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo mathvariant="normal">≠</mo><mi>b</mi><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">dp[i][j] = \begin{cases} dp[i-1][j-1]+1 &amp;, a[i] = b[j] \\ max(dp[i-1][j],dp[i][j-1]) &amp; ,a[i] ≠ b[j] \end{cases}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">p</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.0000299999999998em;vertical-align:-1.25003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">p</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mord mathnormal">p</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">p</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">a</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">b</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mclose">]</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">a</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">b</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mclose">]</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i ++) </span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= m;j ++) </span><br><span class="line">		<span class="keyword">if</span> (a[i] == b[j])	dp[i][j] = dp[i - <span class="number">1</span>][j - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span> dp[i][j] = <span class="built_in">max</span>(dp[i - <span class="number">1</span>][j],dp[i][j - <span class="number">1</span>]);</span><br></pre></td></tr></table></figure>
+                    <h1 id="马克思主义基本原理"><a class="markdownIt-Anchor" href="#马克思主义基本原理"></a> 马克思主义基本原理</h1>
+<h2 id="导论"><a class="markdownIt-Anchor" href="#导论"></a> 导论</h2>
+<p>“三个部分”的<strong>关系</strong>：</p>
+<ul>
+<li>马克思主义哲学：基础、方法</li>
+<li>马克思主义政治经济学：主体理论</li>
+<li>科学社会主义：目的、归宿</li>
+</ul>
+<p>“三个部分”的<strong>出处</strong>：<strong>恩格斯</strong>在**《反杜林论》**首次将马克思理论分为三个部分加以阐述</p>
+<p>基本立场：以<strong>人民</strong>为中心</p>
+<p>基本观点：<strong>全面</strong>的<strong>科学</strong>认识</p>
+<p>基本方法：<strong>辩证唯物主义和历史唯物主义</strong></p>
+<p>基本特征：科学性、人民性、实践性、发展性。</p>
+<blockquote>
+<p>科学性与革命性的统一</p>
+</blockquote>
+<p>人民性 + 实践性 + 发展性 = 革命性</p>
+<hr>
+<h2 id="马克思主义哲学"><a class="markdownIt-Anchor" href="#马克思主义哲学"></a> 马克思主义哲学</h2>
+<ul>
+<li>辩证唯物论：世界是什么？</li>
+<li>唯物辩证法：世界是怎样存在的？</li>
+<li>认识论：如何认识世界？</li>
+<li>唯物史观：人类历史有何发展规律？</li>
+</ul>
+<p><strong>哲学基本问题</strong>：</p>
+<blockquote>
+<p>物质和精神何者是第一性、何者是第二性？<br>
+思维和存在有无同一性，即“思维能否正确认识存在”？</p>
+</blockquote>
+<p><code>第一性</code>分为<strong>唯物主义</strong>和<strong>唯心主义</strong></p>
+<p><strong>唯物主义（什么是物质）</strong>：<br>
+实物——古典/朴素唯物主义<br>
+粒子——机械唯物主义<br>
+<strong>一切客观存在——辩证唯物主义（马克思）</strong><br>
+第三者包括前两者</p>
+<p><strong>唯心主义（什么是精神）</strong>：<br>
+本我的精神（主观）<br>
+独立于人之外的精神（客观）</p>
+<p><code>同一性</code>：<br>
+有——可知论（唯物、唯心）<br>
+没有——不可知论（二元论，不彻底的唯心主义）</p>
+<p><strong>哲学重要问题</strong>：世界是怎样存在的？</p>
+<blockquote>
+<p>孤立、片面、静止、无矛盾——形而上学<br>
+联系、全面、发展、有矛盾——辩证法</p>
+</blockquote>
+<p>马克思在哲学史上的两大历史贡献：</p>
+<ol>
+<li>创立了唯物史观</li>
+<li>形成了辩证唯物主义</li>
+</ol>
+<hr>
+<p>物和物的概念的关系：</p>
+<ul>
+<li>具体和抽象</li>
+<li>共性和个性</li>
+<li>普遍和特殊</li>
+<li>一般和个别</li>
+</ul>
+<p>时空的特点：</p>
+<ul>
+<li>客观性——不以人的意志为转移</li>
+<li>有限性——具体事物</li>
+<li>无限性——整个物质世界</li>
+<li>绝对性——时空绝对存在</li>
+<li>相对性——物质运动速度的极限，时空发生变化</li>
+</ul>
 
                 </div>
                 
@@ -419,11 +475,11 @@ mjx-container[display="true"] + br {
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                最长公共子序列(LCS)
+                马克思主义基本原理
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2024/06/21/最长公共子序列/
+                2024/08/23/马克思主义基本原理/
             </div>
         </div>
 
@@ -439,7 +495,7 @@ mjx-container[display="true"] + br {
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2024-06-21 21:56</div>
+                <div class="content">2024-08-23 18:54</div>
             </div>
 
 
@@ -475,15 +531,15 @@ mjx-container[display="true"] + br {
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E8%80%83%E7%A0%94/">考研</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/dp/">dp</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%94%BF%E6%B2%BB/">政治</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/LCS/">LCS</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E9%A9%AC%E5%8E%9F/">马原</a>
                                     </li>
                                 
                             </ul>
@@ -534,31 +590,15 @@ mjx-container[display="true"] + br {
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2024/06/21/%E6%B5%85%E5%AD%A6%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"
-                                   title="浅学编译原理"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">浅学编译原理</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/06/21/%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97/"
-                                   title="最长上升子序列(LIS)"
+                                   href="/2024/08/23/%E5%86%99%E4%BD%9C/"
+                                   title="写作"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">最长上升子序列(LIS)</span>
+                                        <span class="post-nav-title-item text-ellipsis">写作</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -586,7 +626,7 @@ mjx-container[display="true"] + br {
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%E6%A8%A1%E6%9D%BF"><span class="nav-text"> 最长公共子序列+模板</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text"> 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-text"> 解法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92onm"><span class="nav-text"> 动态规划O(nm)O(nm)O(nm)</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-text"> 马克思主义基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E8%AE%BA"><span class="nav-text"> 导论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%93%B2%E5%AD%A6"><span class="nav-text"> 马克思主义哲学</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -765,7 +805,7 @@ mjx-container[display="true"] + br {
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%E6%A8%A1%E6%9D%BF"><span class="nav-text"> 最长公共子序列+模板</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text"> 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-text"> 解法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92onm"><span class="nav-text"> 动态规划O(nm)O(nm)O(nm)</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-text"> 马克思主义基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E8%AE%BA"><span class="nav-text"> 导论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%93%B2%E5%AD%A6"><span class="nav-text"> 马克思主义哲学</span></a></li></ol></li></ol>
     </div>
 </div>
 
